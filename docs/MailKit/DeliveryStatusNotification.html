@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>MailKit.Net.Smtp.SmtpCapabilities</title>
+    <title>MailKit.DeliveryStatusNotification</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="MailKit: A cross-platform .NET mail-client library optimized for mobile." />
     <link rel="stylesheet" type="text/css" media="screen" href="/MailKit/stylesheets/stylesheet.css" />
@@ -204,131 +204,69 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <div class="CollectionTitle">
-          <a href="../index.html">MailKit</a> : <a href="index.html">MailKit.Net.Smtp Namespace</a></div>
-        <h1 class="PageTitle" id="T:MailKit.Net.Smtp.SmtpCapabilities">SmtpCapabilities  Enum</h1>
-        <p class="Summary" id="T:MailKit.Net.Smtp.SmtpCapabilities:Summary">
-            Capabilities supported by an SMTP server.
+          <a href="../index.html">MailKit</a> : <a href="index.html">MailKit Namespace</a></div>
+        <h1 class="PageTitle" id="T:MailKit.DeliveryStatusNotification">DeliveryStatusNotification  Enum</h1>
+        <p class="Summary" id="T:MailKit.DeliveryStatusNotification:Summary">
+            Delivery status notification types.
             </p>
         <div>
           <h2>Syntax</h2>
-          <div class="Signature" id="T:MailKit.Net.Smtp.SmtpCapabilities:Signature">[System.Flags]<br />public enum <b>SmtpCapabilities</b></div>
+          <div class="Signature" id="T:MailKit.DeliveryStatusNotification:Signature">[System.Flags]<br />public enum <b>DeliveryStatusNotification</b></div>
         </div>
-        <div class="Remarks" id="T:MailKit.Net.Smtp.SmtpCapabilities:Docs">
+        <div class="Remarks" id="T:MailKit.DeliveryStatusNotification:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="T:MailKit.Net.Smtp.SmtpCapabilities:Docs:Remarks">
-            Capabilities are read as part of the response to the EHLO command that
-            is issued during the connection phase of the <a href="../MailKit.Net.Smtp/SmtpClient.html">MailKit.Net.Smtp.SmtpClient</a>.
+          <div class="SectionBox" id="T:MailKit.DeliveryStatusNotification:Docs:Remarks">
+            A set of flags that may be bitwise-or'd together to specify
+            when a delivery status notification should be sent for a
+            particlar recipient.
             </div>
           <h2 class="Section">Members</h2>
-          <div class="SectionBox" id="T:MailKit.Net.Smtp.SmtpCapabilities:Docs:Members">
+          <div class="SectionBox" id="T:MailKit.DeliveryStatusNotification:Docs:Members">
             <table class="Enumeration">
               <tr>
                 <th>Member Name</th>
                 <th>Description</th>
               </tr>
               <tr valign="top">
-                <td id="F:MailKit.Net.Smtp.SmtpCapabilities.Authentication">
-                  <b>Authentication</b>
+                <td id="F:MailKit.DeliveryStatusNotification.Delay">
+                  <b>Delay</b>
                 </td>
                 <td>
-            The server supports the AUTH extension (rfc2554), allowing clients to
-            authenticate via supported SASL mechanisms.
+            Send a notification when the delivery to the recipient has
+            been delayed for an unusual amount fo time.
             </td>
               </tr>
               <tr valign="top">
-                <td id="F:MailKit.Net.Smtp.SmtpCapabilities.BinaryMime">
-                  <b>BinaryMime</b>
+                <td id="F:MailKit.DeliveryStatusNotification.Failure">
+                  <b>Failure</b>
                 </td>
                 <td>
-            The server supports the BINARYMIME extension (rfc3030).
+            Send a notification on failure to deliver to the recipient.
             </td>
               </tr>
               <tr valign="top">
-                <td id="F:MailKit.Net.Smtp.SmtpCapabilities.Chunking">
-                  <b>Chunking</b>
+                <td id="F:MailKit.DeliveryStatusNotification.Never">
+                  <b>Never</b>
                 </td>
                 <td>
-            The server supports the CHUNKING extension (rfc3030), allowing clients
-            to upload messages in chunks.
+            Never send delivery status notifications.
             </td>
               </tr>
               <tr valign="top">
-                <td id="F:MailKit.Net.Smtp.SmtpCapabilities.Dsn">
-                  <b>Dsn</b>
+                <td id="F:MailKit.DeliveryStatusNotification.Success">
+                  <b>Success</b>
                 </td>
                 <td>
-            The server supports the DSN extension (rfc1891), allowing clients to
-            specify which (if any) recipients they would like to receive delivery
-            notifications for.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MailKit.Net.Smtp.SmtpCapabilities.EightBitMime">
-                  <b>EightBitMime</b>
-                </td>
-                <td>
-            The server supports the 8BITMIME extension (rfc2821), allowing clients
-            to send messages using the "8bit" Content-Transfer-Encoding.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MailKit.Net.Smtp.SmtpCapabilities.EnhancedStatusCodes">
-                  <b>EnhancedStatusCodes</b>
-                </td>
-                <td>
-            The server supports the ENHANCEDSTATUSCODES extension (rfc2034).
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MailKit.Net.Smtp.SmtpCapabilities.None">
-                  <b>None</b>
-                </td>
-                <td>
-            The server does not support any additional extensions.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MailKit.Net.Smtp.SmtpCapabilities.Pipelining">
-                  <b>Pipelining</b>
-                </td>
-                <td>
-            The server supports the PIPELINING extension (rfc2920), allowing clients
-            to send multiple commands at once in order to reduce round-trip latency.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MailKit.Net.Smtp.SmtpCapabilities.Size">
-                  <b>Size</b>
-                </td>
-                <td>
-            The server supports the SIZE extension (rfc1870) and may have a maximum
-            message size limitation (see <a href="../MailKit.Net.Smtp/SmtpClient.html#P:MailKit.Net.Smtp.SmtpClient.MaxSize">SmtpClient.MaxSize</a>).
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MailKit.Net.Smtp.SmtpCapabilities.StartTLS">
-                  <b>StartTLS</b>
-                </td>
-                <td>
-            The server supports the STARTTLS extension (rfc3207), allowing clients
-            to switch to an encrypted SSL/TLS connection after connecting.
-            </td>
-              </tr>
-              <tr valign="top">
-                <td id="F:MailKit.Net.Smtp.SmtpCapabilities.UTF8">
-                  <b>UTF8</b>
-                </td>
-                <td>
-            The server supports the SMTPUTF8 extension (rfc6531).
+            Send a notification on successful delivery to the recipient.
             </td>
               </tr>
             </table>
           </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="T:MailKit.Net.Smtp.SmtpCapabilities:Docs:Version Information">
-            <b>Namespace: </b>MailKit.Net.Smtp<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+          <div class="SectionBox" id="T:MailKit.DeliveryStatusNotification:Docs:Version Information">
+            <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
         </div>
-        <div class="Members" id="T:MailKit.Net.Smtp.SmtpCapabilities:Members">
+        <div class="Members" id="T:MailKit.DeliveryStatusNotification:Members">
         </div>
       </section>
     </div>
