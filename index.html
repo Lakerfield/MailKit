@@ -2,9 +2,9 @@
 <html>
 
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="MailKit : A cross-platform .NET mail client library." />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="MailKit : A cross-platform .NET mail client library.">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -32,15 +32,19 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1>
-<a name="mailkit" class="anchor" href="#mailkit"><span class="octicon octicon-link"></span></a>MailKit</h1>
+<a id="mailkit" class="anchor" href="#mailkit" aria-hidden="true"><span class="octicon octicon-link"></span></a>MailKit</h1>
+
+<p><a href="https://scan.coverity.com/projects/3202">
+  <img alt="Coverity Scan Build Status" src="https://scan.coverity.com/projects/3202/badge.svg">
+</a></p>
 
 <h2>
-<a name="what-is-mailkit" class="anchor" href="#what-is-mailkit"><span class="octicon octicon-link"></span></a>What is MailKit?</h2>
+<a id="what-is-mailkit" class="anchor" href="#what-is-mailkit" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is MailKit?</h2>
 
 <p>MailKit is a cross-platform mail client library built on top of <a href="https://github.com/jstedfast/MimeKit">MimeKit</a>.</p>
 
 <h2>
-<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
 
 <ul>
 <li>SASL Authentication
@@ -51,6 +55,7 @@
 <li>LOGIN</li>
 <li>NTLM</li>
 <li>PLAIN</li>
+<li>SCRAM-SHA-1</li>
 <li>XOAUTH2 (partial support - you need to fetch the auth tokens yourself)</li>
 </ul>
 </li>
@@ -59,11 +64,8 @@
 <ul>
 <li>Supports all of the SASL mechanisms listed above.</li>
 <li>Supports SSL-wrapped connections via the "smtps" protocol.</li>
-<li>Supports the STARTTLS extension.</li>
 <li>Supports client SSL/TLS certificates.</li>
-<li>Supports the 8BITMIME and BINARYMIME extensions.</li>
-<li>Supports the PIPELINING extension.</li>
-<li>Parses the SIZE extension value.</li>
+<li>Supports the following extensions: STARTTLS, SIZE, DSN, 8BITMIME, PIPELINING, BINARYMIME, SMTPUTF8</li>
 <li>All APIs are cancellable.</li>
 <li>Async APIs are available.</li>
 </ul>
@@ -74,9 +76,8 @@
 <li>Supports all of the SASL mechanisms listed above.</li>
 <li>Also supports authentication via APOP and USER/PASS.</li>
 <li>Supports SSL-wrapped connections via the "pops" protocol.</li>
-<li>Supports the STLS extension.</li>
 <li>Supports client SSL/TLS certificates.</li>
-<li>Supports the UIDL command.</li>
+<li>Supports the following extensions: STLS, UIDL, PIPELINING, UTF8, LANG</li>
 <li>All APIs are cancellable.</li>
 <li>Async APIs are available.</li>
 </ul>
@@ -90,6 +91,7 @@
 <li>Supports the following extensions:
 
 <ul>
+<li>QUOTA</li>
 <li>LITERAL+</li>
 <li>IDLE</li>
 <li>NAMESPACE</li>
@@ -103,13 +105,17 @@
 <li>ESEARCH</li>
 <li>SASL-IR</li>
 <li>COMPRESS</li>
+<li>WITHIN</li>
 <li>ENABLE</li>
 <li>QRESYNC</li>
 <li>SORT</li>
 <li>THREAD</li>
 <li>ESORT (partial)</li>
 <li>SPECIAL-USE</li>
+<li>SEARCH=FUZZY (partial)</li>
 <li>MOVE</li>
+<li>UTF8=ACCEPT</li>
+<li>UTF8=ONLY</li>
 <li>XLIST</li>
 <li>X-GM-EXT1 (X-GM-MSGID, X-GM-THRID, X-GM-RAW and X-GM-LABELS)</li>
 </ul>
@@ -119,72 +125,45 @@
 </ul>
 </li>
 <li>Client-side sorting and threading of messages.</li>
-</ul><h2>
-<a name="todo" class="anchor" href="#todo"><span class="octicon octicon-link"></span></a>TODO</h2>
-
-<ul>
-<li>SASL Authentication
-
-<ul>
-<li>Improve XOAUTH2</li>
-<li>ANONYMOUS</li>
-<li>GSSAPI</li>
-<li>SCRAM-SHA-1</li>
-<li>SCRAM-*</li>
 </ul>
-</li>
-<li>SMTP Client
-
-<ul>
-<li>CHUNKING (hmmm, doesn't really seem all that useful...)</li>
-<li>Throw an exception if the MimeMessage is larger than the SIZE value?</li>
-</ul>
-</li>
-<li>POP3 Client
-
-<ul>
-<li>PIPELINING</li>
-</ul>
-</li>
-<li>IMAP4 Client
-
-<ul>
-<li>Extensions:
-
-<ul>
-<li>QUOTA</li>
-<li>BINARY</li>
-<li>CATENATE</li>
-<li>LIST-EXTENDED</li>
-<li>CONVERT</li>
-<li>METADATA</li>
-<li>NOTIFY</li>
-<li>FILTERS</li>
-<li>LIST-STATUS</li>
-<li>MULTISEARCH</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Maildir</li>
-<li>Thunderbird mbox folder trees</li>
-</ul><h2>
-<a name="goals" class="anchor" href="#goals"><span class="octicon octicon-link"></span></a>Goals</h2>
-
-<p>The main goal of this project is to optimize for mobile platforms such as Android, iOS, and eventually Windows Phone 8.
-This means that IMAP extensions such as CONDSTORE, QRESYNC, and any other extensions that allow clients to reduce
-network traffic (IDLE? ESEARCH? COMPRESS?) will take priority over any of the other extensions. After that, the most
-common extensions will take precedence over the lesser-used extensions until finally all of the extensions anyone
-actually cares about are implemented.</p>
-
-<p>At some point in the (near?) future, I'd also like to start using async/await. For those who are stuck in .NET 4.0,
-Microsoft has released an
-<a href="http://blogs.msdn.com/b/bclteam/archive/2013/04/17/microsoft-bcl-async-is-now-stable.aspx">Async Targetting Pack</a>
-on <a href="https://nuget.org/packages/Microsoft.Bcl.Async">NuGet</a> which allows the use of the async/await keywords on
-pre-.NET 4.5 platforms. If you haven't already, I'd highly recommend installing it.</p>
 
 <h2>
-<a name="license-information" class="anchor" href="#license-information"><span class="octicon octicon-link"></span></a>License Information</h2>
+<a id="goals" class="anchor" href="#goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Goals</h2>
+
+<p>The main goal of this project is to provide the .NET world with robust, fully featured and RFC-compliant
+SMTP, POP3, and IMAP client implementations.</p>
+
+<p>All of the other .NET IMAP client implementations that I could find suffer from major architectural
+problems such as ignoring unexpected untagged responses, assuming that literal string tokens will
+never be used for anything other than message bodies (when in fact they could be used for pretty
+much any string token in a response), assuming that the way to find the end of a message body in a
+FETCH response is by scanning for ") UID", and not properly handling mailbox names with international
+characters to simply name a few.</p>
+
+<p>IMAP requires a LOT of time spent laboriously reading and re-reading the IMAP specifications (as well
+as the MIME specifications) to understand all of the subtleties of the protocol and most (all?) of the
+other Open Source .NET IMAP libraries, at least, were written by developers that only cared enough that
+it worked for their simple needs. There's nothing necessarily wrong with doing that, but the web is full
+of half-working, non-RFC-compliant IMAP implementations out there that it was finally time for a carefully
+designed and implemented IMAP client library to be written.</p>
+
+<p>For POP3, libraries such as OpenPOP.NET are actually fairly decent, although the MIME parser is far
+too strict - throwing exceptions any time it encounteres a Content-Type or Content-Disposition
+parameter that it doesn't already know about, which, if you read over the mailing-list, is a problem
+that OpenPOP.NET users are constantly running into. MailKit's Pop3Client, of course, doesn't have this
+problem. It also parses messages directly from the socket instead of downloading the message into a
+large string buffer before parsing it, so you'll probably find that not only is MailKit faster (MailKit's
+MIME parser, <a href="https://github.com/jstedfast/MimeKit">MimeKit</a>, parses messages from disk 25x faster than
+OpenPOP.NET's parser), but also uses far less memory.</p>
+
+<p>For SMTP, most developers use System.Net.Mail.SmtpClient which suits their needs more-or-less satisfactorily
+and so is probably not high on their list of needs. However, the SmtpClient implementation included with
+MailKit is a much better option if cross-platform support is needed or if the developer wants to be able to
+save and re-load MIME messages before sending them via SMTP. MailKit's SmtpClient also supports PIPELINING
+which should improve performance of sending messages (although might not be very noticeable).</p>
+
+<h2>
+<a id="license-information" class="anchor" href="#license-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>License Information</h2>
 
 <p>MailKit is Copyright (C) 2013-2014 Xamarin Inc. and is licensed under the MIT license:</p>
 
@@ -208,7 +187,7 @@ THE SOFTWARE.
 </code></pre>
 
 <h2>
-<a name="installing-via-nuget" class="anchor" href="#installing-via-nuget"><span class="octicon octicon-link"></span></a>Installing via NuGet</h2>
+<a id="installing-via-nuget" class="anchor" href="#installing-via-nuget" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing via NuGet</h2>
 
 <p>The easiest way to install MailKit is via <a href="https://www.nuget.org/packages/MailKit/">NuGet</a>.</p>
 
@@ -219,7 +198,7 @@ simply enter the following command:</p>
 </code></pre>
 
 <h2>
-<a name="building" class="anchor" href="#building"><span class="octicon octicon-link"></span></a>Building</h2>
+<a id="building" class="anchor" href="#building" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building</h2>
 
 <p>First, you'll need to clone MailKit, MimeKit, Bouncy Castle, and Portable.Text.Encoding from my GitHub repository:</p>
 
@@ -229,12 +208,12 @@ git clone https://github.com/jstedfast/bc-csharp.git
 git clone https://github.com/jstedfast/Portable.Text.Encoding.git
 </code></pre>
 
-<p>Currently, MailKit (through its use of MimeKit) depends on the visual-studio-2010 branch of bc-csharp for
-the Visual Studio 2010 project files that I've added (to replace the Visual Studio 2003 project files).
+<p>Currently, MailKit (through its use of MimeKit) depends on the vs2010 branch of bc-csharp for the
+Visual Studio 2010 project files that I've added (to replace the Visual Studio 2003 project files).
 To switch to that branch,</p>
 
 <pre><code>cd bc-csharp
-git checkout -b visual-studio-2010 origin/visual-studio-2010
+git checkout -b vs2010 origin/vs2010
 </code></pre>
 
 <p>In the top-level MailKit source directory, there are three solution files: MailKit.sln, MailKit.Net40.sln and MailKit.Mobile.sln.</p>
@@ -244,7 +223,9 @@ git checkout -b visual-studio-2010 origin/visual-studio-2010
 <li>MailKit.Net40.sln just includes the .NET Framework 4.0 C# project (MailKit/MailKit.Net40.csproj)</li>
 <li>MailKit.Mobile.sln just includes the Xamarin.iOS and Xamarin.Android projects.</li>
 <li>MailKit.Win.sln just includes the Windows 8.1 Universal project (aka wpa81).</li>
-</ul><p>If you don't have the Xamarin products, you'll probably want to open the MailKit.Net45.sln instead of MailKit.sln.</p>
+</ul>
+
+<p>If you don't have the Xamarin products, you'll probably want to open the MailKit.Net45.sln instead of MailKit.sln.</p>
 
 <p>Once you've opened the appropriate MailKit solution file in either Xamarin Studio or Visual Studio 2010+ (either will work),
 you can simply choose the Debug or Release build configuration and then build.</p>
@@ -252,277 +233,270 @@ you can simply choose the Debug or Release build configuration and then build.</
 <p>Note: The Release build will generate the xml API documentation, but the Debug build will not.</p>
 
 <h2>
-<a name="using-mailkit" class="anchor" href="#using-mailkit"><span class="octicon octicon-link"></span></a>Using MailKit</h2>
+<a id="using-mailkit" class="anchor" href="#using-mailkit" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using MailKit</h2>
 
 <h3>
-<a name="sending-messages" class="anchor" href="#sending-messages"><span class="octicon octicon-link"></span></a>Sending Messages</h3>
+<a id="sending-messages" class="anchor" href="#sending-messages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sending Messages</h3>
 
 <p>One of the more common operations that MailKit is meant for is sending email messages.</p>
 
-<div class="highlight highlight-csharp"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight highlight-csharp"><pre><span class="pl-k">using</span> System;
 
-<span class="k">using</span> <span class="nn">MailKit.Net.Smtp</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">MailKit</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">MimeKit</span><span class="p">;</span>
+<span class="pl-k">using</span> MailKit.Net.Smtp;
+<span class="pl-k">using</span> MailKit;
+<span class="pl-k">using</span> MimeKit;
 
-<span class="k">namespace</span> <span class="nn">TestClient</span> <span class="p">{</span>
-    <span class="k">class</span> <span class="nc">Program</span>
-    <span class="p">{</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span> <span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="k">new</span> <span class="n">MimeMessage</span> <span class="p">();</span>
-            <span class="n">message</span><span class="p">.</span><span class="n">From</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Joey Tribbiani"</span><span class="p">,</span> <span class="s">"joey@friends.com"</span><span class="p">));</span>
-            <span class="n">message</span><span class="p">.</span><span class="n">To</span><span class="p">.</span><span class="n">Add</span> <span class="p">(</span><span class="k">new</span> <span class="n">MailboxAddress</span> <span class="p">(</span><span class="s">"Mrs. Chanandler Bong"</span><span class="p">,</span> <span class="s">"chandler@friends.com"</span><span class="p">));</span>
-            <span class="n">message</span><span class="p">.</span><span class="n">Subject</span> <span class="p">=</span> <span class="s">"How you doin'?"</span><span class="p">;</span>
+<span class="pl-k">namespace</span> <span class="pl-en">TestClient</span> {
+    <span class="pl-s">class</span> <span class="pl-en">Program</span>
+    {
+        <span class="pl-s">public</span> <span class="pl-s">static</span> <span class="pl-st">void</span> <span class="pl-en">Main</span> (<span class="pl-st">string[]</span> <span class="pl-vpf">args</span>)
+        {
+            <span class="pl-k">var</span> message = <span class="pl-s">new</span> MimeMessage ();
+            message.From.Add (<span class="pl-s">new</span> MailboxAddress (<span class="pl-s1"><span class="pl-pds">"</span>Joey Tribbiani<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>joey@friends.com<span class="pl-pds">"</span></span>));
+            message.To.Add (<span class="pl-s">new</span> MailboxAddress (<span class="pl-s1"><span class="pl-pds">"</span>Mrs. Chanandler Bong<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>chandler@friends.com<span class="pl-pds">"</span></span>));
+            message.Subject = <span class="pl-s1"><span class="pl-pds">"</span>How you doin'?<span class="pl-pds">"</span></span>;
 
-            <span class="n">message</span><span class="p">.</span><span class="n">Body</span> <span class="p">=</span> <span class="k">new</span> <span class="n">TextPart</span> <span class="p">(</span><span class="s">"plain"</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">Text</span> <span class="p">=</span> <span class="s">@"Hey Chandler,</span>
+            message.Body = <span class="pl-s">new</span> TextPart (<span class="pl-s1"><span class="pl-pds">"</span>plain<span class="pl-pds">"</span></span>) {
+                Text = @<span class="pl-s1"><span class="pl-pds">"</span>Hey Chandler,</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">I just wanted to let you know that Monica and I were going to go play some paintball, you in?</span>
+<span class="pl-s1"></span>
+<span class="pl-s1">-- Joey<span class="pl-pds">"</span></span>
+            };
 
-<span class="s">I just wanted to let you know that Monica and I were going to go play some paintball, you in?</span>
+            <span class="pl-k">using</span> (<span class="pl-k">var</span> client = <span class="pl-s">new</span> SmtpClient ()) {
+                client.Connect (<span class="pl-s1"><span class="pl-pds">"</span>smtp.friends.com<span class="pl-pds">"</span></span>, <span class="pl-c1">587</span>, <span class="pl-c1">false</span>);
 
-<span class="s">-- Joey"</span>
-            <span class="p">};</span>
+                <span class="pl-c">// Note: since we don't have an OAuth2 token, disable</span>
+                <span class="pl-c">// the XOAUTH2 authentication mechanism.</span>
+                client.AuthenticationMechanisms.Remove (<span class="pl-s1"><span class="pl-pds">"</span>XOAUTH2<span class="pl-pds">"</span></span>);
 
-            <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SmtpClient</span> <span class="p">())</span> <span class="p">{</span>
-                <span class="n">client</span><span class="p">.</span><span class="n">Connect</span> <span class="p">(</span><span class="s">"smtp.friends.com"</span><span class="p">,</span> <span class="m">587</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+                <span class="pl-c">// Note: only needed if the SMTP server requires authentication</span>
+                client.Authenticate (<span class="pl-s1"><span class="pl-pds">"</span>joey<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>password<span class="pl-pds">"</span></span>);
 
-                <span class="c1">// Note: since we don't have an OAuth2 token, disable</span>
-                <span class="c1">// the XOAUTH2 authentication mechanism.</span>
-                <span class="n">client</span><span class="p">.</span><span class="n">AuthenticationMechanisms</span><span class="p">.</span><span class="n">Remove</span> <span class="p">(</span><span class="s">"XOAUTH2"</span><span class="p">);</span>
-
-                <span class="c1">// Note: only needed if the SMTP server requires authentication</span>
-                <span class="n">client</span><span class="p">.</span><span class="n">Authenticate</span> <span class="p">(</span><span class="s">"joey"</span><span class="p">,</span> <span class="s">"password"</span><span class="p">);</span>
-
-                <span class="n">client</span><span class="p">.</span><span class="n">Send</span> <span class="p">(</span><span class="n">message</span><span class="p">);</span>
-                <span class="n">client</span><span class="p">.</span><span class="n">Disconnect</span> <span class="p">(</span><span class="k">true</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+                client.Send (message);
+                client.Disconnect (<span class="pl-c1">true</span>);
+            }
+        }
+    }
+}</pre></div>
 
 <h2>
-<a name="retrieving-messages-via-pop3" class="anchor" href="#retrieving-messages-via-pop3"><span class="octicon octicon-link"></span></a>Retrieving Messages (via Pop3)</h2>
+<a id="retrieving-messages-via-pop3" class="anchor" href="#retrieving-messages-via-pop3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Retrieving Messages (via Pop3)</h2>
 
 <p>One of the other main uses of MailKit is retrieving messages from pop3 servers.</p>
 
-<div class="highlight highlight-csharp"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight highlight-csharp"><pre><span class="pl-k">using</span> System;
 
-<span class="k">using</span> <span class="nn">MailKit.Net.Pop3</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">MailKit</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">MimeKit</span><span class="p">;</span>
+<span class="pl-k">using</span> MailKit.Net.Pop3;
+<span class="pl-k">using</span> MailKit;
+<span class="pl-k">using</span> MimeKit;
 
-<span class="k">namespace</span> <span class="nn">TestClient</span> <span class="p">{</span>
-    <span class="k">class</span> <span class="nc">Program</span>
-    <span class="p">{</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span> <span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Pop3Client</span> <span class="p">())</span> <span class="p">{</span>
-                <span class="n">client</span><span class="p">.</span><span class="n">Connect</span> <span class="p">(</span><span class="s">"pop.friends.com"</span><span class="p">,</span> <span class="m">110</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
+<span class="pl-k">namespace</span> <span class="pl-en">TestClient</span> {
+    <span class="pl-s">class</span> <span class="pl-en">Program</span>
+    {
+        <span class="pl-s">public</span> <span class="pl-s">static</span> <span class="pl-st">void</span> <span class="pl-en">Main</span> (<span class="pl-st">string[]</span> <span class="pl-vpf">args</span>)
+        {
+            <span class="pl-k">using</span> (<span class="pl-k">var</span> client = <span class="pl-s">new</span> Pop3Client ()) {
+                client.Connect (<span class="pl-s1"><span class="pl-pds">"</span>pop.friends.com<span class="pl-pds">"</span></span>, <span class="pl-c1">110</span>, <span class="pl-c1">false</span>);
 
-                <span class="c1">// Note: since we don't have an OAuth2 token, disable</span>
-                <span class="c1">// the XOAUTH2 authentication mechanism.</span>
-                <span class="n">client</span><span class="p">.</span><span class="n">AuthenticationMechanisms</span><span class="p">.</span><span class="n">Remove</span> <span class="p">(</span><span class="s">"XOAUTH2"</span><span class="p">);</span>
+                <span class="pl-c">// Note: since we don't have an OAuth2 token, disable</span>
+                <span class="pl-c">// the XOAUTH2 authentication mechanism.</span>
+                client.AuthenticationMechanisms.Remove (<span class="pl-s1"><span class="pl-pds">"</span>XOAUTH2<span class="pl-pds">"</span></span>);
 
-                <span class="n">client</span><span class="p">.</span><span class="n">Authenticate</span> <span class="p">(</span><span class="s">"joey"</span><span class="p">,</span> <span class="s">"password"</span><span class="p">);</span>
+                client.Authenticate (<span class="pl-s1"><span class="pl-pds">"</span>joey<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>password<span class="pl-pds">"</span></span>);
 
-                <span class="kt">int</span> <span class="n">count</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">GetMessageCount</span> <span class="p">();</span>
-                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">count</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
-                    <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">GetMessage</span> <span class="p">(</span><span class="n">i</span><span class="p">);</span>
-                    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">"Subject: {0}"</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">Subject</span><span class="p">);</span>
-                <span class="p">}</span>
+                <span class="pl-st">int</span> count = client.GetMessageCount ();
+                <span class="pl-k">for</span> (<span class="pl-st">int</span> i = <span class="pl-c1">0</span>; i &lt; count; i++) {
+                    <span class="pl-k">var</span> message = client.GetMessage (i);
+                    Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>Subject: {0}<span class="pl-pds">"</span></span>, message.Subject);
+                }
 
-                <span class="n">client</span><span class="p">.</span><span class="n">Disconnect</span> <span class="p">(</span><span class="k">true</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+                client.Disconnect (<span class="pl-c1">true</span>);
+            }
+        }
+    }
+}</pre></div>
 
 <h2>
-<a name="using-imap" class="anchor" href="#using-imap"><span class="octicon octicon-link"></span></a>Using IMAP</h2>
+<a id="using-imap" class="anchor" href="#using-imap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using IMAP</h2>
 
 <p>More important than POP3 support is the IMAP support. Here's a simple use-case of retreiving messages from an IMAP server:</p>
 
-<div class="highlight highlight-csharp"><pre><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<div class="highlight highlight-csharp"><pre><span class="pl-k">using</span> System;
 
-<span class="k">using</span> <span class="nn">MailKit.Net.Imap</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">MailKit.Search</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">MailKit</span><span class="p">;</span>
-<span class="k">using</span> <span class="nn">MimeKit</span><span class="p">;</span>
+<span class="pl-k">using</span> MailKit.Net.Imap;
+<span class="pl-k">using</span> MailKit.Search;
+<span class="pl-k">using</span> MailKit;
+<span class="pl-k">using</span> MimeKit;
 
-<span class="k">namespace</span> <span class="nn">TestClient</span> <span class="p">{</span>
-    <span class="k">class</span> <span class="nc">Program</span>
-    <span class="p">{</span>
-        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span> <span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="k">using</span> <span class="p">(</span><span class="kt">var</span> <span class="n">client</span> <span class="p">=</span> <span class="k">new</span> <span class="n">ImapClient</span> <span class="p">())</span> <span class="p">{</span>
-                <span class="n">client</span><span class="p">.</span><span class="n">Connect</span> <span class="p">(</span><span class="s">"imap.friends.com"</span><span class="p">,</span> <span class="m">995</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+<span class="pl-k">namespace</span> <span class="pl-en">TestClient</span> {
+    <span class="pl-s">class</span> <span class="pl-en">Program</span>
+    {
+        <span class="pl-s">public</span> <span class="pl-s">static</span> <span class="pl-st">void</span> <span class="pl-en">Main</span> (<span class="pl-st">string[]</span> <span class="pl-vpf">args</span>)
+        {
+            <span class="pl-k">using</span> (<span class="pl-k">var</span> client = <span class="pl-s">new</span> ImapClient ()) {
+                client.Connect (<span class="pl-s1"><span class="pl-pds">"</span>imap.friends.com<span class="pl-pds">"</span></span>, <span class="pl-c1">995</span>, <span class="pl-c1">true</span>);
 
-                <span class="c1">// Note: since we don't have an OAuth2 token, disable</span>
-                <span class="c1">// the XOAUTH2 authentication mechanism.</span>
-                <span class="n">client</span><span class="p">.</span><span class="n">AuthenticationMechanisms</span><span class="p">.</span><span class="n">Remove</span> <span class="p">(</span><span class="s">"XOAUTH"</span><span class="p">);</span>
+                <span class="pl-c">// Note: since we don't have an OAuth2 token, disable</span>
+                <span class="pl-c">// the XOAUTH2 authentication mechanism.</span>
+                client.AuthenticationMechanisms.Remove (<span class="pl-s1"><span class="pl-pds">"</span>XOAUTH<span class="pl-pds">"</span></span>);
 
-                <span class="n">client</span><span class="p">.</span><span class="n">Authenticate</span> <span class="p">(</span><span class="s">"joey"</span><span class="p">,</span> <span class="s">"password"</span><span class="p">);</span>
+                client.Authenticate (<span class="pl-s1"><span class="pl-pds">"</span>joey<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>password<span class="pl-pds">"</span></span>);
 
-                <span class="c1">// The Inbox folder is always available on all IMAP servers...</span>
-                <span class="kt">var</span> <span class="n">inbox</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">Inbox</span><span class="p">;</span>
-                <span class="n">inbox</span><span class="p">.</span><span class="n">Open</span> <span class="p">(</span><span class="n">FolderAccess</span><span class="p">.</span><span class="n">ReadOnly</span><span class="p">);</span>
+                <span class="pl-c">// The Inbox folder is always available on all IMAP servers...</span>
+                <span class="pl-k">var</span> inbox = client.Inbox;
+                inbox.Open (FolderAccess.ReadOnly);
 
-                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">"Total messages: {0}"</span><span class="p">,</span> <span class="n">inbox</span><span class="p">.</span><span class="n">Count</span><span class="p">);</span>
-                <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">"Recent messages: {0}"</span><span class="p">,</span> <span class="n">inbox</span><span class="p">.</span><span class="n">Recent</span><span class="p">);</span>
+                Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>Total messages: {0}<span class="pl-pds">"</span></span>, inbox.Count);
+                Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>Recent messages: {0}<span class="pl-pds">"</span></span>, inbox.Recent);
 
-                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">inbox</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span> <span class="p">{</span>
-                    <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="n">inbox</span><span class="p">.</span><span class="n">GetMessage</span> <span class="p">(</span><span class="n">i</span><span class="p">);</span>
-                    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">"Subject: {0}"</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">Subject</span><span class="p">);</span>
-                <span class="p">}</span>
+                <span class="pl-k">for</span> (<span class="pl-st">int</span> i = <span class="pl-c1">0</span>; i &lt; inbox.Count; i++) {
+                    <span class="pl-k">var</span> message = inbox.GetMessage (i);
+                    Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>Subject: {0}<span class="pl-pds">"</span></span>, message.Subject);
+                }
 
-                <span class="n">client</span><span class="p">.</span><span class="n">Disconnect</span> <span class="p">(</span><span class="k">true</span><span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
+                client.Disconnect (<span class="pl-c1">true</span>);
+            }
+        }
+    }
+}</pre></div>
 
 <p>However, you probably want to do more complicated things with IMAP such as fetching summary information
 so that you can display a list of messages in a mail client without having to first download all of the
 messages from the server:</p>
 
-<div class="highlight highlight-csharp"><pre><span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">summary</span> <span class="k">in</span> <span class="n">inbox</span><span class="p">.</span><span class="n">Fetch</span> <span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="p">-</span><span class="m">1</span><span class="p">,</span> <span class="n">MessageSummaryItems</span><span class="p">.</span><span class="n">Full</span> <span class="p">|</span> <span class="n">MessageSummaryItems</span><span class="p">.</span><span class="n">UniqueId</span><span class="p">))</span> <span class="p">{</span>
-    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">"[summary] {0:D2}: {1}"</span><span class="p">,</span> <span class="n">summary</span><span class="p">.</span><span class="n">Index</span><span class="p">,</span> <span class="n">summary</span><span class="p">.</span><span class="n">Envelope</span><span class="p">.</span><span class="n">Subject</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
+<div class="highlight highlight-csharp"><pre><span class="pl-k">foreach</span> (<span class="pl-k">var</span> summary <span class="pl-k">in</span> inbox.Fetch (<span class="pl-c1">0</span>, -<span class="pl-c1">1</span>, MessageSummaryItems.Full | MessageSummaryItems.UniqueId)) {
+    Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>[summary] {0:D2}: {1}<span class="pl-pds">"</span></span>, summary.Index, summary.Envelope.Subject);
+}</pre></div>
 
 <p>The results of a Fetch command can also be used to download individual MIME parts rather
 than downloading the entire message. For example:</p>
 
-<div class="highlight highlight-csharp"><pre><span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">summary</span> <span class="k">in</span> <span class="n">inbox</span><span class="p">.</span><span class="n">Fetch</span> <span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="p">-</span><span class="m">1</span><span class="p">,</span> <span class="n">MessageSummaryItems</span><span class="p">.</span><span class="n">Full</span> <span class="p">|</span> <span class="n">MessageSummaryItems</span><span class="p">.</span><span class="n">UniqueId</span><span class="p">))</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">text</span> <span class="p">=</span> <span class="n">summary</span><span class="p">.</span><span class="n">Body</span> <span class="k">as</span> <span class="n">BodyPartText</span><span class="p">;</span>
+<div class="highlight highlight-csharp"><pre><span class="pl-k">foreach</span> (<span class="pl-k">var</span> summary <span class="pl-k">in</span> inbox.Fetch (<span class="pl-c1">0</span>, -<span class="pl-c1">1</span>, MessageSummaryItems.Full | MessageSummaryItems.UniqueId)) {
+    <span class="pl-k">var</span> text = summary.Body <span class="pl-k">as</span> BodyPartText;
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">text</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kt">var</span> <span class="n">multipart</span> <span class="p">=</span> <span class="n">summary</span><span class="p">.</span><span class="n">Body</span> <span class="k">as</span> <span class="n">BodyPartMultipart</span><span class="p">;</span>
+    <span class="pl-k">if</span> (text == <span class="pl-c1">null</span>) {
+        <span class="pl-k">var</span> multipart = summary.Body <span class="pl-k">as</span> BodyPartMultipart;
 
-        <span class="k">if</span> <span class="p">(</span><span class="n">multipart</span> <span class="p">!=</span> <span class="k">null</span><span class="p">)</span>
-            <span class="n">text</span> <span class="p">=</span> <span class="n">multipart</span><span class="p">.</span><span class="n">BodyParts</span><span class="p">.</span><span class="n">OfType</span><span class="p">&lt;</span><span class="n">BodyPartText</span><span class="p">&gt;</span> <span class="p">().</span><span class="n">FirstOrDefault</span> <span class="p">();</span>
-    <span class="p">}</span>
+        <span class="pl-k">if</span> (multipart != <span class="pl-c1">null</span>)
+            text = multipart.BodyParts.OfType&lt;BodyPartText&gt; ().FirstOrDefault ();
+    }
 
-    <span class="k">if</span> <span class="p">(</span><span class="n">text</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
-        <span class="k">continue</span><span class="p">;</span>
+    <span class="pl-k">if</span> (text == <span class="pl-c1">null</span>)
+        <span class="pl-k">continue</span>;
 
-    <span class="c1">// this will download *just* the text part</span>
-    <span class="kt">var</span> <span class="n">part</span> <span class="p">=</span> <span class="n">inbox</span><span class="p">.</span><span class="n">GetBodyPart</span> <span class="p">(</span><span class="n">summary</span><span class="p">.</span><span class="n">UniqueId</span><span class="p">.</span><span class="n">Value</span><span class="p">,</span> <span class="n">text</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
+    <span class="pl-c">// this will download *just* the text part</span>
+    <span class="pl-k">var</span> part = inbox.GetBodyPart (summary.UniqueId.Value, text);
+}</pre></div>
 
 <p>You may also be interested in sorting and searching...</p>
 
-<div class="highlight highlight-csharp"><pre><span class="c1">// let's search for all messages received after Jan 12, 2013 with "MailKit" in the subject...</span>
-<span class="kt">var</span> <span class="n">query</span> <span class="p">=</span> <span class="n">SearchQuery</span><span class="p">.</span><span class="n">DeliveredAfter</span> <span class="p">(</span><span class="n">DateTime</span><span class="p">.</span><span class="n">Parse</span> <span class="p">(</span><span class="s">"2013-01-12"</span><span class="p">))</span>
-    <span class="p">.</span><span class="n">And</span> <span class="p">(</span><span class="n">SearchQuery</span><span class="p">.</span><span class="n">SubjectContains</span> <span class="p">(</span><span class="s">"MailKit"</span><span class="p">)).</span><span class="n">And</span> <span class="p">(</span><span class="n">SearchQuery</span><span class="p">.</span><span class="n">Seen</span><span class="p">);</span>
+<div class="highlight highlight-csharp"><pre><span class="pl-c">// let's search for all messages received after Jan 12, 2013 with "MailKit" in the subject...</span>
+<span class="pl-k">var</span> query = SearchQuery.DeliveredAfter (DateTime.Parse (<span class="pl-s1"><span class="pl-pds">"</span>2013-01-12<span class="pl-pds">"</span></span>))
+    .And (SearchQuery.SubjectContains (<span class="pl-s1"><span class="pl-pds">"</span>MailKit<span class="pl-pds">"</span></span>)).And (SearchQuery.Seen);
 
-<span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">uid</span> <span class="k">in</span> <span class="n">inbox</span><span class="p">.</span><span class="n">Search</span> <span class="p">(</span><span class="n">query</span><span class="p">))</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="n">inbox</span><span class="p">.</span><span class="n">GetMessage</span> <span class="p">(</span><span class="n">uid</span><span class="p">);</span>
-    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">"[match] {0}: {1}"</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">Subject</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="pl-k">foreach</span> (<span class="pl-k">var</span> uid <span class="pl-k">in</span> inbox.Search (query)) {
+    <span class="pl-k">var</span> message = inbox.GetMessage (uid);
+    Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>[match] {0}: {1}<span class="pl-pds">"</span></span>, uid, message.Subject);
+}
 
-<span class="c1">// let's do the same search, but this time sort them in reverse arrival order</span>
-<span class="kt">var</span> <span class="n">orderBy</span> <span class="p">=</span> <span class="k">new</span> <span class="p">[]</span> <span class="p">{</span> <span class="n">OrderBy</span><span class="p">.</span><span class="n">ReverseArrival</span> <span class="p">};</span>
-<span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">uid</span> <span class="k">in</span> <span class="n">inbox</span><span class="p">.</span><span class="n">Search</span> <span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">orderBy</span><span class="p">))</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="n">inbox</span><span class="p">.</span><span class="n">GetMessage</span> <span class="p">(</span><span class="n">uid</span><span class="p">);</span>
-    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">"[match] {0}: {1}"</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">Subject</span><span class="p">);</span>
-<span class="p">}</span>
+<span class="pl-c">// let's do the same search, but this time sort them in reverse arrival order</span>
+<span class="pl-k">var</span> orderBy = <span class="pl-s">new</span> [] { OrderBy.ReverseArrival };
+<span class="pl-k">foreach</span> (<span class="pl-k">var</span> uid <span class="pl-k">in</span> inbox.Search (query, orderBy)) {
+    <span class="pl-k">var</span> message = inbox.GetMessage (uid);
+    Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>[match] {0}: {1}<span class="pl-pds">"</span></span>, uid, message.Subject);
+}
 
-<span class="c1">// you'll notice that the orderBy argument is an array... this is because you</span>
-<span class="c1">// can actually sort the search results based on multiple columns:</span>
-<span class="n">orderBy</span> <span class="p">=</span> <span class="k">new</span> <span class="p">[]</span> <span class="p">{</span> <span class="n">OrderBy</span><span class="p">.</span><span class="n">ReverseArrival</span><span class="p">,</span> <span class="n">OrderBy</span><span class="p">.</span><span class="n">Subject</span> <span class="p">};</span>
-<span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">uid</span> <span class="k">in</span> <span class="n">inbox</span><span class="p">.</span><span class="n">Search</span> <span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">orderBy</span><span class="p">))</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">message</span> <span class="p">=</span> <span class="n">inbox</span><span class="p">.</span><span class="n">GetMessage</span> <span class="p">(</span><span class="n">uid</span><span class="p">);</span>
-    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">"[match] {0}: {1}"</span><span class="p">,</span> <span class="n">uid</span><span class="p">,</span> <span class="n">message</span><span class="p">.</span><span class="n">Subject</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
+<span class="pl-c">// you'll notice that the orderBy argument is an array... this is because you</span>
+<span class="pl-c">// can actually sort the search results based on multiple columns:</span>
+orderBy = <span class="pl-s">new</span> [] { OrderBy.ReverseArrival, OrderBy.Subject };
+<span class="pl-k">foreach</span> (<span class="pl-k">var</span> uid <span class="pl-k">in</span> inbox.Search (query, orderBy)) {
+    <span class="pl-k">var</span> message = inbox.GetMessage (uid);
+    Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>[match] {0}: {1}<span class="pl-pds">"</span></span>, uid, message.Subject);
+}</pre></div>
 
 <p>Of course, instead of downloading the message, you could also fetch the summary information for the matching messages
 or do any of a number of other things with the UIDs that are returned.</p>
 
 <p>How about navigating folders? MailKit can do that, too:</p>
 
-<div class="highlight highlight-csharp"><pre><span class="c1">// Get the first personal namespace and list the toplevel folders under it.</span>
-<span class="kt">var</span> <span class="n">personal</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">GetFolder</span> <span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">PersonalNamespaces</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span>
-<span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">folder</span> <span class="k">in</span> <span class="n">personal</span><span class="p">.</span><span class="n">GetSubfolders</span> <span class="p">(</span><span class="k">false</span><span class="p">))</span>
-    <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span> <span class="p">(</span><span class="s">"[folder] {0}"</span><span class="p">,</span> <span class="n">folder</span><span class="p">.</span><span class="n">Name</span><span class="p">);</span>
-</pre></div>
+<div class="highlight highlight-csharp"><pre><span class="pl-c">// Get the first personal namespace and list the toplevel folders under it.</span>
+<span class="pl-k">var</span> personal = client.GetFolder (client.PersonalNamespaces[<span class="pl-c1">0</span>]);
+<span class="pl-k">foreach</span> (<span class="pl-k">var</span> folder <span class="pl-k">in</span> personal.GetSubfolders (<span class="pl-c1">false</span>))
+    Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>[folder] {0}<span class="pl-pds">"</span></span>, folder.Name);</pre></div>
 
 <p>If the IMAP server supports the SPECIAL-USE or the XLIST (GMail) extension, you can get ahold of
 the pre-defined All, Drafts, Flagged (aka Important), Junk, Sent, Trash, etc folders like this:</p>
 
-<div class="highlight highlight-csharp"><pre><span class="k">if</span> <span class="p">((</span><span class="n">client</span><span class="p">.</span><span class="n">Capabilities</span> <span class="p">&amp;</span> <span class="p">(</span><span class="n">ImapCapabilities</span><span class="p">.</span><span class="n">SpecialUse</span> <span class="p">|</span> <span class="n">ImapCapabilities</span><span class="p">.</span><span class="n">XList</span><span class="p">))</span> <span class="p">!=</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">var</span> <span class="n">drafts</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">GetFolder</span> <span class="p">(</span><span class="n">SpecialFolder</span><span class="p">.</span><span class="n">Drafts</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="c1">// maybe check the user's preferences for the Drafts folder?</span>
-<span class="p">}</span>
-</pre></div>
+<div class="highlight highlight-csharp"><pre><span class="pl-k">if</span> ((client.Capabilities &amp; (ImapCapabilities.SpecialUse | ImapCapabilities.XList)) != <span class="pl-c1">0</span>) {
+    <span class="pl-k">var</span> drafts = client.GetFolder (SpecialFolder.Drafts);
+} <span class="pl-k">else</span> {
+    <span class="pl-c">// maybe check the user's preferences for the Drafts folder?</span>
+}</pre></div>
 
 <p>In cases where the IMAP server does <em>not</em> support the SPECIAL-USE or XLIST extensions, you'll have to
 come up with your own heuristics for getting the Sent, Drafts, Trash, etc folders. For example, you
 might use logic similar to this:</p>
 
-<div class="highlight highlight-csharp"><pre><span class="k">static</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">CommonSentFolderNames</span> <span class="p">=</span> <span class="p">{</span> <span class="s">"Sent Items"</span><span class="p">,</span> <span class="s">"Sent Mail"</span><span class="p">,</span> <span class="cm">/* maybe add some translated names */</span> <span class="p">};</span>
+<div class="highlight highlight-csharp"><pre><span class="pl-s">static</span> <span class="pl-st">string</span>[] CommonSentFolderNames = { <span class="pl-s1"><span class="pl-pds">"</span>Sent Items<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>Sent Mail<span class="pl-pds">"</span></span>, <span class="pl-c">/* maybe add some translated names */</span> };
 
-<span class="k">static</span> <span class="n">IFolder</span> <span class="nf">GetSentFolder</span> <span class="p">(</span><span class="n">ImapClient</span> <span class="n">client</span><span class="p">,</span> <span class="n">CancellationToken</span> <span class="n">cancellationToken</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">var</span> <span class="n">personal</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">GetFolder</span> <span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">PersonalNamespaces</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span>
+<span class="pl-s">static</span> IFolder GetSentFolder (ImapClient client, CancellationToken cancellationToken)
+{
+    <span class="pl-k">var</span> personal = client.GetFolder (client.PersonalNamespaces[<span class="pl-c1">0</span>]);
 
-    <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">folder</span> <span class="k">in</span> <span class="n">personal</span><span class="p">.</span><span class="n">GetSubfolders</span> <span class="p">(</span><span class="k">false</span><span class="p">,</span> <span class="n">cancellationToken</span><span class="p">))</span> <span class="p">{</span>
-        <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">name</span> <span class="k">in</span> <span class="n">CommonSentFolderNames</span><span class="p">)</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">folder</span><span class="p">.</span><span class="n">Name</span> <span class="p">==</span> <span class="n">commonName</span><span class="p">)</span>
-                <span class="k">return</span> <span class="n">folder</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
+    <span class="pl-k">foreach</span> (<span class="pl-k">var</span> folder <span class="pl-k">in</span> personal.GetSubfolders (<span class="pl-c1">false</span>, cancellationToken)) {
+        <span class="pl-k">foreach</span> (<span class="pl-k">var</span> name <span class="pl-k">in</span> CommonSentFolderNames) {
+            <span class="pl-k">if</span> (folder.Name == commonName)
+                <span class="pl-k">return</span> folder;
+        }
+    }
 
-    <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
+    <span class="pl-k">return</span> <span class="pl-c1">null</span>;
+}</pre></div>
 
 <p>Using LINQ, you could simplify this down to something more like this:</p>
 
-<div class="highlight highlight-csharp"><pre><span class="k">static</span> <span class="kt">string</span><span class="p">[]</span> <span class="n">CommonSentFolderNames</span> <span class="p">=</span> <span class="p">{</span> <span class="s">"Sent Items"</span><span class="p">,</span> <span class="s">"Sent Mail"</span><span class="p">,</span> <span class="cm">/* maybe add some translated names */</span> <span class="p">};</span>
+<div class="highlight highlight-csharp"><pre><span class="pl-s">static</span> <span class="pl-st">string</span>[] CommonSentFolderNames = { <span class="pl-s1"><span class="pl-pds">"</span>Sent Items<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>Sent Mail<span class="pl-pds">"</span></span>, <span class="pl-c">/* maybe add some translated names */</span> };
 
-<span class="k">static</span> <span class="n">IFolder</span> <span class="nf">GetSentFolder</span> <span class="p">(</span><span class="n">ImapClient</span> <span class="n">client</span><span class="p">,</span> <span class="n">CancellationToken</span> <span class="n">cancellationToken</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="kt">var</span> <span class="n">personal</span> <span class="p">=</span> <span class="n">client</span><span class="p">.</span><span class="n">GetFolder</span> <span class="p">(</span><span class="n">client</span><span class="p">.</span><span class="n">PersonalNamespaces</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span>
+<span class="pl-s">static</span> IFolder GetSentFolder (ImapClient client, CancellationToken cancellationToken)
+{
+    <span class="pl-k">var</span> personal = client.GetFolder (client.PersonalNamespaces[<span class="pl-c1">0</span>]);
 
-    <span class="k">return</span> <span class="n">personal</span><span class="p">.</span><span class="n">GetSubfolders</span> <span class="p">(</span><span class="k">false</span><span class="p">,</span> <span class="n">cancellationToken</span><span class="p">).</span><span class="n">FirstOrDefault</span> <span class="p">(</span><span class="n">x</span> <span class="p">=&gt;</span> <span class="n">CommonSentFolderNames</span><span class="p">.</span><span class="n">Contains</span> <span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">Name</span><span class="p">));</span>
-<span class="p">}</span>
-</pre></div>
+    <span class="pl-k">return</span> personal.GetSubfolders (<span class="pl-c1">false</span>, cancellationToken).FirstOrDefault (x =&gt; CommonSentFolderNames.Contains (x.Name));
+}</pre></div>
 
 <p>Another option might be to allow the user of your application to configure which folder he or she wants to use as their Sent folder, Drafts folder, Trash folder, etc.</p>
 
 <p>How you handle this is up to you.</p>
 
 <h2>
-<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
 
 <p>The first thing you'll need to do is fork MailKit to your own GitHub repository. Once you do that,</p>
 
 <pre><code>git clone git@github.com/&lt;your-account&gt;/MailKit.git
 </code></pre>
 
-<p>If you use <a href="http://xamarin.com/studio">Xamarin Studio</a> or <a href="http://monodevelop.org">MonoDevelop</a>, all of the
+<p>If you use <a href="http://xamarin.com/studio">Xamarin Studio</a> or <a href="http://monodevelop.com">MonoDevelop</a>, all of the
 solution files are configured with the coding style used by MailKit. If you use Visual Studio or some
 other editor, please try to maintain the existing coding style as best as you can.</p>
 
 <p>Once you've got some changes that you'd like to submit upstream to the official MailKit repository,
 simply send me a Pull Request and I will try to review your changes in a timely manner.</p>
 
+<p>If you'd like to contribute but don't have any particular features in mind to work on, check out the issue
+tracker and look for something that might pique your interest!</p>
+
 <h2>
-<a name="reporting-bugs" class="anchor" href="#reporting-bugs"><span class="octicon octicon-link"></span></a>Reporting Bugs</h2>
+<a id="reporting-bugs" class="anchor" href="#reporting-bugs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reporting Bugs</h2>
 
 <p>Have a bug or a feature request? <a href="https://github.com/jstedfast/MailKit/issues">Please open a new issue</a>.</p>
 
 <p>Before opening a new issue, please search for existing issues to avoid submitting duplicates.</p>
 
 <h2>
-<a name="documentation" class="anchor" href="#documentation"><span class="octicon octicon-link"></span></a>Documentation</h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h2>
 
 <p>API documentation can be found at <a href="http://jstedfast.github.io/MailKit/docs">http://jstedfast.github.io/MailKit/docs</a>.</p>
       </section>
