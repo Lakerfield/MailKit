@@ -1521,7 +1521,7 @@
             Mark the specified message for deletion.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DeleteMessage</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">[System.Obsolete("Use DeleteMessage (int index, CancellationToken cancellationToken = default (CancellationToken)) instead.")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DeleteMessage</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.DeleteMessage(System.String,System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -1747,7 +1747,7 @@
             Asynchronously mark the specified message for deletion.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a> <b>DeleteMessageAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">[System.Obsolete("Use DeleteMessageAsync (int index, CancellationToken cancellationToken = default (CancellationToken)) instead.")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a> <b>DeleteMessageAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.DeleteMessageAsync(System.String,System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -1983,7 +1983,7 @@
             Mark the specified messages for deletion.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DeleteMessages</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;string&gt;</a> uids, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">[System.Obsolete("Use DeleteMessages (IList&lt;int&gt; indexes, CancellationToken cancellationToken = default (CancellationToken)) instead.")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>DeleteMessages</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;string&gt;</a> uids, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.DeleteMessages(System.Collections.Generic.IList{System.String},System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -2330,7 +2330,7 @@
             Asynchronously mark the specified messages for deletion.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a> <b>DeleteMessagesAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;string&gt;</a> uids, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">[System.Obsolete("Use DeleteMessagesAsync (IList&lt;int&gt; indexes, CancellationToken cancellationToken = default (CancellationToken)) instead.")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a> <b>DeleteMessagesAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;string&gt;</a> uids, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.DeleteMessagesAsync(System.Collections.Generic.IList{System.String},System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -2752,7 +2752,7 @@
             Get the message with the specified UID.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public abstract <a href="javascript:alert(&quot;Documentation not found.&quot;)">MimeKit.MimeMessage</a> <b>GetMessage</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">[System.Obsolete("Use GetMessage (int index, CancellationToken cancellationToken = default (CancellationToken)) instead.")]<br />public abstract <a href="javascript:alert(&quot;Documentation not found.&quot;)">MimeKit.MimeMessage</a> <b>GetMessage</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetMessage(System.String,System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -2976,7 +2976,7 @@
             Asynchronously get the message with the specified UID.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;MimeKit.MimeMessage&gt;</a> <b>GetMessageAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">[System.Obsolete("Use GetMessageAsync (int index, CancellationToken cancellationToken = default (CancellationToken)) instead.")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;MimeKit.MimeMessage&gt;</a> <b>GetMessageAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetMessageAsync(System.String,System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -3394,7 +3394,7 @@
             Get the headers for the specified messages.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;MimeKit.HeaderList&gt;</a> <b>GetMessageHeaders</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;string&gt;</a> uids, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">[System.Obsolete("Use GetMessageHeaders (IList&lt;int&gt; indexes, CancellationToken cancellationToken = default (CancellationToken)) instead.")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;MimeKit.HeaderList&gt;</a> <b>GetMessageHeaders</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;string&gt;</a> uids, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetMessageHeaders(System.Collections.Generic.IList{System.String},System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -3620,7 +3620,7 @@
             Get the headers for the specified message.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public abstract <a href="javascript:alert(&quot;Documentation not found.&quot;)">MimeKit.HeaderList</a> <b>GetMessageHeaders</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">[System.Obsolete("Use GetMessageHeaders (int index, CancellationToken cancellationToken = default (CancellationToken)) instead.")]<br />public abstract <a href="javascript:alert(&quot;Documentation not found.&quot;)">MimeKit.HeaderList</a> <b>GetMessageHeaders</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetMessageHeaders(System.String,System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -3963,7 +3963,7 @@
             Asynchronously get the headers for the specified messages.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IList&lt;MimeKit.HeaderList&gt;&gt;</a> <b>GetMessageHeadersAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;string&gt;</a> uids, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">[System.Obsolete("Use GetMessageHeadersAsync (IList&lt;int&gt; indexes, CancellationToken cancellationToken = default (CancellationToken)) instead.")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IList&lt;MimeKit.HeaderList&gt;&gt;</a> <b>GetMessageHeadersAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;string&gt;</a> uids, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetMessageHeadersAsync(System.Collections.Generic.IList{System.String},System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -4189,7 +4189,7 @@
             Asynchronously get the headers for the specified message.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;MimeKit.HeaderList&gt;</a> <b>GetMessageHeadersAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">[System.Obsolete("Use GetMessageHeadersAsync (int index, CancellationToken cancellationToken = default (CancellationToken)) instead.")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;MimeKit.HeaderList&gt;</a> <b>GetMessageHeadersAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetMessageHeadersAsync(System.String,System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -4532,7 +4532,7 @@
             Get the messages with the specified UIDs.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;MimeKit.MimeMessage&gt;</a> <b>GetMessages</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;string&gt;</a> uids, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">[System.Obsolete("Use GetMessages (IList&lt;int&gt; indexes, CancellationToken cancellationToken = default (CancellationToken)) instead.")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;MimeKit.MimeMessage&gt;</a> <b>GetMessages</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;string&gt;</a> uids, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetMessages(System.Collections.Generic.IList{System.String},System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -4877,7 +4877,7 @@
             Asynchronously get the messages with the specified UIDs.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IList&lt;MimeKit.MimeMessage&gt;&gt;</a> <b>GetMessagesAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;string&gt;</a> uids, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">[System.Obsolete("Use GetMessagesAsync (IList&lt;int&gt; indexes, CancellationToken cancellationToken = default (CancellationToken)) instead.")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IList&lt;MimeKit.MimeMessage&gt;&gt;</a> <b>GetMessagesAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;string&gt;</a> uids, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetMessagesAsync(System.Collections.Generic.IList{System.String},System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -5212,7 +5212,7 @@
             Get the size of the specified message, in bytes.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>GetMessageSize</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">[System.Obsolete("Use GetMessageSize (int index, CancellationToken cancellationToken = default (CancellationToken)) instead.")]<br />public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> <b>GetMessageSize</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetMessageSize(System.String,System.Threading.CancellationToken):Parameters">
                 <dl>
@@ -5428,7 +5428,7 @@
             Asynchronously get the size of the specified message, in bytes.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;int&gt;</a> <b>GetMessageSizeAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">[System.Obsolete("Use GetMessageSizeAsync (int index, CancellationToken cancellationToken = default (CancellationToken)) instead.")]<br />public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;int&gt;</a> <b>GetMessageSizeAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> uid, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetMessageSizeAsync(System.String,System.Threading.CancellationToken):Parameters">
                 <dl>
