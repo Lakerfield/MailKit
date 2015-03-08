@@ -246,6 +246,21 @@
             Initializes a new instance of the <a href="../MailKit/UniqueId.html">MailKit.UniqueId</a> struct.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <div>
+                        <b>
+                          <a href="#C:MailKit.UniqueId(System.UInt32,System.UInt32)">UniqueId</a>
+                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>)</div>
+                    </td>
+                    <td>
+            Initializes a new instance of the <a href="../MailKit/UniqueId.html">MailKit.UniqueId</a> struct.
+            </td>
+                  </tr>
                 </table>
               </div>
             </div>
@@ -299,6 +314,22 @@
                         <a href="../MailKit/UniqueId.html">UniqueId</a>
                       </i>. 
             The minimum <a href="../MailKit/UniqueId.html">MailKit.UniqueId</a> value.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>readonly </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#F:MailKit.UniqueId.Validity">Validity</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a>
+                      </i>. 
+            The validity, if non-zero.
             </td>
                   </tr>
                 </table>
@@ -474,6 +505,35 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MailKit.UniqueId(System.UInt32):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="C:MailKit.UniqueId(System.UInt32,System.UInt32)">UniqueId Constructor</h3>
+            <blockquote id="C:MailKit.UniqueId(System.UInt32,System.UInt32):member">
+              <div class="msummary">
+            Initializes a new instance of the <a href="../MailKit/UniqueId.html">MailKit.UniqueId</a> struct.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public  <b>UniqueId</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> validity, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> id)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="C:MailKit.UniqueId(System.UInt32,System.UInt32):Parameters">
+                <dl>
+                  <dt>
+                    <i>validity</i>
+                  </dt>
+                  <dd>The uid validity.</dd>
+                  <dt>
+                    <i>id</i>
+                  </dt>
+                  <dd>The unique identifier.</dd>
+                </dl>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MailKit.UniqueId(System.UInt32,System.UInt32):Remarks">
+            Creates a new <a href="../MailKit/UniqueId.html">MailKit.UniqueId</a> with the specified validity and value.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MailKit.UniqueId(System.UInt32,System.UInt32):Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -839,6 +899,22 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.UniqueId.ToString():Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="F:MailKit.UniqueId.Validity">Validity Field</h3>
+            <blockquote id="F:MailKit.UniqueId.Validity:member">
+              <div class="msummary">
+            The validity, if non-zero.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public readonly <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt32">uint</a> <b>Validity</b> </div>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="F:MailKit.UniqueId.Validity:Remarks">
+            The UidValidity of the containing folder.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="F:MailKit.UniqueId.Validity:Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>

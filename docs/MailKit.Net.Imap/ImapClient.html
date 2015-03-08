@@ -948,6 +948,30 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MailKit.Net.Imap.ImapClient.Identify(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken)">Identify</a>
+                      </b>(<a href="../MailKit.Net.Imap/ImapImplementation.html">ImapImplementation</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="../MailKit.Net.Imap/ImapImplementation.html">ImapImplementation</a></nobr><blockquote>
+            Identify the client implementation to the server and obtain the server implementation details.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.Net.Imap.ImapClient.IdentifyAsync(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken)">IdentifyAsync</a>
+                      </b>(<a href="../MailKit.Net.Imap/ImapImplementation.html">ImapImplementation</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;ImapImplementation&gt;</a></nobr><blockquote>
+            Asynchronously identify the client implementation to the server and obtain the server implementation details.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="#M:MailKit.Net.Imap.ImapClient.Idle(System.Threading.CancellationToken,System.Threading.CancellationToken)">Idle</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
             Toggle the <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> into the IDLE state.
@@ -1765,6 +1789,14 @@
             An IMAP protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapCommandException.html">MailKit.Net.Imap.ImapCommandException</a>
+                    </td>
+                    <td>
+            The server replied to the ENABLE command with a NO or BAD response.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -1854,6 +1886,14 @@
             An IMAP protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapCommandException.html">MailKit.Net.Imap.ImapCommandException</a>
+                    </td>
+                    <td>
+            The server replied to the ENABLE command with a NO or BAD response.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -1936,6 +1976,14 @@
                     </td>
                     <td>
             An IMAP protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapCommandException.html">MailKit.Net.Imap.ImapCommandException</a>
+                    </td>
+                    <td>
+            The server replied to the ENABLE command with a NO or BAD response.
             </td>
                   </tr>
                 </table>
@@ -2163,6 +2211,224 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.GetFolder(System.String,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.Net.Imap.ImapClient.Identify(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken)">Identify Method</h3>
+            <blockquote id="M:MailKit.Net.Imap.ImapClient.Identify(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Identify the client implementation to the server and obtain the server implementation details.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MailKit.Net.Imap/ImapImplementation.html">ImapImplementation</a> <b>Identify</b> (<a href="../MailKit.Net.Imap/ImapImplementation.html">ImapImplementation</a> clientImplementation, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.Identify(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>clientImplementation</i>
+                  </dt>
+                  <dd>The client implementation.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.Identify(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken):Returns">The implementation details of the server.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.Identify(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is processing another command.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+            The IMAP server does not support the ID extension.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapProtocolException.html">MailKit.Net.Imap.ImapProtocolException</a>
+                    </td>
+                    <td>
+            An IMAP protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapCommandException.html">MailKit.Net.Imap.ImapCommandException</a>
+                    </td>
+                    <td>
+            The server replied to the ID command with a NO or BAD response.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.Identify(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken):Remarks">
+                <p>Passes along the client implementation details to the server while also obtaining implementation
+            details from the server.</p>
+                <p>If the <i>clientImplementation</i> is null or no properties have been set, no
+            identifying information will be sent to the server.</p>
+                <p>Security Implications</p>
+                <p>This command has the danger of violating the privacy of users if misused. Clients should
+            notify users that they send the ID command.</p>
+                <p>It is highly desirable that implementations provide a method of disabling ID support, perhaps by
+            not calling this method at all, or by passing <tt>null</tt> as the <i>clientImplementation</i>
+            argument.</p>
+                <p>Implementors must exercise extreme care in adding properties to the <i>clientImplementation</i>.
+            Some properties, such as a processor ID number, Ethernet address, or other unique (or mostly unique) identifier
+            would allow tracking of users in ways that violate user privacy expectations and may also make it easier for
+            attackers to exploit security holes in the client.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.Identify(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.Net.Imap.ImapClient.IdentifyAsync(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken)">IdentifyAsync Method</h3>
+            <blockquote id="M:MailKit.Net.Imap.ImapClient.IdentifyAsync(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Asynchronously identify the client implementation to the server and obtain the server implementation details.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;ImapImplementation&gt;</a> <b>IdentifyAsync</b> (<a href="../MailKit.Net.Imap/ImapImplementation.html">ImapImplementation</a> clientImplementation, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.IdentifyAsync(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>clientImplementation</i>
+                  </dt>
+                  <dd>The client implementation.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.IdentifyAsync(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken):Returns">The implementation details of the server.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.IdentifyAsync(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is processing another command.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+            The IMAP server does not support the ID extension.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapProtocolException.html">MailKit.Net.Imap.ImapProtocolException</a>
+                    </td>
+                    <td>
+            An IMAP protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapCommandException.html">MailKit.Net.Imap.ImapCommandException</a>
+                    </td>
+                    <td>
+            The server replied to the ID command with a NO or BAD response.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.IdentifyAsync(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken):Remarks">
+                <p>Passes along the client implementation details to the server while also obtaining implementation
+            details from the server.</p>
+                <p>If the <i>clientImplementation</i> is null or no properties have been set, no
+            identifying information will be sent to the server.</p>
+                <p>Security Implications</p>
+                <p>This command has the danger of violating the privacy of users if misused. Clients should
+            notify users that they send the ID command.</p>
+                <p>It is highly desirable that implementations provide a method of disabling ID support, perhaps by
+            not calling this method at all, or by passing <tt>null</tt> as the <i>clientImplementation</i>
+            argument.</p>
+                <p>Implementors must exercise extreme care in adding properties to the <i>clientImplementation</i>.
+            Some properties, such as a processor ID number, Ethernet address, or other unique (or mostly unique) identifier
+            would allow tracking of users in ways that violate user privacy expectations and may also make it easier for
+            attackers to exploit security holes in the client.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.IdentifyAsync(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
