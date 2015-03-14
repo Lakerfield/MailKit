@@ -257,6 +257,20 @@
               <div class="SubsectionBox">
                 <table class="TypeMembers">
                   <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MailKit.MessageSummary.Attachments">Attachments</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;BodyPartBasic&gt;</a>
+                      </i>. 
+            Gets the attachments.
+            </td>
+                  </tr>
+                  <tr valign="top">
                     <td>
                       <div>
                       </div>
@@ -271,6 +285,20 @@
                         <a href="../MailKit/BodyPart.html">BodyPart</a>
                       </i>. 
             Gets the body structure of the message, if available.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MailKit.MessageSummary.BodyParts">BodyParts</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;BodyPartBasic&gt;</a>
+                      </i>. 
+            Gets the body parts of the message.
             </td>
                   </tr>
                   <tr valign="top">
@@ -379,6 +407,20 @@
                     <td>[read-only]<div></div></td>
                     <td>
                       <b>
+                        <a href="#P:MailKit.MessageSummary.HtmlBody">HtmlBody</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MailKit/BodyPartText.html">BodyPartText</a>
+                      </i>. 
+            Gets the html body part of the message if it exists.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
                         <a href="#P:MailKit.MessageSummary.Index">Index</a>
                       </b>
                     </td>
@@ -455,6 +497,20 @@
                         <a href="javascript:alert(&quot;Documentation not found.&quot;)">MimeKit.MessageIdList</a>
                       </i>. 
             Gets the message-ids that the message references, if available.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MailKit.MessageSummary.TextBody">TextBody</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MailKit/BodyPartText.html">BodyPartText</a>
+                      </i>. 
+            Gets the text body part of the message if it exists.
             </td>
                   </tr>
                   <tr valign="top">
@@ -744,6 +800,29 @@
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="P:MailKit.MessageSummary.Attachments">Attachments Property</h3>
+            <blockquote id="P:MailKit.MessageSummary.Attachments:member">
+              <div class="msummary">
+            Gets the attachments.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;BodyPartBasic&gt;</a> <b>Attachments</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.MessageSummary.Attachments:Value">The attachments.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MailKit.MessageSummary.Attachments:Remarks">
+                <p>Traverses over the <a href="../MailKit/MessageSummary.html#P:MailKit.MessageSummary.Body">MessageSummary.Body</a>, enumerating all of the
+            <a href="../MailKit/BodyPartBasic.html">MailKit.BodyPartBasic</a> objects that have a Content-Disposition
+            header set to <tt>"attachment"</tt>.</p>
+                <p>In order for this to work properly, it is necessary to include
+            <a href="../MailKit/MessageSummaryItems.html#F:MailKit.MessageSummaryItems.BodyStructure">MessageSummaryItems.BodyStructure</a> when fetching
+            summary information from a <a href="../MailKit/IMailFolder.html">MailKit.IMailFolder</a>.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MailKit.MessageSummary.Attachments:Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="P:MailKit.MessageSummary.Body">Body Property</h3>
             <blockquote id="P:MailKit.MessageSummary.Body:member">
               <div class="msummary">
@@ -759,11 +838,35 @@
             <a href="../MailKit/BodyPartMessage.html">MailKit.BodyPartMessage</a>, <a href="../MailKit/BodyPartBasic.html">MailKit.BodyPartBasic</a>,
             or <a href="../MailKit/BodyPartMultipart.html">MailKit.BodyPartMultipart</a>.</p>
                 <p>This property will only be set if the
-            <a href="../MailKit/MessageSummaryItems.html#F:MailKit.MessageSummaryItems.Body">MessageSummaryItems.Body</a> flag is passed to
-            <a href="../MailKit/IMailFolder.html#M:MailKit.IMailFolder.Fetch(System.Collections.Generic.IList{MailKit.UniqueId},MailKit.MessageSummaryItems,System.Threading.CancellationToken)">IMailFolder.Fetch(IList&lt;MailKit.UniqueId&gt;,MailKit.MessageSummaryItems,System.Threading.CancellationToken)</a>.</p>
+            <a href="../MailKit/MessageSummaryItems.html#F:MailKit.MessageSummaryItems.BodyStructure">MessageSummaryItems.BodyStructure</a> or
+            <a href="../MailKit/MessageSummaryItems.html#F:MailKit.MessageSummaryItems.Body">MessageSummaryItems.Body</a> flag is used
+            when fetching summary information from a <a href="../MailKit/IMailFolder.html">MailKit.IMailFolder</a>.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.MessageSummary.Body:Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MailKit.MessageSummary.BodyParts">BodyParts Property</h3>
+            <blockquote id="P:MailKit.MessageSummary.BodyParts:member">
+              <div class="msummary">
+            Gets the body parts of the message.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;BodyPartBasic&gt;</a> <b>BodyParts</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.MessageSummary.BodyParts:Value">The body parts.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MailKit.MessageSummary.BodyParts:Remarks">
+                <p>Traverses over the <a href="../MailKit/MessageSummary.html#P:MailKit.MessageSummary.Body">MessageSummary.Body</a>, enumerating all of the
+            <a href="../MailKit/BodyPartBasic.html">MailKit.BodyPartBasic</a> objects.</p>
+                <p>In order for this to work, it is necessary to include
+            <a href="../MailKit/MessageSummaryItems.html#F:MailKit.MessageSummaryItems.BodyStructure">MessageSummaryItems.BodyStructure</a> or
+            <a href="../MailKit/MessageSummaryItems.html#F:MailKit.MessageSummaryItems.Body">MessageSummaryItems.Body</a> when fetching
+            summary information from a <a href="../MailKit/IMailFolder.html">MailKit.IMailFolder</a>.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MailKit.MessageSummary.BodyParts:Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -894,6 +997,27 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.MessageSummary.Headers:Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MailKit.MessageSummary.HtmlBody">HtmlBody Property</h3>
+            <blockquote id="P:MailKit.MessageSummary.HtmlBody:member">
+              <div class="msummary">
+            Gets the html body part of the message if it exists.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MailKit/BodyPartText.html">BodyPartText</a> <b>HtmlBody</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.MessageSummary.HtmlBody:Value">The html body if it exists; otherwise, <tt>null</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MailKit.MessageSummary.HtmlBody:Remarks">
+                <p>Gets the text/html body part of the message.</p>
+                <p>In order for this to work properly, it is necessary to include
+            <a href="../MailKit/MessageSummaryItems.html#F:MailKit.MessageSummaryItems.BodyStructure">MessageSummaryItems.BodyStructure</a> when fetching
+            summary information from a <a href="../MailKit/IMailFolder.html">MailKit.IMailFolder</a>.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MailKit.MessageSummary.HtmlBody:Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -1268,6 +1392,27 @@
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.MessageSummary.References:Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MailKit.MessageSummary.TextBody">TextBody Property</h3>
+            <blockquote id="P:MailKit.MessageSummary.TextBody:member">
+              <div class="msummary">
+            Gets the text body part of the message if it exists.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MailKit/BodyPartText.html">BodyPartText</a> <b>TextBody</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.MessageSummary.TextBody:Value">The text body if it exists; otherwise, <tt>null</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MailKit.MessageSummary.TextBody:Remarks">
+                <p>Gets the text/plain body part of the message.</p>
+                <p>In order for this to work properly, it is necessary to include
+            <a href="../MailKit/MessageSummaryItems.html#F:MailKit.MessageSummaryItems.BodyStructure">MessageSummaryItems.BodyStructure</a> when fetching
+            summary information from a <a href="../MailKit/IMailFolder.html">MailKit.IMailFolder</a>.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MailKit.MessageSummary.TextBody:Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>

@@ -338,6 +338,34 @@
                     <td>[read-only]<div>override </div></td>
                     <td>
                       <b>
+                        <a href="#P:MailKit.Net.Smtp.SmtpClient.IsAuthenticated">IsAuthenticated</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Get whether or not the client is currently authenticated with the SMTP server.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div>abstract </div></td>
+                    <td>
+                      <b>
+                        <a href="../MailKit/MailService.html#P:MailKit.MailService.IsAuthenticated">IsAuthenticated</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Get whether or not the client is currently authenticated with the mail server.
+             (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div>override </div></td>
+                    <td>
+                      <b>
                         <a href="#P:MailKit.Net.Smtp.SmtpClient.IsConnected">IsConnected</a>
                       </b>
                     </td>
@@ -404,7 +432,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>
                       </i>. 
-            Gets an object that can be used to synchronize access to the folder.
+            Gets an object that can be used to synchronize access to the SMTP server.
             </td>
                   </tr>
                   <tr valign="top">
@@ -418,7 +446,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>
                       </i>. 
-            Gets an object that can be used to synchronize access to the folder.
+            Gets an object that can be used to synchronize access to the service.
              (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</td>
                   </tr>
                   <tr valign="top">
@@ -1649,6 +1677,28 @@
                 <b>Namespace: </b>MailKit.Net.Smtp<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="P:MailKit.Net.Smtp.SmtpClient.IsAuthenticated">IsAuthenticated Property</h3>
+            <blockquote id="P:MailKit.Net.Smtp.SmtpClient.IsAuthenticated:member">
+              <div class="msummary">
+            Get whether or not the client is currently authenticated with the SMTP server.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsAuthenticated</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.Net.Smtp.SmtpClient.IsAuthenticated:Value">
+                <tt>true</tt> if the client is connected; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MailKit.Net.Smtp.SmtpClient.IsAuthenticated:Remarks">
+                <p>Gets whether or not the client is currently authenticated with the SMTP server.</p>
+                <p>To authenticate with the mail server, use
+            <a href="javascript:alert(&quot;Documentation not found.&quot;)">.(string,  string,  System.Threading.CancellationToken)</a>
+            or <a href="javascript:alert(&quot;Documentation not found.&quot;)">.(ICredential,  System.Threading.CancellationToken)</a>.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MailKit.Net.Smtp.SmtpClient.IsAuthenticated:Version Information">
+                <b>Namespace: </b>MailKit.Net.Smtp<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="P:MailKit.Net.Smtp.SmtpClient.IsConnected">IsConnected Property</h3>
             <blockquote id="P:MailKit.Net.Smtp.SmtpClient.IsConnected:member">
               <div class="msummary">
@@ -2079,16 +2129,18 @@
             <h3 id="P:MailKit.Net.Smtp.SmtpClient.SyncRoot">SyncRoot Property</h3>
             <blockquote id="P:MailKit.Net.Smtp.SmtpClient.SyncRoot:member">
               <div class="msummary">
-            Gets an object that can be used to synchronize access to the folder.
+            Gets an object that can be used to synchronize access to the SMTP server.
             </div>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> <b>SyncRoot</b>  { get; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MailKit.Net.Smtp.SmtpClient.SyncRoot:Value">The sync root.</blockquote>
+              <blockquote class="SubsectionBox" id="P:MailKit.Net.Smtp.SmtpClient.SyncRoot:Value">The lock object.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Smtp.SmtpClient.SyncRoot:Remarks">
-            Gets an object that can be used to synchronize access to the folder.
-            </div>
+                <p>Gets an object that can be used to synchronize access to the SMTP server.</p>
+                <p>When using the non-Async methods from multiple threads, it is important to lock the
+            <a href="../MailKit.Net.Smtp/SmtpClient.html#P:MailKit.Net.Smtp.SmtpClient.SyncRoot">SmtpClient.SyncRoot</a> object for thread safety when using the synchronous methods.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.Net.Smtp.SmtpClient.SyncRoot:Version Information">
                 <b>Namespace: </b>MailKit.Net.Smtp<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

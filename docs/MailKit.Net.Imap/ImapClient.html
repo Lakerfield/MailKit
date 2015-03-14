@@ -359,8 +359,36 @@
                       <i>
                         <a href="../MailKit/IMailFolder.html">MailKit.IMailFolder</a>
                       </i>. 
-            Gets the Inbox folder.
+            Get the Inbox folder.
              (<i>Inherited from <a href="../MailKit/MailStore.html">MailKit.MailStore</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div>override </div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MailKit.Net.Imap.ImapClient.IsAuthenticated">IsAuthenticated</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Get whether or not the client is currently authenticated with the IMAP server.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div>abstract </div></td>
+                    <td>
+                      <b>
+                        <a href="../MailKit/MailService.html#P:MailKit.MailService.IsAuthenticated">IsAuthenticated</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Get whether or not the client is currently authenticated with the mail server.
+             (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</td>
                   </tr>
                   <tr valign="top">
                     <td>[read-only]<div>override </div></td>
@@ -389,6 +417,20 @@
                       </i>. 
             Gets whether or not the client is currently connected to an mail server.
              (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MailKit.Net.Imap.ImapClient.IsIdle">IsIdle</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Get whether or not the client is currently in the IDLE state.
+            </td>
                   </tr>
                   <tr valign="top">
                     <td>[read-only]<div>override </div></td>
@@ -513,7 +555,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>
                       </i>. 
-            Gets the lock object used by the default Async methods.
+            Gets an object that can be used to synchronize access to the IMAP server.
             </td>
                   </tr>
                   <tr valign="top">
@@ -527,7 +569,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>
                       </i>. 
-            Gets an object that can be used to synchronize access to the folder.
+            Gets an object that can be used to synchronize access to the service.
              (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</td>
                   </tr>
                   <tr valign="top">
@@ -2681,12 +2723,62 @@
               <div class="Signature">public override <a href="../MailKit/IMailFolder.html">MailKit.IMailFolder</a> <b>Inbox</b>  { get; }</div>
               <h4 class="Subsection">Value</h4>
               <blockquote class="SubsectionBox" id="P:MailKit.Net.Imap.ImapClient.Inbox:Value">The Inbox folder.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.Net.Imap.ImapClient.Inbox:Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+                      <p>The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.</p>
+                      <p>-or-</p>
+                      <p>The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.</p>
+                    </td>
+                  </tr>
+                </table>
+              </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.Inbox:Remarks">
-            The Inbox folder is the default folder and always exists.
-            </div>
+                <p>The Inbox folder is the default folder and always exists on the server.</p>
+                <p>Note: This property will only be available after the client has been authenticated.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.Inbox:Version Information">
+                <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MailKit.Net.Imap.ImapClient.IsAuthenticated">IsAuthenticated Property</h3>
+            <blockquote id="P:MailKit.Net.Imap.ImapClient.IsAuthenticated:member">
+              <div class="msummary">
+            Get whether or not the client is currently authenticated with the IMAP server.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsAuthenticated</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.Net.Imap.ImapClient.IsAuthenticated:Value">
+                <tt>true</tt> if the client is connected; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.IsAuthenticated:Remarks">
+                <p>Gets whether or not the client is currently authenticated with the IMAP server.</p>
+                <p>To authenticate with the mail server, use
+            <a href="javascript:alert(&quot;Documentation not found.&quot;)">.(string, string, System.Threading.CancellationToken)</a>
+            or <a href="javascript:alert(&quot;Documentation not found.&quot;)">.(System.Net.ICredential, System.Threading.CancellationToken)</a>.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.IsAuthenticated:Version Information">
                 <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -2707,6 +2799,26 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.IsConnected:Version Information">
+                <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MailKit.Net.Imap.ImapClient.IsIdle">IsIdle Property</h3>
+            <blockquote id="P:MailKit.Net.Imap.ImapClient.IsIdle:member">
+              <div class="msummary">
+            Get whether or not the client is currently in the IDLE state.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsIdle</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.Net.Imap.ImapClient.IsIdle:Value">
+                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.IsIdle:Remarks">
+            Gets whether or not the client is currently in the IDLE state.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.IsIdle:Version Information">
                 <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -2886,7 +2998,7 @@
             <h3 id="P:MailKit.Net.Imap.ImapClient.SyncRoot">SyncRoot Property</h3>
             <blockquote id="P:MailKit.Net.Imap.ImapClient.SyncRoot:member">
               <div class="msummary">
-            Gets the lock object used by the default Async methods.
+            Gets an object that can be used to synchronize access to the IMAP server.
             </div>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> <b>SyncRoot</b>  { get; }</div>
@@ -2894,8 +3006,10 @@
               <blockquote class="SubsectionBox" id="P:MailKit.Net.Imap.ImapClient.SyncRoot:Value">The lock object.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.SyncRoot:Remarks">
-            Gets the lock object used by the default Async methods.
-            </div>
+                <p>Gets an object that can be used to synchronize access to the IMAP server.</p>
+                <p>When using the non-Async methods from multiple threads, it is important to lock the
+            <a href="../MailKit.Net.Imap/ImapClient.html#P:MailKit.Net.Imap.ImapClient.SyncRoot">ImapClient.SyncRoot</a> object for thread safety when using the synchronous methods.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.SyncRoot:Version Information">
                 <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

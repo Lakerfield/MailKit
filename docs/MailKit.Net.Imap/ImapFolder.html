@@ -542,7 +542,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>
                       </i>. 
-            Gets an object that can be used to synchronize access to the folder.
+            Gets an object that can be used to synchronize access to the IMAP server.
             </td>
                   </tr>
                   <tr valign="top">
@@ -14863,16 +14863,18 @@
             <h3 id="P:MailKit.Net.Imap.ImapFolder.SyncRoot">SyncRoot Property</h3>
             <blockquote id="P:MailKit.Net.Imap.ImapFolder.SyncRoot:member">
               <div class="msummary">
-            Gets an object that can be used to synchronize access to the folder.
+            Gets an object that can be used to synchronize access to the IMAP server.
             </div>
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> <b>SyncRoot</b>  { get; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MailKit.Net.Imap.ImapFolder.SyncRoot:Value">The sync root.</blockquote>
+              <blockquote class="SubsectionBox" id="P:MailKit.Net.Imap.ImapFolder.SyncRoot:Value">The lock object.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapFolder.SyncRoot:Remarks">
-            Gets an object that can be used to synchronize access to the folder.
-            </div>
+                <p>Gets an object that can be used to synchronize access to the IMAP server.</p>
+                <p>When using the non-Async methods from multiple threads, it is important to lock the
+            <a href="../MailKit.Net.Imap/ImapFolder.html#P:MailKit.Net.Imap.ImapFolder.SyncRoot">ImapFolder.SyncRoot</a> object for thread safety when using the synchronous methods.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapFolder.SyncRoot:Version Information">
                 <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

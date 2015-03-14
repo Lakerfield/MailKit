@@ -32774,8 +32774,10 @@
               <blockquote class="SubsectionBox" id="P:MailKit.MailFolder.SyncRoot:Value">The sync root.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.MailFolder.SyncRoot:Remarks">
-            Gets an object that can be used to synchronize access to the folder.
-            </div>
+                <p>Gets an object that can be used to synchronize access to the folder.</p>
+                <p>When using the non-Async methods from multiple threads, it is important to lock the
+            <a href="../MailKit/MailFolder.html#P:MailKit.MailFolder.SyncRoot">MailFolder.SyncRoot</a> object for thread safety when using the synchronous methods.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.MailFolder.SyncRoot:Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

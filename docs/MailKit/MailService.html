@@ -288,6 +288,20 @@
                     <td>[read-only]<div>abstract </div></td>
                     <td>
                       <b>
+                        <a href="#P:MailKit.MailService.IsAuthenticated">IsAuthenticated</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Get whether or not the client is currently authenticated with the mail server.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div>abstract </div></td>
+                    <td>
+                      <b>
                         <a href="#P:MailKit.MailService.IsConnected">IsConnected</a>
                       </b>
                     </td>
@@ -309,7 +323,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>
                       </i>. 
-            Gets an object that can be used to synchronize access to the folder.
+            Gets an object that can be used to synchronize access to the service.
             </td>
                   </tr>
                   <tr valign="top">
@@ -1762,6 +1776,29 @@
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="P:MailKit.MailService.IsAuthenticated">IsAuthenticated Property</h3>
+            <blockquote id="P:MailKit.MailService.IsAuthenticated:member">
+              <div class="msummary">
+            Get whether or not the client is currently authenticated with the mail server.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsAuthenticated</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.MailService.IsAuthenticated:Value">
+                <tt>true</tt> if the client is connected; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MailKit.MailService.IsAuthenticated:Remarks">
+                <p>Gets whether or not the client is currently authenticated with the mail server.</p>
+                <p>To authenticate with the mail server, use
+            <a href="../MailKit/MailService.html#M:MailKit.MailService.Authenticate(System.String,System.String,System.Threading.CancellationToken)">MailService.Authenticate(string, string, System.Threading.CancellationToken)</a>,
+            <a href="javascript:alert(&quot;Documentation not found.&quot;)">.(ICredential,  System.Threading.CancellationToken)</a>,
+            or any of the Async alternatives.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MailKit.MailService.IsAuthenticated:Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="P:MailKit.MailService.IsConnected">IsConnected Property</h3>
             <blockquote id="P:MailKit.MailService.IsConnected:member">
               <div class="msummary">
@@ -2028,7 +2065,7 @@
             <h3 id="P:MailKit.MailService.SyncRoot">SyncRoot Property</h3>
             <blockquote id="P:MailKit.MailService.SyncRoot:member">
               <div class="msummary">
-            Gets an object that can be used to synchronize access to the folder.
+            Gets an object that can be used to synchronize access to the service.
             </div>
               <h2>Syntax</h2>
               <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a> <b>SyncRoot</b>  { get; }</div>
@@ -2036,8 +2073,10 @@
               <blockquote class="SubsectionBox" id="P:MailKit.MailService.SyncRoot:Value">The sync root.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.MailService.SyncRoot:Remarks">
-            Gets an object that can be used to synchronize access to the folder.
-            </div>
+                <p>Gets an object that can be used to synchronize access to the service.</p>
+                <p>When using the non-Async methods from multiple threads, it is important to lock the
+            <a href="../MailKit/MailService.html#P:MailKit.MailService.SyncRoot">MailService.SyncRoot</a> object for thread safety when using the synchronous methods.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.MailService.SyncRoot:Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

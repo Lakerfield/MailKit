@@ -403,6 +403,34 @@
              (<i>Inherited from <a href="../MailKit/BodyPartBasic.html">BodyPartBasic</a>.</i>)</td>
                   </tr>
                   <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MailKit.BodyPartText.IsHtml">IsHtml</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Gets whether or not this text part contains HTML.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MailKit.BodyPartText.IsPlain">IsPlain</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Gets whether or not this text part contains plain text.
+            </td>
+                  </tr>
+                  <tr valign="top">
                     <td>
                       <div>
                       </div>
@@ -557,6 +585,44 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.BodyPartText.Encode(System.Text.StringBuilder):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MailKit.BodyPartText.IsHtml">IsHtml Property</h3>
+            <blockquote id="P:MailKit.BodyPartText.IsHtml:member">
+              <div class="msummary">
+            Gets whether or not this text part contains HTML.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsHtml</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.BodyPartText.IsHtml:Value">
+                <tt>true</tt> if the text is html; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MailKit.BodyPartText.IsHtml:Remarks">
+            Checks whether or not the text part's Content-Type is text/html.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MailKit.BodyPartText.IsHtml:Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MailKit.BodyPartText.IsPlain">IsPlain Property</h3>
+            <blockquote id="P:MailKit.BodyPartText.IsPlain:member">
+              <div class="msummary">
+            Gets whether or not this text part contains plain text.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsPlain</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.BodyPartText.IsPlain:Value">
+                <tt>true</tt> if the text is html; otherwise, <tt>false</tt>.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MailKit.BodyPartText.IsPlain:Remarks">
+            Checks whether or not the text part's Content-Type is text/plain.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MailKit.BodyPartText.IsPlain:Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>

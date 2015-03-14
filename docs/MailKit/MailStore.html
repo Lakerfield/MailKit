@@ -295,8 +295,22 @@
                       <i>
                         <a href="../MailKit/IMailFolder.html">IMailFolder</a>
                       </i>. 
-            Gets the Inbox folder.
+            Get the Inbox folder.
             </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div>abstract </div></td>
+                    <td>
+                      <b>
+                        <a href="../MailKit/MailService.html#P:MailKit.MailService.IsAuthenticated">IsAuthenticated</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>
+                      </i>. 
+            Get whether or not the client is currently authenticated with the mail server.
+             (<i>Inherited from <a href="../MailKit/MailService.html">MailService</a>.</i>)</td>
                   </tr>
                   <tr valign="top">
                     <td>[read-only]<div>abstract </div></td>
@@ -379,7 +393,7 @@
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Object">object</a>
                       </i>. 
-            Gets an object that can be used to synchronize access to the folder.
+            Gets an object that can be used to synchronize access to the service.
              (<i>Inherited from <a href="../MailKit/MailService.html">MailService</a>.</i>)</td>
                   </tr>
                   <tr valign="top">
@@ -1311,7 +1325,7 @@
             <h3 id="P:MailKit.MailStore.Inbox">Inbox Property</h3>
             <blockquote id="P:MailKit.MailStore.Inbox:member">
               <div class="msummary">
-            Gets the Inbox folder.
+            Get the Inbox folder.
             </div>
               <h2>Syntax</h2>
               <div class="Signature">public abstract <a href="../MailKit/IMailFolder.html">IMailFolder</a> <b>Inbox</b>  { get; }</div>
@@ -1319,8 +1333,9 @@
               <blockquote class="SubsectionBox" id="P:MailKit.MailStore.Inbox:Value">The Inbox folder.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.MailStore.Inbox:Remarks">
-            The Inbox folder is the default folder and always exists.
-            </div>
+                <p>The Inbox folder is the default folder and always exists on the mail store.</p>
+                <p>Note: This property will only be available after the client has been authenticated.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.MailStore.Inbox:Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
