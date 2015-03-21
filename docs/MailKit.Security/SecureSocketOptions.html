@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>MailKit: MailKit.Security</title>
+    <title>MailKit.Security.SecureSocketOptions</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="MailKit: A cross-platform .NET mail-client library optimized for mobile." />
     <link rel="stylesheet" type="text/css" media="screen" href="/MailKit/stylesheets/stylesheet.css" />
@@ -204,128 +204,81 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <div class="CollectionTitle">
-          <a href="../index.html">MailKit</a>
-        </div>
-        <h1 class="PageTitle">MailKit.Security Namespace</h1>
-        <p class="Summary">
-        </p>
-        <div>
-        </div>
-        <div class="Remarks">
-          <h2 class="Section"> Namespace</h2>
-          <p>SASL mechanisms used by the various clients to authenticate with a remote server.</p>
-          <table class="TypesListing" style="margin-top: 1em">
-            <tr>
-              <th>Type</th>
-              <th>Description</th>
-            </tr>
-            <tr valign="top">
-              <td>
-                <a href="./AuthenticationException.html">AuthenticationException</a>
-              </td>
-              <td>
-            The exception that is thrown when there is an authentication error.
-            </td>
-            </tr>
-            <tr valign="top">
-              <td>
-                <a href="./SaslErrorCode.html">SaslErrorCode</a>
-              </td>
-              <td>
-            An enumeration of the possible error codes that may be reported by a <a href="../MailKit.Security/SaslException.html">MailKit.Security.SaslException</a>.
-            </td>
-            </tr>
-            <tr valign="top">
-              <td>
-                <a href="./SaslException.html">SaslException</a>
-              </td>
-              <td>
-            A SASL authentication exception.
-            </td>
-            </tr>
-            <tr valign="top">
-              <td>
-                <a href="./SaslMechanism.html">SaslMechanism</a>
-              </td>
-              <td>
-            A SASL authentication mechanism.
-            </td>
-            </tr>
-            <tr valign="top">
-              <td>
-                <a href="./SaslMechanismCramMd5.html">SaslMechanismCramMd5</a>
-              </td>
-              <td>
-            The CRAM-MD5 SASL mechanism.
-            </td>
-            </tr>
-            <tr valign="top">
-              <td>
-                <a href="./SaslMechanismDigestMd5.html">SaslMechanismDigestMd5</a>
-              </td>
-              <td>
-            The DIGEST-MD5 SASL mechanism.
-            </td>
-            </tr>
-            <tr valign="top">
-              <td>
-                <a href="./SaslMechanismLogin.html">SaslMechanismLogin</a>
-              </td>
-              <td>
-            The LOGIN SASL mechanism.
-            </td>
-            </tr>
-            <tr valign="top">
-              <td>
-                <a href="./SaslMechanismNtlm.html">SaslMechanismNtlm</a>
-              </td>
-              <td>
-            The NTLM SASL mechanism.
-            </td>
-            </tr>
-            <tr valign="top">
-              <td>
-                <a href="./SaslMechanismOAuth2.html">SaslMechanismOAuth2</a>
-              </td>
-              <td>
-            The OAuth2 SASL mechanism.
-            </td>
-            </tr>
-            <tr valign="top">
-              <td>
-                <a href="./SaslMechanismPlain.html">SaslMechanismPlain</a>
-              </td>
-              <td>
-            The PLAIN SASL mechanism.
-            </td>
-            </tr>
-            <tr valign="top">
-              <td>
-                <a href="./SaslMechanismScramBase.html">SaslMechanismScramBase</a>
-              </td>
-              <td>
-            The base class for SCRAM-based SASL mechanisms.
-            </td>
-            </tr>
-            <tr valign="top">
-              <td>
-                <a href="./SaslMechanismScramSha1.html">SaslMechanismScramSha1</a>
-              </td>
-              <td>
-            The SCRAM-SHA-1 SASL mechanism.
-            </td>
-            </tr>
-            <tr valign="top">
-              <td>
-                <a href="./SecureSocketOptions.html">SecureSocketOptions</a>
-              </td>
-              <td>
+          <a href="../index.html">MailKit</a> : <a href="index.html">MailKit.Security Namespace</a></div>
+        <h1 class="PageTitle" id="T:MailKit.Security.SecureSocketOptions">SecureSocketOptions  Enum</h1>
+        <p class="Summary" id="T:MailKit.Security.SecureSocketOptions:Summary">
             Secure socket options.
-            </td>
-            </tr>
-          </table>
+            </p>
+        <div>
+          <h2>Syntax</h2>
+          <div class="Signature" id="T:MailKit.Security.SecureSocketOptions:Signature">public enum <b>SecureSocketOptions</b></div>
         </div>
-        <div class="Members">
+        <div class="Remarks" id="T:MailKit.Security.SecureSocketOptions:Docs">
+          <h2 class="Section">Remarks</h2>
+          <div class="SectionBox" id="T:MailKit.Security.SecureSocketOptions:Docs:Remarks">
+            Provides a way of specifying the SSL and/or TLS encryption that
+            should be used for a connection.
+            </div>
+          <h2 class="Section">Members</h2>
+          <div class="SectionBox" id="T:MailKit.Security.SecureSocketOptions:Docs:Members">
+            <table class="Enumeration">
+              <tr>
+                <th>Member Name</th>
+                <th>Description</th>
+              </tr>
+              <tr valign="top">
+                <td id="F:MailKit.Security.SecureSocketOptions.Auto">
+                  <b>Auto</b>
+                </td>
+                <td>
+            Allow the <a href="../MailKit/IMailService.html">MailKit.IMailService</a> to decide which SSL
+            or TLS options to use (default).
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MailKit.Security.SecureSocketOptions.None">
+                  <b>None</b>
+                </td>
+                <td>
+            No SSL or TLS encryption should be used.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MailKit.Security.SecureSocketOptions.SslOnConnect">
+                  <b>SslOnConnect</b>
+                </td>
+                <td>
+            The connection should use SSL or TLS encryption immediately.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MailKit.Security.SecureSocketOptions.StartTls">
+                  <b>StartTls</b>
+                </td>
+                <td>
+            Elevates the connection to use TLS encryption immediately after
+            reading the greeting and capabilities of the server. If the server
+            does not support the STARTTLS extension, then the connection will
+            fail and a <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a> will be thrown.
+            </td>
+              </tr>
+              <tr valign="top">
+                <td id="F:MailKit.Security.SecureSocketOptions.StartTlsWhenAvailable">
+                  <b>StartTlsWhenAvailable</b>
+                </td>
+                <td>
+            Elevates the connection to use TLS encryption immediately after
+            reading the greeting and capabilities of the server, but only if
+            the server supports the STARTTLS extension.
+            </td>
+              </tr>
+            </table>
+          </div>
+          <h2 class="Section">Requirements</h2>
+          <div class="SectionBox" id="T:MailKit.Security.SecureSocketOptions:Docs:Version Information">
+            <b>Namespace: </b>MailKit.Security<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+        </div>
+        <div class="Members" id="T:MailKit.Security.SecureSocketOptions:Members">
         </div>
       </section>
     </div>

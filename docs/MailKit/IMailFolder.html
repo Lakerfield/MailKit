@@ -534,6 +534,30 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MailKit.IMailFolder.AddAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken)">AddAccessRights</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MailKit/AccessRights.html">AccessRights</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Add access rights for the specified identity.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.IMailFolder.AddAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken)">AddAccessRightsAsync</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MailKit/AccessRights.html">AccessRights</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a></nobr><blockquote>
+            Asynchronously add access rights for the specified identity.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="#M:MailKit.IMailFolder.AddFlags(MailKit.UniqueId,MailKit.MessageFlags,System.Boolean,System.Threading.CancellationToken)">AddFlags</a>
                       </b>(<a href="../MailKit/UniqueId.html">UniqueId</a>, <a href="../MailKit/MessageFlags.html">MessageFlags</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
             Add a set of flags to the specified message.
@@ -1830,6 +1854,54 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MailKit.IMailFolder.GetAccessControlList(System.Threading.CancellationToken)">GetAccessControlList</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="../MailKit/AccessControlList.html">AccessControlList</a></nobr><blockquote>
+            Get the complete access control list for the folder.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.IMailFolder.GetAccessControlListAsync(System.Threading.CancellationToken)">GetAccessControlListAsync</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;AccessControlList&gt;</a></nobr><blockquote>
+            Asynchronously get the complete access control list for the folder.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.IMailFolder.GetAccessRights(System.String,System.Threading.CancellationToken)">GetAccessRights</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="../MailKit/AccessRights.html">AccessRights</a></nobr><blockquote>
+            Get the access rights for a particular identifier.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.IMailFolder.GetAccessRightsAsync(System.String,System.Threading.CancellationToken)">GetAccessRightsAsync</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;AccessRights&gt;</a></nobr><blockquote>
+            Asynchronously get the access rights for a particular identifier.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="#M:MailKit.IMailFolder.GetBodyPart(MailKit.UniqueId,MailKit.BodyPart,System.Threading.CancellationToken)">GetBodyPart</a>
                       </b>(<a href="../MailKit/UniqueId.html">UniqueId</a>, <a href="../MailKit/BodyPart.html">BodyPart</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="javascript:alert(&quot;Documentation not found.&quot;)">MimeKit.MimeEntity</a></nobr><blockquote>
             Get the specified body part.
@@ -1965,6 +2037,30 @@
                         <a href="#M:MailKit.IMailFolder.GetMessageAsync(System.Int32,System.Threading.CancellationToken)">GetMessageAsync</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;MimeKit.MimeMessage&gt;</a></nobr><blockquote>
             Asynchronously get the specified message.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.IMailFolder.GetMyAccessRights(System.Threading.CancellationToken)">GetMyAccessRights</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="../MailKit/AccessRights.html">AccessRights</a></nobr><blockquote>
+            Get the access rights for the current authenticated user.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.IMailFolder.GetMyAccessRightsAsync(System.Threading.CancellationToken)">GetMyAccessRightsAsync</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;AccessRights&gt;</a></nobr><blockquote>
+            Asynchronously get the access rights for the current authenticated user.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -2277,6 +2373,54 @@
                         <a href="#M:MailKit.IMailFolder.OpenAsync(MailKit.FolderAccess,MailKit.UniqueId,System.UInt64,System.Collections.Generic.IList{MailKit.UniqueId},System.Threading.CancellationToken)">OpenAsync</a>
                       </b>(<a href="../MailKit/FolderAccess.html">FolderAccess</a>, <a href="../MailKit/UniqueId.html">UniqueId</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;UniqueId&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;FolderAccess&gt;</a></nobr><blockquote>
             Asynchronously opens the folder using the requested folder access.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.IMailFolder.RemoveAccess(System.String,System.Threading.CancellationToken)">RemoveAccess</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Remove all access rights for the given identity.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.IMailFolder.RemoveAccessAsync(System.String,System.Threading.CancellationToken)">RemoveAccessAsync</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a></nobr><blockquote>
+            Asynchronously remove all access rights for the given identity.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.IMailFolder.RemoveAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken)">RemoveAccessRights</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MailKit/AccessRights.html">AccessRights</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Remove access rights for the specified identity.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.IMailFolder.RemoveAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken)">RemoveAccessRightsAsync</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MailKit/AccessRights.html">AccessRights</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a></nobr><blockquote>
+            Asynchronously remove access rights for the specified identity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -2833,6 +2977,30 @@
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;UniqueId&gt;</a>, <a href="../MailKit.Search/SearchQuery.html">MailKit.Search.SearchQuery</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;MailKit.Search.OrderBy&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IList&lt;UniqueId&gt;&gt;</a></nobr><blockquote>
             Asynchronously search the subset of UIDs in the folder for messages matching the specified query,
             returning them in the preferred sort order.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.IMailFolder.SetAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken)">SetAccessRights</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MailKit/AccessRights.html">AccessRights</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Set the access rights for the specified identity.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.IMailFolder.SetAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken)">SetAccessRightsAsync</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MailKit/AccessRights.html">AccessRights</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a></nobr><blockquote>
+            Asynchronously set the access rights for the sepcified identity.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -3629,6 +3797,74 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.IMailFolder.Access:Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailFolder.AddAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken)">AddAccessRights Method</h3>
+            <blockquote id="M:MailKit.IMailFolder.AddAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Add access rights for the specified identity.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>AddAccessRights</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="../MailKit/AccessRights.html">AccessRights</a> rights, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.AddAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>name</i>
+                  </dt>
+                  <dd>The identity name.</dd>
+                  <dt>
+                    <i>rights</i>
+                  </dt>
+                  <dd>The access rights.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.AddAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Remarks">
+            Adds the given access rights for the specified identity.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.AddAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailFolder.AddAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken)">AddAccessRightsAsync Method</h3>
+            <blockquote id="M:MailKit.IMailFolder.AddAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Asynchronously add access rights for the specified identity.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a> <b>AddAccessRightsAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="../MailKit/AccessRights.html">AccessRights</a> rights, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.AddAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>name</i>
+                  </dt>
+                  <dd>The identity name.</dd>
+                  <dt>
+                    <i>rights</i>
+                  </dt>
+                  <dd>The access rights.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.AddAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Returns">An asynchronous task context.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.AddAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Remarks">
+            Asynchronously adds the given access rights for the specified identity.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.AddAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -7991,6 +8227,122 @@
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="M:MailKit.IMailFolder.GetAccessControlList(System.Threading.CancellationToken)">GetAccessControlList Method</h3>
+            <blockquote id="M:MailKit.IMailFolder.GetAccessControlList(System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Get the complete access control list for the folder.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MailKit/AccessControlList.html">AccessControlList</a> <b>GetAccessControlList</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.GetAccessControlList(System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.GetAccessControlList(System.Threading.CancellationToken):Returns">The access control list.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.GetAccessControlList(System.Threading.CancellationToken):Remarks">
+            Gets the complete access control list for the folder.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.GetAccessControlList(System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailFolder.GetAccessControlListAsync(System.Threading.CancellationToken)">GetAccessControlListAsync Method</h3>
+            <blockquote id="M:MailKit.IMailFolder.GetAccessControlListAsync(System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Asynchronously get the complete access control list for the folder.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;AccessControlList&gt;</a> <b>GetAccessControlListAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.GetAccessControlListAsync(System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.GetAccessControlListAsync(System.Threading.CancellationToken):Returns">The access control list.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.GetAccessControlListAsync(System.Threading.CancellationToken):Remarks">
+            Asynchronously gets the complete access control list for the folder.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.GetAccessControlListAsync(System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailFolder.GetAccessRights(System.String,System.Threading.CancellationToken)">GetAccessRights Method</h3>
+            <blockquote id="M:MailKit.IMailFolder.GetAccessRights(System.String,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Get the access rights for a particular identifier.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MailKit/AccessRights.html">AccessRights</a> <b>GetAccessRights</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.GetAccessRights(System.String,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>name</i>
+                  </dt>
+                  <dd>The identifier name.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.GetAccessRights(System.String,System.Threading.CancellationToken):Returns">The access rights.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.GetAccessRights(System.String,System.Threading.CancellationToken):Remarks">
+            Gets the access rights for a particular identifier.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.GetAccessRights(System.String,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailFolder.GetAccessRightsAsync(System.String,System.Threading.CancellationToken)">GetAccessRightsAsync Method</h3>
+            <blockquote id="M:MailKit.IMailFolder.GetAccessRightsAsync(System.String,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Asynchronously get the access rights for a particular identifier.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;AccessRights&gt;</a> <b>GetAccessRightsAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.GetAccessRightsAsync(System.String,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>name</i>
+                  </dt>
+                  <dd>The identifier name.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.GetAccessRightsAsync(System.String,System.Threading.CancellationToken):Returns">The access rights.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.GetAccessRightsAsync(System.String,System.Threading.CancellationToken):Remarks">
+            Asynchronously gets the access rights for a particular identifier.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.GetAccessRightsAsync(System.String,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="M:MailKit.IMailFolder.GetBodyPart(MailKit.UniqueId,MailKit.BodyPart,System.Threading.CancellationToken)">GetBodyPart Method</h3>
             <blockquote id="M:MailKit.IMailFolder.GetBodyPart(MailKit.UniqueId,MailKit.BodyPart,System.Threading.CancellationToken):member">
               <div class="msummary">
@@ -8412,6 +8764,60 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.IMailFolder.GetMessageAsync(System.Int32,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailFolder.GetMyAccessRights(System.Threading.CancellationToken)">GetMyAccessRights Method</h3>
+            <blockquote id="M:MailKit.IMailFolder.GetMyAccessRights(System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Get the access rights for the current authenticated user.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MailKit/AccessRights.html">AccessRights</a> <b>GetMyAccessRights</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.GetMyAccessRights(System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.GetMyAccessRights(System.Threading.CancellationToken):Returns">The access rights.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.GetMyAccessRights(System.Threading.CancellationToken):Remarks">
+            Gets the access rights for the current authenticated user.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.GetMyAccessRights(System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailFolder.GetMyAccessRightsAsync(System.Threading.CancellationToken)">GetMyAccessRightsAsync Method</h3>
+            <blockquote id="M:MailKit.IMailFolder.GetMyAccessRightsAsync(System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Asynchronously get the access rights for the current authenticated user.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;AccessRights&gt;</a> <b>GetMyAccessRightsAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.GetMyAccessRightsAsync(System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.GetMyAccessRightsAsync(System.Threading.CancellationToken):Returns">The access rights.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.GetMyAccessRightsAsync(System.Threading.CancellationToken):Remarks">
+            Asynchronously gets the access rights for the current authenticated user.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.GetMyAccessRightsAsync(System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -9625,6 +10031,134 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="E:MailKit.IMailFolder.RecentChanged:Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailFolder.RemoveAccess(System.String,System.Threading.CancellationToken)">RemoveAccess Method</h3>
+            <blockquote id="M:MailKit.IMailFolder.RemoveAccess(System.String,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Remove all access rights for the given identity.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveAccess</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.RemoveAccess(System.String,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>name</i>
+                  </dt>
+                  <dd>The identity name.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.RemoveAccess(System.String,System.Threading.CancellationToken):Remarks">
+            Removes all access rights for the given identity.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.RemoveAccess(System.String,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailFolder.RemoveAccessAsync(System.String,System.Threading.CancellationToken)">RemoveAccessAsync Method</h3>
+            <blockquote id="M:MailKit.IMailFolder.RemoveAccessAsync(System.String,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Asynchronously remove all access rights for the given identity.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a> <b>RemoveAccessAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.RemoveAccessAsync(System.String,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>name</i>
+                  </dt>
+                  <dd>The identity name.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.RemoveAccessAsync(System.String,System.Threading.CancellationToken):Returns">An asynchronous task context.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.RemoveAccessAsync(System.String,System.Threading.CancellationToken):Remarks">
+            Asynchronously removes all access rights for the given identity.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.RemoveAccessAsync(System.String,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailFolder.RemoveAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken)">RemoveAccessRights Method</h3>
+            <blockquote id="M:MailKit.IMailFolder.RemoveAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Remove access rights for the specified identity.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>RemoveAccessRights</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="../MailKit/AccessRights.html">AccessRights</a> rights, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.RemoveAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>name</i>
+                  </dt>
+                  <dd>The identity name.</dd>
+                  <dt>
+                    <i>rights</i>
+                  </dt>
+                  <dd>The access rights.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.RemoveAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Remarks">
+            Removes the given access rights for the specified identity.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.RemoveAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailFolder.RemoveAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken)">RemoveAccessRightsAsync Method</h3>
+            <blockquote id="M:MailKit.IMailFolder.RemoveAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Asynchronously remove access rights for the specified identity.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a> <b>RemoveAccessRightsAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="../MailKit/AccessRights.html">AccessRights</a> rights, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.RemoveAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>name</i>
+                  </dt>
+                  <dd>The identity name.</dd>
+                  <dt>
+                    <i>rights</i>
+                  </dt>
+                  <dd>The access rights.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.RemoveAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Returns">An asynchronous task context.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.RemoveAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Remarks">
+            Asynchronously removes the given access rights for the specified identity.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.RemoveAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -11473,6 +12007,74 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.IMailFolder.SearchAsync(System.Collections.Generic.IList{MailKit.UniqueId},MailKit.Search.SearchQuery,System.Collections.Generic.IList{MailKit.Search.OrderBy},System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailFolder.SetAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken)">SetAccessRights Method</h3>
+            <blockquote id="M:MailKit.IMailFolder.SetAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Set the access rights for the specified identity.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>SetAccessRights</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="../MailKit/AccessRights.html">AccessRights</a> rights, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.SetAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>name</i>
+                  </dt>
+                  <dd>The identity name.</dd>
+                  <dt>
+                    <i>rights</i>
+                  </dt>
+                  <dd>The access rights.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.SetAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Remarks">
+            Sets the access rights for the specified identity.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.SetAccessRights(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailFolder.SetAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken)">SetAccessRightsAsync Method</h3>
+            <blockquote id="M:MailKit.IMailFolder.SetAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Asynchronously set the access rights for the sepcified identity.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a> <b>SetAccessRightsAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> name, <a href="../MailKit/AccessRights.html">AccessRights</a> rights, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.SetAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>name</i>
+                  </dt>
+                  <dd>The identity name.</dd>
+                  <dt>
+                    <i>rights</i>
+                  </dt>
+                  <dd>The access rights.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailFolder.SetAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Returns">An asynchronous task context.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.SetAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Remarks">
+            Asynchronously sets the access rights for the specified identity.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailFolder.SetAccessRightsAsync(System.String,MailKit.AccessRights,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>

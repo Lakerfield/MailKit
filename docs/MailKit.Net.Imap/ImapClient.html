@@ -489,6 +489,20 @@
              (<i>Inherited from <a href="../MailKit/MailStore.html">MailKit.MailStore</a>.</i>)</td>
                   </tr>
                   <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MailKit.Net.Imap.ImapClient.Rights">Rights</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MailKit/AccessRights.html">MailKit.AccessRights</a>
+                      </i>. 
+            Get the access rights supported by the IMAP server.
+            </td>
+                  </tr>
+                  <tr valign="top">
                     <td>[read-only]<div>override </div></td>
                     <td>
                       <b>
@@ -720,25 +734,15 @@
                   </tr>
                   <tr valign="top">
                     <td>
-                      <div>override </div>
+                      <div>
+                      </div>
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Threading.CancellationToken)">Connect</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
-            Establishes a connection to the specified IMAP server.
+                        <a href="#M:MailKit.Net.Imap.ImapClient.Compress(System.Threading.CancellationToken)">Compress</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Enable compression over the IMAP connection.
             </blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>abstract </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
-                        <a href="../MailKit/MailService.html#M:MailKit.MailService.Connect(System.Uri,System.Threading.CancellationToken)">Connect</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
-            Establishes a connection to the specified mail server.
-             (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -747,10 +751,44 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Net.Sockets.Socket,System.Threading.CancellationToken)">Connect</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Sockets.Socket">System.Net.Sockets.Socket</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
-            Establishes a connection to the specified IMAP server using the provided socket.
+                        <a href="#M:MailKit.Net.Imap.ImapClient.CompressAsync(System.Threading.CancellationToken)">CompressAsync</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a></nobr><blockquote>
+            Asynchronously enable compression over the IMAP connection.
             </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MailKit/MailService.html#M:MailKit.MailService.Connect(System.Uri,System.Threading.CancellationToken)">Connect</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Establish a connection to the specified mail server.
+             (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Connect</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Establish a connection to the specified IMAP server.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MailKit/MailService.html#M:MailKit.MailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Connect</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Establish a connection to the specified mail server.
+             (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -761,8 +799,20 @@
                       <b>
                         <a href="../MailKit/MailService.html#M:MailKit.MailService.Connect(System.String,System.Int32,System.Boolean,System.Threading.CancellationToken)">Connect</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
-            Establishes a connection to the specified mail server.
+            Establish a connection to the specified mail server.
              (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.Net.Imap.ImapClient.Connect(System.Net.Sockets.Socket,System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Connect</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Sockets.Socket">System.Net.Sockets.Socket</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Establish a connection to the specified IMAP or IMAP/S server using the provided socket.
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -773,7 +823,19 @@
                       <b>
                         <a href="../MailKit/MailService.html#M:MailKit.MailService.ConnectAsync(System.Uri,System.Threading.CancellationToken)">ConnectAsync</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a></nobr><blockquote>
-            Asynchronously establishes a connection to the specified mail server.
+            Asynchronously establish a connection to the specified mail server.
+             (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MailKit/MailService.html#M:MailKit.MailService.ConnectAsync(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ConnectAsync</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a></nobr><blockquote>
+            Asynchronously establish a connection to the specified mail server.
              (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -785,7 +847,7 @@
                       <b>
                         <a href="../MailKit/MailService.html#M:MailKit.MailService.ConnectAsync(System.String,System.Int32,System.Boolean,System.Threading.CancellationToken)">ConnectAsync</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a></nobr><blockquote>
-            Asynchronously establishes a connection to the specified mail server.
+            Asynchronously establish a connection to the specified mail server.
              (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -1226,7 +1288,7 @@
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MailKit.Net.Imap.ImapClient():Remarks">
             Before you can retrieve messages with the <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a>, you must first
-            call the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Threading.CancellationToken)">ImapClient.Connect(Uri, System.Threading.CancellationToken)</a> method and authenticate with
+            call the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ImapClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method and authenticate with
             the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">ImapClient.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a> method.
             </div>
               <h2 class="Section">Requirements</h2>
@@ -1270,7 +1332,7 @@
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MailKit.Net.Imap.ImapClient(MailKit.IProtocolLogger):Remarks">
             Before you can retrieve messages with the <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a>, you must first
-            call the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Threading.CancellationToken)">ImapClient.Connect(Uri, System.Threading.CancellationToken)</a> method and authenticate with
+            call the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ImapClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method and authenticate with
             the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">ImapClient.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a> method.
             </div>
               <h2 class="Section">Requirements</h2>
@@ -1405,7 +1467,7 @@
               <blockquote class="SubsectionBox" id="P:MailKit.Net.Imap.ImapClient.AuthenticationMechanisms:Value">The authentication mechanisms.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.AuthenticationMechanisms:Remarks">
-            The authentication mechanisms are queried as part of the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Threading.CancellationToken)">ImapClient.Connect(Uri, System.Threading.CancellationToken)</a> method.
+            The authentication mechanisms are queried as part of the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ImapClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.AuthenticationMechanisms:Version Information">
@@ -1441,7 +1503,7 @@
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.Capabilities:Remarks">
             The capabilities will not be known until a successful connection has been made via
-            the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Threading.CancellationToken)">ImapClient.Connect(Uri, System.Threading.CancellationToken)</a> method and may change as a side-effect
+            the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ImapClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method and may change as a side-effect
             of the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">ImapClient.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a> method.
             </div>
               <h2 class="Section">Requirements</h2>
@@ -1449,21 +1511,16 @@
                 <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Threading.CancellationToken)">Connect Method</h3>
-            <blockquote id="M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Threading.CancellationToken):member">
+            <h3 id="M:MailKit.Net.Imap.ImapClient.Compress(System.Threading.CancellationToken)">Compress Method</h3>
+            <blockquote id="M:MailKit.Net.Imap.ImapClient.Compress(System.Threading.CancellationToken):member">
               <div class="msummary">
-            Establishes a connection to the specified IMAP server.
+            Enable compression over the IMAP connection.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Connect</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a> uri, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Compress</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Threading.CancellationToken):Parameters">
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.Compress(System.Threading.CancellationToken):Parameters">
                 <dl>
-                  <dt>
-                    <i>uri</i>
-                  </dt>
-                  <dd>The server URI. The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=P:System.Uri.Scheme">Uri.Scheme</a> should either
-            be "imap" to make a clear-text connection or "imaps" to make an SSL connection.</dd>
                   <dt>
                     <i>cancellationToken</i>
                   </dt>
@@ -1471,7 +1528,203 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Threading.CancellationToken):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.Compress(System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+            The IMAP server does not support the QRESYNC extension.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapCommandException.html">MailKit.Net.Imap.ImapCommandException</a>
+                    </td>
+                    <td>
+            The server replied to the ENABLE command with a NO or BAD response.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapProtocolException.html">MailKit.Net.Imap.ImapProtocolException</a>
+                    </td>
+                    <td>
+            An IMAP protocol error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.Compress(System.Threading.CancellationToken):Remarks">
+            If the IMAP server supports the COMPRESS extension, it is possible at any point
+            after connecting to enable compression to reduce network bandwidth usage.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.Compress(System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.Net.Imap.ImapClient.CompressAsync(System.Threading.CancellationToken)">CompressAsync Method</h3>
+            <blockquote id="M:MailKit.Net.Imap.ImapClient.CompressAsync(System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Asynchronously enable compression over the IMAP connection.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a> <b>CompressAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.CompressAsync(System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.CompressAsync(System.Threading.CancellationToken):Returns">An asynchronous task context.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.CompressAsync(System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected, not authenticated, or a folder has been selected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+            The IMAP server does not support the UTF8=ACCEPT extension.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapCommandException.html">MailKit.Net.Imap.ImapCommandException</a>
+                    </td>
+                    <td>
+            The server replied to the ENABLE command with a NO or BAD response.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapProtocolException.html">MailKit.Net.Imap.ImapProtocolException</a>
+                    </td>
+                    <td>
+            An IMAP protocol error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.CompressAsync(System.Threading.CancellationToken):Remarks">
+            If the IMAP server supports the COMPRESS extension, it is possible at any point
+            after connecting to enable compression to reduce network bandwidth usage.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.CompressAsync(System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Connect Method</h3>
+            <blockquote id="M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Establish a connection to the specified IMAP server.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Connect</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> host, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> port, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>host</i>
+                  </dt>
+                  <dd>The host name to connect to.</dd>
+                  <dt>
+                    <i>port</i>
+                  </dt>
+                  <dd>The port to connect to. If the specified port is <tt>0</tt>, then the default port will be used.</dd>
+                  <dt>
+                    <i>options</i>
+                  </dt>
+                  <dd>The secure socket options to when connecting.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -1482,7 +1735,23 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
                     </td>
                     <td>
-            The <i>uri</i> is <tt>null</tt>.
+                      <i>host</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>port</i> is not between <tt>0</tt> and <tt>65535</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+            The <i>host</i> is a zero-length string.
             </td>
                   </tr>
                   <tr valign="top">
@@ -1499,6 +1768,16 @@
                     </td>
                     <td>
             The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is already connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+                      <i>options</i> was set to
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.StartTls">MailKit.Security.SecureSocketOptions.StartTls</a>
+            and the IMAP server does not support the STARTTLS extension.
             </td>
                   </tr>
                   <tr valign="top">
@@ -1525,70 +1804,64 @@
             An IMAP protocol error occurred.
             </td>
                   </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
-                    </td>
-                    <td>
-            The <i>uri</i> is not an absolute URI.
-            </td>
-                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Threading.CancellationToken):Remarks">
-                <p>Establishes a connection to an IMAP or IMAP/S server. If the schema
-            in the uri is "imap", a clear-text connection is made and defaults to using
-            port 143 if no port is specified in the URI. However, if the schema in the
-            uri is "imaps", an SSL connection is made using the
-            <a href="../MailKit/MailService.html#P:MailKit.MailService.ClientCertificates">MailKit.MailService.ClientCertificates</a> and defaults to port 993 unless a port
-            is specified in the URI.</p>
-                <p>It should be noted that when using a clear-text IMAP connection,
-            if the server advertizes support for the STARTTLS extension, the client
-            will automatically switch into TLS mode before authenticating unless the
-            <i>uri</i> contains a query string ("?starttls=false") to
-            disable it.</p>
-                <p>If the IMAP server advertizes the COMPRESS extension and either does not
-            support the STARTTLS extension or the <i>uri</i> explicitly disabled
-            the use of the STARTTLS extension, then the client will automatically opt into
-            using a compressed data connection to optimize bandwidth usage unless the
-            <i>uri</i> contains a query string ("?compress=false") to explicitly
-            disable it.</p>
-                <p>If a successful connection is made, the <a href="../MailKit.Net.Imap/ImapClient.html#P:MailKit.Net.Imap.ImapClient.AuthenticationMechanisms">ImapClient.AuthenticationMechanisms</a>
-            and <a href="../MailKit.Net.Imap/ImapClient.html#P:MailKit.Net.Imap.ImapClient.Capabilities">ImapClient.Capabilities</a> properties will be populated.</p>
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Remarks">
+                <p>Establishes a connection to the specified IMAP or IMAP/S server.</p>
+                <p>If the <i>port</i> has a value of <tt>0</tt>, then the
+            <i>options</i> parameter is used to determine the default port to
+            connect to. The default port used with <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.SslOnConnect">MailKit.Security.SecureSocketOptions.SslOnConnect</a>
+            is <tt>993</tt>. All other values will use a default port of <tt>143</tt>.</p>
+                <p>If the <i>options</i> has a value of
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.Auto">MailKit.Security.SecureSocketOptions.Auto</a>, then the <i>port</i> is used
+            to determine the default security options. If the <i>port</i> has a value
+            of <tt>993</tt>, then the default options used will be
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.SslOnConnect">MailKit.Security.SecureSocketOptions.SslOnConnect</a>. All other values will use
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.StartTlsWhenAvailable">MailKit.Security.SecureSocketOptions.StartTlsWhenAvailable</a>.</p>
+                <p>Once a connection is established, properties such as
+            <a href="../MailKit.Net.Imap/ImapClient.html#P:MailKit.Net.Imap.ImapClient.AuthenticationMechanisms">ImapClient.AuthenticationMechanisms</a> and <a href="../MailKit.Net.Imap/ImapClient.html#P:MailKit.Net.Imap.ImapClient.Capabilities">ImapClient.Capabilities</a> will be
+            populated.</p>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Threading.CancellationToken):Version Information">
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Net.Sockets.Socket,System.Threading.CancellationToken)">Connect Method</h3>
-            <blockquote id="M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Net.Sockets.Socket,System.Threading.CancellationToken):member">
+            <h3 id="M:MailKit.Net.Imap.ImapClient.Connect(System.Net.Sockets.Socket,System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Connect Method</h3>
+            <blockquote id="M:MailKit.Net.Imap.ImapClient.Connect(System.Net.Sockets.Socket,System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):member">
               <div class="msummary">
-            Establishes a connection to the specified IMAP server using the provided socket.
+            Establish a connection to the specified IMAP or IMAP/S server using the provided socket.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Connect</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a> uri, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Sockets.Socket">System.Net.Sockets.Socket</a> socket, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Connect</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Sockets.Socket">System.Net.Sockets.Socket</a> socket, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> host, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> port, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Net.Sockets.Socket,System.Threading.CancellationToken):Parameters">
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.Net.Sockets.Socket,System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Parameters">
                 <dl>
-                  <dt>
-                    <i>uri</i>
-                  </dt>
-                  <dd>The server URI. The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=P:System.Uri.Scheme">Uri.Scheme</a> should either
-            be "imap" to make a clear-text connection or "imaps" to make an SSL connection.</dd>
                   <dt>
                     <i>socket</i>
                   </dt>
                   <dd>The socket to use for the connection.</dd>
                   <dt>
+                    <i>host</i>
+                  </dt>
+                  <dd>The host name to connect to.</dd>
+                  <dt>
+                    <i>port</i>
+                  </dt>
+                  <dd>The port to connect to. If the specified port is <tt>0</tt>, then the default port will be used.</dd>
+                  <dt>
+                    <i>options</i>
+                  </dt>
+                  <dd>The secure socket options to when connecting.</dd>
+                  <dt>
                     <i>cancellationToken</i>
                   </dt>
                   <dd>The cancellation token.</dd>
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Net.Sockets.Socket,System.Threading.CancellationToken):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.Net.Sockets.Socket,System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -1600,11 +1873,19 @@
                     </td>
                     <td>
                       <p>
-                        <i>uri</i> is <tt>null</tt>.</p>
+                        <i>socket</i> is <tt>null</tt>.</p>
                       <p>-or-</p>
                       <p>
-                        <i>socket</i> is <tt>null</tt>.</p>
+                        <i>host</i> is <tt>null</tt>.</p>
                     </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>port</i> is not between <tt>0</tt> and <tt>65535</tt>.
+            </td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -1612,11 +1893,10 @@
                     </td>
                     <td>
                       <p>
-                        <i>uri</i> is not an absolute URI.</p>
-                      <p>-or-</p>
-                      <p>
                         <i>socket</i> is not connected.</p>
-                    </td>
+                      <p>-or-</p>
+            The <i>host</i> is a zero-length string.
+            </td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -1632,6 +1912,16 @@
                     </td>
                     <td>
             The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is already connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+                      <i>options</i> was set to
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.StartTls">MailKit.Security.SecureSocketOptions.StartTls</a>
+            and the IMAP server does not support the STARTTLS extension.
             </td>
                   </tr>
                   <tr valign="top">
@@ -1661,27 +1951,25 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Net.Sockets.Socket,System.Threading.CancellationToken):Remarks">
-                <p>Establishes a connection to an IMAP or IMAP/S server. If the schema
-            in the uri is "imap", a clear-text connection is assumed. However, if the
-            schema in the uri is "imaps", an SSL connection is made using the
-            <a href="../MailKit/MailService.html#P:MailKit.MailService.ClientCertificates">MailKit.MailService.ClientCertificates</a>.</p>
-                <p>It should be noted that when using a clear-text IMAP connection,
-            if the server advertizes support for the STARTTLS extension, the client
-            will automatically switch into TLS mode before authenticating unless the
-            <i>uri</i> contains a query string ("?starttls=false") to
-            disable it.</p>
-                <p>If the IMAP server advertizes the COMPRESS extension and either does not
-            support the STARTTLS extension or the <i>uri</i> explicitly disabled
-            the use of the STARTTLS extension, then the client will automatically opt into
-            using a compressed data connection to optimize bandwidth usage unless the
-            <i>uri</i> contains a query string ("?compress=false") to explicitly
-            disable it.</p>
-                <p>If a successful connection is made, the <a href="../MailKit.Net.Imap/ImapClient.html#P:MailKit.Net.Imap.ImapClient.AuthenticationMechanisms">ImapClient.AuthenticationMechanisms</a>
-            and <a href="../MailKit.Net.Imap/ImapClient.html#P:MailKit.Net.Imap.ImapClient.Capabilities">ImapClient.Capabilities</a> properties will be populated.</p>
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.Net.Sockets.Socket,System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Remarks">
+                <p>Establishes a connection to the specified IMAP or IMAP/S server using
+            the provided socket.</p>
+                <p>If the <i>port</i> has a value of <tt>0</tt>, then the
+            <i>options</i> parameter is used to determine the default port to
+            connect to. The default port used with <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.SslOnConnect">MailKit.Security.SecureSocketOptions.SslOnConnect</a>
+            is <tt>993</tt>. All other values will use a default port of <tt>143</tt>.</p>
+                <p>If the <i>options</i> has a value of
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.Auto">MailKit.Security.SecureSocketOptions.Auto</a>, then the <i>port</i> is used
+            to determine the default security options. If the <i>port</i> has a value
+            of <tt>993</tt>, then the default options used will be
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.SslOnConnect">MailKit.Security.SecureSocketOptions.SslOnConnect</a>. All other values will use
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.StartTlsWhenAvailable">MailKit.Security.SecureSocketOptions.StartTlsWhenAvailable</a>.</p>
+                <p>Once a connection is established, properties such as
+            <a href="../MailKit.Net.Imap/ImapClient.html#P:MailKit.Net.Imap.ImapClient.AuthenticationMechanisms">ImapClient.AuthenticationMechanisms</a> and <a href="../MailKit.Net.Imap/ImapClient.html#P:MailKit.Net.Imap.ImapClient.Capabilities">ImapClient.Capabilities</a> will be
+            populated.</p>
               </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Net.Sockets.Socket,System.Threading.CancellationToken):Version Information">
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.Connect(System.Net.Sockets.Socket,System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -2773,9 +3061,9 @@
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.IsAuthenticated:Remarks">
                 <p>Gets whether or not the client is currently authenticated with the IMAP server.</p>
-                <p>To authenticate with the mail server, use
-            <a href="javascript:alert(&quot;Documentation not found.&quot;)">.(string, string, System.Threading.CancellationToken)</a>
-            or <a href="javascript:alert(&quot;Documentation not found.&quot;)">.(System.Net.ICredential, System.Threading.CancellationToken)</a>.</p>
+                <p>To authenticate with the IMAP server, use
+            <a href="../MailKit/MailService.html#M:MailKit.MailService.Authenticate(System.String,System.String,System.Threading.CancellationToken)">MailKit.MailService.Authenticate(string, string, System.Threading.CancellationToken)</a>
+            or <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">ImapClient.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a>.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.IsAuthenticated:Version Information">
@@ -2811,8 +3099,7 @@
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsIdle</b>  { get; }</div>
               <h4 class="Subsection">Value</h4>
               <blockquote class="SubsectionBox" id="P:MailKit.Net.Imap.ImapClient.IsIdle:Value">
-                <span class="NotEntered">Documentation for this section has not yet been entered.</span>
-              </blockquote>
+                <tt>true</tt> if an IDLE command is active; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.IsIdle:Remarks">
             Gets whether or not the client is currently in the IDLE state.
@@ -2958,6 +3245,27 @@
                 <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="P:MailKit.Net.Imap.ImapClient.Rights">Rights Property</h3>
+            <blockquote id="P:MailKit.Net.Imap.ImapClient.Rights:member">
+              <div class="msummary">
+            Get the access rights supported by the IMAP server.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MailKit/AccessRights.html">MailKit.AccessRights</a> <b>Rights</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.Net.Imap.ImapClient.Rights:Value">The rights.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.Rights:Remarks">
+            These rights are additional rights supported by the IMAP server
+            beyond the standard rights defined in
+            https://tools.ietf.org/html/rfc4314#section-2.1 and will
+            not be populated until the client is successfully connected.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.Rights:Version Information">
+                <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="P:MailKit.Net.Imap.ImapClient.SharedNamespaces">SharedNamespaces Property</h3>
             <blockquote id="P:MailKit.Net.Imap.ImapClient.SharedNamespaces:member">
               <div class="msummary">
@@ -3026,7 +3334,7 @@
               <blockquote class="SubsectionBox" id="P:MailKit.Net.Imap.ImapClient.ThreadingAlgorithms:Value">The authentication mechanisms.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.ThreadingAlgorithms:Remarks">
-            The threading algorithms are queried as part of the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.Uri,System.Threading.CancellationToken)">ImapClient.Connect(Uri, System.Threading.CancellationToken)</a> and
+            The threading algorithms are queried as part of the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ImapClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> and
             <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">ImapClient.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a> methods.
             </div>
               <h2 class="Section">Requirements</h2>

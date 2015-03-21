@@ -342,8 +342,8 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MailKit.IMailService.Connect(System.Uri,System.Threading.CancellationToken)">Connect</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+                        <a href="#M:MailKit.IMailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Connect</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
             Connect to the server specified in the URI.
             </blockquote></td>
                   </tr>
@@ -354,8 +354,8 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MailKit.IMailService.ConnectAsync(System.Uri,System.Threading.CancellationToken)">ConnectAsync</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a></nobr><blockquote>
+                        <a href="#M:MailKit.IMailService.ConnectAsync(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ConnectAsync</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a></nobr><blockquote>
             Asynchronously connect to the specified mail server.
             </blockquote></td>
                   </tr>
@@ -633,7 +633,7 @@
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.IMailService.AuthenticationMechanisms:Remarks">
             The authentication mechanisms are queried durring the
-            <a href="../MailKit/IMailService.html#M:MailKit.IMailService.Connect(System.Uri,System.Threading.CancellationToken)">IMailService.Connect(Uri, System.Threading.CancellationToken)</a> method.
+            <a href="../MailKit/IMailService.html#M:MailKit.IMailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">IMailService.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.IMailService.AuthenticationMechanisms:Version Information">
@@ -653,67 +653,43 @@
               <div class="SectionBox" id="P:MailKit.IMailService.ClientCertificates:Remarks">
                 <p>Some servers may require the client SSL certificates in order
             to allow the user to connect.</p>
-                <p>This property should be set before calling <a href="../MailKit/IMailService.html#M:MailKit.IMailService.Connect(System.Uri,System.Threading.CancellationToken)">IMailService.Connect(Uri, System.Threading.CancellationToken)</a>.</p>
+                <p>This property should be set before calling <a href="../MailKit/IMailService.html#M:MailKit.IMailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">IMailService.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a>.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.IMailService.ClientCertificates:Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MailKit.IMailService.Connect(System.Uri,System.Threading.CancellationToken)">Connect Method</h3>
-            <blockquote id="M:MailKit.IMailService.Connect(System.Uri,System.Threading.CancellationToken):member">
+            <h3 id="M:MailKit.IMailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Connect Method</h3>
+            <blockquote id="M:MailKit.IMailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):member">
               <div class="msummary">
             Connect to the server specified in the URI.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Connect</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a> uri, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Connect</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> host, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> port, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MailKit.IMailService.Connect(System.Uri,System.Threading.CancellationToken):Parameters">
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Parameters">
                 <dl>
                   <dt>
-                    <i>uri</i>
+                    <i>host</i>
                   </dt>
-                  <dd>The server URI.</dd>
+                  <dd>The host name to connect to.</dd>
+                  <dt>
+                    <i>port</i>
+                  </dt>
+                  <dd>The port to connect to. If the specified port is <tt>0</tt>, then the default port will be used.</dd>
+                  <dt>
+                    <i>options</i>
+                  </dt>
+                  <dd>The secure socket options to when connecting.</dd>
                   <dt>
                     <i>cancellationToken</i>
                   </dt>
                   <dd>The cancellation token.</dd>
                 </dl>
               </blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MailKit.IMailService.Connect(System.Uri,System.Threading.CancellationToken):Remarks">
-            If a successful connection is made, the <a href="../MailKit/IMailService.html#P:MailKit.IMailService.AuthenticationMechanisms">IMailService.AuthenticationMechanisms</a>
-            property will be populated.
-            </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MailKit.IMailService.Connect(System.Uri,System.Threading.CancellationToken):Version Information">
-                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="M:MailKit.IMailService.ConnectAsync(System.Uri,System.Threading.CancellationToken)">ConnectAsync Method</h3>
-            <blockquote id="M:MailKit.IMailService.ConnectAsync(System.Uri,System.Threading.CancellationToken):member">
-              <div class="msummary">
-            Asynchronously connect to the specified mail server.
-            </div>
-              <h2>Syntax</h2>
-              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a> <b>ConnectAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a> uri, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
-              <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MailKit.IMailService.ConnectAsync(System.Uri,System.Threading.CancellationToken):Parameters">
-                <dl>
-                  <dt>
-                    <i>uri</i>
-                  </dt>
-                  <dd>The server URI.</dd>
-                  <dt>
-                    <i>cancellationToken</i>
-                  </dt>
-                  <dd>The cancellation token.</dd>
-                </dl>
-              </blockquote>
-              <h4 class="Subsection">Returns</h4>
-              <blockquote class="SubsectionBox" id="M:MailKit.IMailService.ConnectAsync(System.Uri,System.Threading.CancellationToken):Returns">An asynchronous task context.</blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MailKit.IMailService.ConnectAsync(System.Uri,System.Threading.CancellationToken):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -724,15 +700,80 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
                     </td>
                     <td>
-            The <i>uri</i> is <tt>null</tt>.
+                      <i>host</i> is <tt>null</tt>.
             </td>
                   </tr>
                   <tr valign="top">
                     <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
                     </td>
                     <td>
-            The <i>uri</i> is not an absolute URI.
+                      <i>port</i> is not between <tt>0</tt> and <tt>65535</tt>.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Remarks">
+            If a successful connection is made, the <a href="../MailKit/IMailService.html#P:MailKit.IMailService.AuthenticationMechanisms">IMailService.AuthenticationMechanisms</a>
+            property will be populated.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailService.ConnectAsync(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ConnectAsync Method</h3>
+            <blockquote id="M:MailKit.IMailService.ConnectAsync(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Asynchronously connect to the specified mail server.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a> <b>ConnectAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> host, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> port, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailService.ConnectAsync(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>host</i>
+                  </dt>
+                  <dd>The host name to connect to.</dd>
+                  <dt>
+                    <i>port</i>
+                  </dt>
+                  <dd>The port to connect to. If the specified port is <tt>0</tt>, then the default port will be used.</dd>
+                  <dt>
+                    <i>options</i>
+                  </dt>
+                  <dd>The secure socket options to when connecting.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailService.ConnectAsync(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Returns">An asynchronous task context.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailService.ConnectAsync(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+            The <i>host</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>port</i> is not between <tt>0</tt> and <tt>65535</tt>.
             </td>
                   </tr>
                   <tr valign="top">
@@ -778,11 +819,11 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MailKit.IMailService.ConnectAsync(System.Uri,System.Threading.CancellationToken):Remarks">
+              <div class="SectionBox" id="M:MailKit.IMailService.ConnectAsync(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Remarks">
             Asynchronously connects to the specified mail server.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MailKit.IMailService.ConnectAsync(System.Uri,System.Threading.CancellationToken):Version Information">
+              <div class="SectionBox" id="M:MailKit.IMailService.ConnectAsync(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>

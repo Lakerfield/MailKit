@@ -622,13 +622,25 @@
                   </tr>
                   <tr valign="top">
                     <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MailKit/MailService.html#M:MailKit.MailService.Connect(System.Uri,System.Threading.CancellationToken)">Connect</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Establish a connection to the specified mail server.
+             (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
                       <div>override </div>
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Threading.CancellationToken)">Connect</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
-            Establishes a connection to the specified POP3 server.
+                        <a href="#M:MailKit.Net.Pop3.Pop3Client.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Connect</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Establish a connection to the specified POP3 or POP3/S server.
             </blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -637,22 +649,10 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="../MailKit/MailService.html#M:MailKit.MailService.Connect(System.Uri,System.Threading.CancellationToken)">Connect</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
-            Establishes a connection to the specified mail server.
+                        <a href="../MailKit/MailService.html#M:MailKit.MailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Connect</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Establish a connection to the specified mail server.
              (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</blockquote></td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <div>
-                      </div>
-                    </td>
-                    <td colspan="2">
-                      <b>
-                        <a href="#M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Net.Sockets.Socket,System.Threading.CancellationToken)">Connect</a>
-                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Sockets.Socket">System.Net.Sockets.Socket</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
-            Establishes a connection to the specified POP3 server using the provided socket.
-            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -663,8 +663,20 @@
                       <b>
                         <a href="../MailKit/MailService.html#M:MailKit.MailService.Connect(System.String,System.Int32,System.Boolean,System.Threading.CancellationToken)">Connect</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
-            Establishes a connection to the specified mail server.
+            Establish a connection to the specified mail server.
              (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.Net.Pop3.Pop3Client.Connect(System.Net.Sockets.Socket,System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Connect</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Sockets.Socket">System.Net.Sockets.Socket</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
+            Establish a connection to the specified POP3 or POP3/S server using the provided socket.
+            </blockquote></td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -675,7 +687,19 @@
                       <b>
                         <a href="../MailKit/MailService.html#M:MailKit.MailService.ConnectAsync(System.Uri,System.Threading.CancellationToken)">ConnectAsync</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a></nobr><blockquote>
-            Asynchronously establishes a connection to the specified mail server.
+            Asynchronously establish a connection to the specified mail server.
+             (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MailKit/MailService.html#M:MailKit.MailService.ConnectAsync(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ConnectAsync</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a></nobr><blockquote>
+            Asynchronously establish a connection to the specified mail server.
              (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -687,7 +711,7 @@
                       <b>
                         <a href="../MailKit/MailService.html#M:MailKit.MailService.ConnectAsync(System.String,System.Int32,System.Boolean,System.Threading.CancellationToken)">ConnectAsync</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task">System.Threading.Tasks.Task</a></nobr><blockquote>
-            Asynchronously establishes a connection to the specified mail server.
+            Asynchronously establish a connection to the specified mail server.
              (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -1815,7 +1839,7 @@
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MailKit.Net.Pop3.Pop3Client():Remarks">
             Before you can retrieve messages with the <a href="../MailKit.Net.Pop3/Pop3Client.html">MailKit.Net.Pop3.Pop3Client</a>, you must first
-            call the <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Threading.CancellationToken)">Pop3Client.Connect(Uri, System.Threading.CancellationToken)</a> method and authenticate with
+            call the <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Pop3Client.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method and authenticate with
             the <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">Pop3Client.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a> method.
             </div>
               <h2 class="Section">Requirements</h2>
@@ -1859,7 +1883,7 @@
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MailKit.Net.Pop3.Pop3Client(MailKit.IProtocolLogger):Remarks">
             Before you can retrieve messages with the <a href="../MailKit.Net.Pop3/Pop3Client.html">MailKit.Net.Pop3.Pop3Client</a>, you must first
-            call the <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Threading.CancellationToken)">Pop3Client.Connect(Uri, System.Threading.CancellationToken)</a> method and authenticate with
+            call the <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Pop3Client.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method and authenticate with
             the <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">Pop3Client.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a> method.
             </div>
               <h2 class="Section">Requirements</h2>
@@ -2013,7 +2037,7 @@
               <blockquote class="SubsectionBox" id="P:MailKit.Net.Pop3.Pop3Client.AuthenticationMechanisms:Value">The authentication mechanisms.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Pop3.Pop3Client.AuthenticationMechanisms:Remarks">
-                <p>The authentication mechanisms are queried durring the <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Threading.CancellationToken)">Pop3Client.Connect(Uri, System.Threading.CancellationToken)</a> method.</p>
+                <p>The authentication mechanisms are queried durring the <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Pop3Client.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method.</p>
                 <p>Servers that do not support the SASL capability will typically support either the
             <tt>"APOP"</tt> authentication mechanism (<a href="../MailKit.Net.Pop3/Pop3Capabilities.html#F:MailKit.Net.Pop3.Pop3Capabilities.Apop">Pop3Capabilities.Apop</a>) or the ability to
             login using the <tt>"USER"</tt> and <tt>"PASS"</tt> commands (<a href="../MailKit.Net.Pop3/Pop3Capabilities.html#F:MailKit.Net.Pop3.Pop3Capabilities.User">Pop3Capabilities.User</a>).</p>
@@ -2052,7 +2076,7 @@
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Pop3.Pop3Client.Capabilities:Remarks">
             The capabilities will not be known until a successful connection has been made via
-            the <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Threading.CancellationToken)">Pop3Client.Connect(Uri, System.Threading.CancellationToken)</a> method and may change as a side-effect
+            the <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Pop3Client.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method and may change as a side-effect
             of the <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">Pop3Client.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a> method.
             </div>
               <h2 class="Section">Requirements</h2>
@@ -2060,21 +2084,28 @@
                 <b>Namespace: </b>MailKit.Net.Pop3<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Threading.CancellationToken)">Connect Method</h3>
-            <blockquote id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Threading.CancellationToken):member">
+            <h3 id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Connect Method</h3>
+            <blockquote id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):member">
               <div class="msummary">
-            Establishes a connection to the specified POP3 server.
+            Establish a connection to the specified POP3 or POP3/S server.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Connect</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a> uri, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Connect</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> host, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> port, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Threading.CancellationToken):Parameters">
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Parameters">
                 <dl>
                   <dt>
-                    <i>uri</i>
+                    <i>host</i>
                   </dt>
-                  <dd>The server URI. The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=P:System.Uri.Scheme">Uri.Scheme</a> should either
-            be "pop" to make a clear-text connection or "pops" to make an SSL connection.</dd>
+                  <dd>The host name to connect to.</dd>
+                  <dt>
+                    <i>port</i>
+                  </dt>
+                  <dd>The port to connect to. If the specified port is <tt>0</tt>, then the default port will be used.</dd>
+                  <dt>
+                    <i>options</i>
+                  </dt>
+                  <dd>The secure socket options to when connecting.</dd>
                   <dt>
                     <i>cancellationToken</i>
                   </dt>
@@ -2082,7 +2113,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Threading.CancellationToken):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -2093,7 +2124,23 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
                     </td>
                     <td>
-            The <i>uri</i> is <tt>null</tt>.
+                      <i>host</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>port</i> is not between <tt>0</tt> and <tt>65535</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+            The <i>host</i> is a zero-length string.
             </td>
                   </tr>
                   <tr valign="top">
@@ -2106,6 +2153,14 @@
                   </tr>
                   <tr valign="top">
                     <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Pop3/Pop3Client.html">MailKit.Net.Pop3.Pop3Client</a> is already connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
                     </td>
                     <td>
@@ -2114,26 +2169,20 @@
                   </tr>
                   <tr valign="top">
                     <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+                      <i>options</i> was set to
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.StartTls">MailKit.Security.SecureSocketOptions.StartTls</a>
+            and the POP3 server does not support the STLS extension.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
                     </td>
                     <td>
             An I/O error occurred.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="javascript:alert(&quot;Documentation not found.&quot;)">MailKit.Net.Pop3.Pop3Exception</a>
-                    </td>
-                    <td>
-            A POP3 protocol error occurred.
-            </td>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
-                    </td>
-                    <td>
-            The <a href="../MailKit.Net.Pop3/Pop3Client.html">MailKit.Net.Pop3.Pop3Client</a> is already connected.
             </td>
                   </tr>
                   <tr valign="top">
@@ -2152,64 +2201,64 @@
             A POP3 protocol error occurred.
             </td>
                   </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
-                    </td>
-                    <td>
-            The <i>uri</i> is not an absolute URI.
-            </td>
-                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Threading.CancellationToken):Remarks">
-                <p>Establishes a connection to a POP3 or POP3/S server. If the schema
-            in the uri is "pop", a clear-text connection is made and defaults to using
-            port 110 if no port is specified in the URI. However, if the schema in the
-            uri is "pops", an SSL connection is made using the
-            <a href="../MailKit/MailService.html#P:MailKit.MailService.ClientCertificates">MailKit.MailService.ClientCertificates</a> and defaults to port 995 unless a port
-            is specified in the URI.</p>
-                <p>It should be noted that when using a clear-text POP3 connection,
-            if the server advertizes support for the STLS extension, the client
-            will automatically switch into TLS mode before authenticating unless
-            the <i>uri</i> contains a query string ("?starttls=false")
-            to disable it.</p>
-            If a successful connection is made, the <a href="../MailKit.Net.Pop3/Pop3Client.html#P:MailKit.Net.Pop3.Pop3Client.AuthenticationMechanisms">Pop3Client.AuthenticationMechanisms</a>
-            and <a href="../MailKit.Net.Pop3/Pop3Client.html#P:MailKit.Net.Pop3.Pop3Client.Capabilities">Pop3Client.Capabilities</a> properties will be populated.
-            </div>
+              <div class="SectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Remarks">
+                <p>Establishes a connection to the specified POP3 or POP3/S server.</p>
+                <p>If the <i>port</i> has a value of <tt>0</tt>, then the
+            <i>options</i> parameter is used to determine the default port to
+            connect to. The default port used with <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.SslOnConnect">MailKit.Security.SecureSocketOptions.SslOnConnect</a>
+            is <tt>995</tt>. All other values will use a default port of <tt>110</tt>.</p>
+                <p>If the <i>options</i> has a value of
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.Auto">MailKit.Security.SecureSocketOptions.Auto</a>, then the <i>port</i> is used
+            to determine the default security options. If the <i>port</i> has a value
+            of <tt>995</tt>, then the default options used will be
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.SslOnConnect">MailKit.Security.SecureSocketOptions.SslOnConnect</a>. All other values will use
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.StartTlsWhenAvailable">MailKit.Security.SecureSocketOptions.StartTlsWhenAvailable</a>.</p>
+                <p>Once a connection is established, properties such as
+            <a href="../MailKit.Net.Pop3/Pop3Client.html#P:MailKit.Net.Pop3.Pop3Client.AuthenticationMechanisms">Pop3Client.AuthenticationMechanisms</a> and <a href="../MailKit.Net.Pop3/Pop3Client.html#P:MailKit.Net.Pop3.Pop3Client.Capabilities">Pop3Client.Capabilities</a> will be
+            populated.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Threading.CancellationToken):Version Information">
+              <div class="SectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit.Net.Pop3<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Net.Sockets.Socket,System.Threading.CancellationToken)">Connect Method</h3>
-            <blockquote id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Net.Sockets.Socket,System.Threading.CancellationToken):member">
+            <h3 id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Net.Sockets.Socket,System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Connect Method</h3>
+            <blockquote id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Net.Sockets.Socket,System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):member">
               <div class="msummary">
-            Establishes a connection to the specified POP3 server using the provided socket.
+            Establish a connection to the specified POP3 or POP3/S server using the provided socket.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Connect</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Uri">Uri</a> uri, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Sockets.Socket">System.Net.Sockets.Socket</a> socket, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>Connect</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Sockets.Socket">System.Net.Sockets.Socket</a> socket, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> host, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> port, <a href="../MailKit.Security/SecureSocketOptions.html">MailKit.Security.SecureSocketOptions</a> options, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Net.Sockets.Socket,System.Threading.CancellationToken):Parameters">
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Net.Sockets.Socket,System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Parameters">
                 <dl>
-                  <dt>
-                    <i>uri</i>
-                  </dt>
-                  <dd>The server URI. The <a href="http://www.go-mono.com/docs/monodoc.ashx?link=P:System.Uri.Scheme">Uri.Scheme</a> should either
-            be "pop" to make a clear-text connection or "pops" to make an SSL connection.</dd>
                   <dt>
                     <i>socket</i>
                   </dt>
                   <dd>The socket to use for the connection.</dd>
                   <dt>
+                    <i>host</i>
+                  </dt>
+                  <dd>The host name to connect to.</dd>
+                  <dt>
+                    <i>port</i>
+                  </dt>
+                  <dd>The port to connect to. If the specified port is <tt>0</tt>, then the default port will be used.</dd>
+                  <dt>
+                    <i>options</i>
+                  </dt>
+                  <dd>The secure socket options to when connecting.</dd>
+                  <dt>
                     <i>cancellationToken</i>
                   </dt>
                   <dd>The cancellation token.</dd>
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Net.Sockets.Socket,System.Threading.CancellationToken):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Net.Sockets.Socket,System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -2221,11 +2270,19 @@
                     </td>
                     <td>
                       <p>
-                        <i>uri</i> is <tt>null</tt>.</p>
+                        <i>socket</i> is <tt>null</tt>.</p>
                       <p>-or-</p>
                       <p>
-                        <i>socket</i> is <tt>null</tt>.</p>
+                        <i>host</i> is <tt>null</tt>.</p>
                     </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>port</i> is not between <tt>0</tt> and <tt>65535</tt>.
+            </td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -2233,11 +2290,10 @@
                     </td>
                     <td>
                       <p>
-                        <i>uri</i> is not an absolute URI.</p>
-                      <p>-or-</p>
-                      <p>
                         <i>socket</i> is not connected.</p>
-                    </td>
+                      <p>-or-</p>
+            The <i>host</i> is a zero-length string.
+            </td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -2253,6 +2309,16 @@
                     </td>
                     <td>
             The <a href="../MailKit.Net.Pop3/Pop3Client.html">MailKit.Net.Pop3.Pop3Client</a> is already connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
+                    </td>
+                    <td>
+                      <i>options</i> was set to
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.StartTls">MailKit.Security.SecureSocketOptions.StartTls</a>
+            and the POP3 server does not support the STLS extension.
             </td>
                   </tr>
                   <tr valign="top">
@@ -2290,21 +2356,25 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Net.Sockets.Socket,System.Threading.CancellationToken):Remarks">
-                <p>Establishes a connection to a POP3 or POP3/S server. If the schema
-            in the uri is "pop", a clear-text connection is assumed. However, if the
-            schema in the uri is "pops", an SSL connection is made using the
-            <a href="../MailKit/MailService.html#P:MailKit.MailService.ClientCertificates">MailKit.MailService.ClientCertificates</a>.</p>
-                <p>It should be noted that when using a clear-text POP3 connection,
-            if the server advertizes support for the STLS extension, the client
-            will automatically switch into TLS mode before authenticating unless
-            the <i>uri</i> contains a query string ("?starttls=false")
-            to disable it.</p>
-            If a successful connection is made, the <a href="../MailKit.Net.Pop3/Pop3Client.html#P:MailKit.Net.Pop3.Pop3Client.AuthenticationMechanisms">Pop3Client.AuthenticationMechanisms</a>
-            and <a href="../MailKit.Net.Pop3/Pop3Client.html#P:MailKit.Net.Pop3.Pop3Client.Capabilities">Pop3Client.Capabilities</a> properties will be populated.
-            </div>
+              <div class="SectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Net.Sockets.Socket,System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Remarks">
+                <p>Establishes a connection to the specified POP3 or POP3/S server using
+            the provided socket.</p>
+                <p>If the <i>port</i> has a value of <tt>0</tt>, then the
+            <i>options</i> parameter is used to determine the default port to
+            connect to. The default port used with <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.SslOnConnect">MailKit.Security.SecureSocketOptions.SslOnConnect</a>
+            is <tt>995</tt>. All other values will use a default port of <tt>110</tt>.</p>
+                <p>If the <i>options</i> has a value of
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.Auto">MailKit.Security.SecureSocketOptions.Auto</a>, then the <i>port</i> is used
+            to determine the default security options. If the <i>port</i> has a value
+            of <tt>995</tt>, then the default options used will be
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.SslOnConnect">MailKit.Security.SecureSocketOptions.SslOnConnect</a>. All other values will use
+            <a href="../MailKit.Security/SecureSocketOptions.html#F:MailKit.Security.SecureSocketOptions.StartTlsWhenAvailable">MailKit.Security.SecureSocketOptions.StartTlsWhenAvailable</a>.</p>
+                <p>Once a connection is established, properties such as
+            <a href="../MailKit.Net.Pop3/Pop3Client.html#P:MailKit.Net.Pop3.Pop3Client.AuthenticationMechanisms">Pop3Client.AuthenticationMechanisms</a> and <a href="../MailKit.Net.Pop3/Pop3Client.html#P:MailKit.Net.Pop3.Pop3Client.Capabilities">Pop3Client.Capabilities</a> will be
+            populated.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Uri,System.Net.Sockets.Socket,System.Threading.CancellationToken):Version Information">
+              <div class="SectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Connect(System.Net.Sockets.Socket,System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit.Net.Pop3<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
@@ -5431,9 +5501,9 @@
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Pop3.Pop3Client.IsAuthenticated:Remarks">
                 <p>Gets whether or not the client is currently authenticated with the POP3 server.</p>
-                <p>To authenticate with the mail server, use
-            <a href="javascript:alert(&quot;Documentation not found.&quot;)">.(string,  string,  System.Threading.CancellationToken)</a>
-            or <a href="javascript:alert(&quot;Documentation not found.&quot;)">.(ICredential,  System.Threading.CancellationToken)</a>.</p>
+                <p>To authenticate with the POP3 server, use
+            <a href="../MailKit/MailService.html#M:MailKit.MailService.Authenticate(System.String,System.String,System.Threading.CancellationToken)">MailKit.MailService.Authenticate(string, string, System.Threading.CancellationToken)</a>
+            or <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">Pop3Client.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a>.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.Net.Pop3.Pop3Client.IsAuthenticated:Version Information">
