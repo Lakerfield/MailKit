@@ -3705,6 +3705,18 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MailKit.MailFolder.OnMessageSummaryFetched(MailKit.IMessageSummary)">OnMessageSummaryFetched</a>
+                      </b>(<a href="../MailKit/IMessageSummary.html">IMessageSummary</a>)<blockquote>
+            Raise the message summary fetched event.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="#M:MailKit.MailFolder.OnMessagesVanished(MailKit.MessagesVanishedEventArgs)">OnMessagesVanished</a>
                       </b>(<a href="../MailKit/MessagesVanishedEventArgs.html">MessagesVanishedEventArgs</a>)<blockquote>
             Raise the messages vanished event.
@@ -3859,6 +3871,20 @@
                     </td>
                     <td>
             Occurs when new messages arrive in the folder.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#E:MailKit.MailFolder.MessageSummaryFetched">MessageSummaryFetched</a>
+                      </b>
+                    </td>
+                    <td>
+            Occurs when a message summary is fetched from the folder.
             </td>
                   </tr>
                   <tr valign="top">
@@ -21222,6 +21248,22 @@
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="E:MailKit.MailFolder.MessageSummaryFetched">MessageSummaryFetched Event</h3>
+            <blockquote id="E:MailKit.MailFolder.MessageSummaryFetched:member">
+              <div class="msummary">
+            Occurs when a message summary is fetched from the folder.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;MessageSummaryFetchedEventArgs&gt;</a> <b>MessageSummaryFetched</b> </div>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="E:MailKit.MailFolder.MessageSummaryFetched:Remarks">
+            Emitted when a message summary is fetched from the folder.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="E:MailKit.MailFolder.MessageSummaryFetched:Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="E:MailKit.MailFolder.MessagesVanished">MessagesVanished Event</h3>
             <blockquote id="E:MailKit.MailFolder.MessagesVanished:member">
               <div class="msummary">
@@ -22367,6 +22409,43 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.MailFolder.OnMessagesArrived(MailKit.MessagesArrivedEventArgs):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.MailFolder.OnMessageSummaryFetched(MailKit.IMessageSummary)">OnMessageSummaryFetched Method</h3>
+            <blockquote id="M:MailKit.MailFolder.OnMessageSummaryFetched(MailKit.IMessageSummary):member">
+              <div class="msummary">
+            Raise the message summary fetched event.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">protected virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>OnMessageSummaryFetched</b> (<a href="../MailKit/IMessageSummary.html">IMessageSummary</a> message)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailFolder.OnMessageSummaryFetched(MailKit.IMessageSummary):Parameters">
+                <dl>
+                  <dt>
+                    <i>message</i>
+                  </dt>
+                  <dd>The message summary.</dd>
+                </dl>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.MailFolder.OnMessageSummaryFetched(MailKit.IMessageSummary):Remarks">
+                <p>Raises the message summary fetched event.</p>
+                <p>When multiple message summaries are being fetched from a remote folder,
+            it is possible that the connection will drop or some other exception will
+            occur, causing the Fetch method to fail, requiring the client to request the
+            same set of message summaries again after it reconnects. This is obviously
+            inefficient. To alleviate this potential problem, this event will be emitted
+            as soon as the <a href="../MailKit/IMailFolder.html">MailKit.IMailFolder</a> successfully retrieves the complete
+            <a href="../MailKit/IMessageSummary.html">MailKit.IMessageSummary</a> for each requested message.</p>
+                <p>Note: The Fetch methods will return a list of all message summaries
+            that any information was retrieved for, regardless of whether or not all of
+            the requested items were fetched, therefore there may be a discrepency between
+            the number of times this event is emitetd and the number of summary items
+            returned from the Fetch method.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.MailFolder.OnMessageSummaryFetched(MailKit.IMessageSummary):Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>

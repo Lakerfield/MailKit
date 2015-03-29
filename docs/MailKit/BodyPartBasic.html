@@ -393,6 +393,20 @@
                     <td>[read-only]<div></div></td>
                     <td>
                       <b>
+                        <a href="#P:MailKit.BodyPartBasic.FileName">FileName</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
+                      </i>. 
+            Get the name of the file.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
                         <a href="#P:MailKit.BodyPartBasic.IsAttachment">IsAttachment</a>
                       </b>
                     </td>
@@ -538,7 +552,7 @@
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.BodyPartBasic.ContentDisposition:Remarks">
                 <p>Gets the Content-Disposition of the body part, if available.</p>
-                <p>The Content-Disposition value is only retrieved if the
+                <p>Note: The Content-Disposition value is only retrieved if the
             <a href="../MailKit/MessageSummaryItems.html#F:MailKit.MessageSummaryItems.BodyStructure">MessageSummaryItems.BodyStructure</a> flag is used when fetching
             summary information from an <a href="../MailKit/IMailFolder.html">MailKit.IMailFolder</a>.</p>
               </div>
@@ -668,6 +682,28 @@
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="P:MailKit.BodyPartBasic.FileName">FileName Property</h3>
+            <blockquote id="P:MailKit.BodyPartBasic.FileName:member">
+              <div class="msummary">
+            Get the name of the file.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>FileName</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.BodyPartBasic.FileName:Value">The name of the file.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MailKit.BodyPartBasic.FileName:Remarks">
+                <p>First checks for the "filename" parameter on the Content-Disposition header. If
+            that does not exist, then the "name" parameter on the Content-Type header is used.</p>
+                <p>Note: Since the value of the Content-Disposition header is needed, it is necessary to
+            include the <a href="../MailKit/MessageSummaryItems.html#F:MailKit.MessageSummaryItems.BodyStructure">MessageSummaryItems.BodyStructure</a> flag when fetching
+            summary information from an <a href="../MailKit/IMailFolder.html">MailKit.IMailFolder</a>.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MailKit.BodyPartBasic.FileName:Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="P:MailKit.BodyPartBasic.IsAttachment">IsAttachment Property</h3>
             <blockquote id="P:MailKit.BodyPartBasic.IsAttachment:member">
               <div class="msummary">
@@ -677,12 +713,12 @@
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> <b>IsAttachment</b>  { get; }</div>
               <h4 class="Subsection">Value</h4>
               <blockquote class="SubsectionBox" id="P:MailKit.BodyPartBasic.IsAttachment:Value">
-                <tt>true</tt> if thie part is an attachment; otherwise, <tt>false</tt>.</blockquote>
+                <tt>true</tt> if this part is an attachment; otherwise, <tt>false</tt>.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.BodyPartBasic.IsAttachment:Remarks">
                 <p>Determines whether or not the body part is an attachment based on the value of
             the Content-Disposition.</p>
-                <p>Since the value of the Content-Disposition header is needed, it is necessary to
+                <p>Note: Since the value of the Content-Disposition header is needed, it is necessary to
             include the <a href="../MailKit/MessageSummaryItems.html#F:MailKit.MessageSummaryItems.BodyStructure">MessageSummaryItems.BodyStructure</a> flag when fetching
             summary information from an <a href="../MailKit/IMailFolder.html">MailKit.IMailFolder</a>.</p>
               </div>

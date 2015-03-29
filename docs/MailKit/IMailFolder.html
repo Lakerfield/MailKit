@@ -3677,6 +3677,20 @@
                     </td>
                     <td>
                       <b>
+                        <a href="#E:MailKit.IMailFolder.MessageSummaryFetched">MessageSummaryFetched</a>
+                      </b>
+                    </td>
+                    <td>
+            Occurs when a message summary is fetched from the folder.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
                         <a href="#E:MailKit.IMailFolder.MessagesVanished">MessagesVanished</a>
                       </b>
                     </td>
@@ -9491,6 +9505,34 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="E:MailKit.IMailFolder.MessagesArrived:Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="E:MailKit.IMailFolder.MessageSummaryFetched">MessageSummaryFetched Event</h3>
+            <blockquote id="E:MailKit.IMailFolder.MessageSummaryFetched:member">
+              <div class="msummary">
+            Occurs when a message summary is fetched from the folder.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public event <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.EventHandler`1">EventHandler&lt;MessageSummaryFetchedEventArgs&gt;</a> <b>MessageSummaryFetched</b> </div>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="E:MailKit.IMailFolder.MessageSummaryFetched:Remarks">
+                <p>Emitted when a message summary is fetched from the folder.</p>
+                <p>When multiple message summaries are being fetched from a remote folder,
+            it is possible that the connection will drop or some other exception will
+            occur, causing the Fetch method to fail, requiring the client to request the
+            same set of message summaries again after it reconnects. This is obviously
+            inefficient. To alleviate this potential problem, this event will be emitted
+            as soon as the <a href="../MailKit/IMailFolder.html">MailKit.IMailFolder</a> successfully retrieves the complete
+            <a href="../MailKit/IMessageSummary.html">MailKit.IMessageSummary</a> for each requested message.</p>
+                <p>Note: The Fetch methods will return a list of all message summaries
+            that any information was retrieved for, regardless of whether or not all of
+            the requested items were fetched, therefore there may be a discrepency between
+            the number of times this event is emitetd and the number of summary items
+            returned from the Fetch method.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="E:MailKit.IMailFolder.MessageSummaryFetched:Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>
