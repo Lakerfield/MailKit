@@ -422,6 +422,23 @@
             </td>
                   </tr>
                   <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MailKit/MailService.html#P:MailKit.MailService.ServerCertificateValidationCallback">ServerCertificateValidationCallback</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Security.RemoteCertificateValidationCallback">System.Net.Security.RemoteCertificateValidationCallback</a>
+                      </i>. 
+            Get or sets a callback function to validate the server certificate.
+             (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
                     <td>[read-only]<div>override </div></td>
                     <td>
                       <b>
@@ -1249,6 +1266,9 @@
             authenticate.</p>
                 <p>If, on the other hand, authentication is not supported, then
             this method simply returns without attempting to authenticate.</p>
+                <p>Note: To prevent the usage of certain authentication mechanisms,
+            simply remove them from the the <a href="../MailKit.Net.Smtp/SmtpClient.html#P:MailKit.Net.Smtp.SmtpClient.AuthenticationMechanisms">SmtpClient.AuthenticationMechanisms</a> hash
+            set before calling the Authenticate() method.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.Net.Smtp.SmtpClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken):Version Information">
@@ -1266,8 +1286,15 @@
               <blockquote class="SubsectionBox" id="P:MailKit.Net.Smtp.SmtpClient.AuthenticationMechanisms:Value">The authentication mechanisms.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Smtp.SmtpClient.AuthenticationMechanisms:Remarks">
-            The authentication mechanisms are queried durring the <a href="../MailKit.Net.Smtp/SmtpClient.html#M:MailKit.Net.Smtp.SmtpClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">SmtpClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method.
-            </div>
+                <p>The authentication mechanisms are queried as part of the
+            <a href="../MailKit.Net.Smtp/SmtpClient.html#M:MailKit.Net.Smtp.SmtpClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">SmtpClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a>
+            method.</p>
+                <p>Note: To prevent the usage of certain authentication mechanisms in
+            <a href="../MailKit/MailService.html#M:MailKit.MailService.Authenticate(System.String,System.String,System.Threading.CancellationToken)">MailKit.MailService.Authenticate(string, string, System.Threading.CancellationToken)</a> or
+            <a href="../MailKit.Net.Smtp/SmtpClient.html#M:MailKit.Net.Smtp.SmtpClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">SmtpClient.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a>, simply remove
+            them from the the <a href="../MailKit.Net.Smtp/SmtpClient.html#P:MailKit.Net.Smtp.SmtpClient.AuthenticationMechanisms">SmtpClient.AuthenticationMechanisms</a> hash set before
+            calling either of the Authenticate() methods.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.Net.Smtp.SmtpClient.AuthenticationMechanisms:Version Information">
                 <b>Namespace: </b>MailKit.Net.Smtp<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>

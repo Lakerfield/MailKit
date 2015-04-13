@@ -503,6 +503,23 @@
             </td>
                   </tr>
                   <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MailKit/MailService.html#P:MailKit.MailService.ServerCertificateValidationCallback">ServerCertificateValidationCallback</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Security.RemoteCertificateValidationCallback">System.Net.Security.RemoteCertificateValidationCallback</a>
+                      </i>. 
+            Get or sets a callback function to validate the server certificate.
+             (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
                     <td>[read-only]<div>override </div></td>
                     <td>
                       <b>
@@ -1288,8 +1305,8 @@
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MailKit.Net.Imap.ImapClient():Remarks">
             Before you can retrieve messages with the <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a>, you must first
-            call the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ImapClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method and authenticate with
-            the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">ImapClient.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a> method.
+            call the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ImapClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method
+            and authenticate with the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">ImapClient.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a> method.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MailKit.Net.Imap.ImapClient():Version Information">
@@ -1332,8 +1349,8 @@
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="C:MailKit.Net.Imap.ImapClient(MailKit.IProtocolLogger):Remarks">
             Before you can retrieve messages with the <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a>, you must first
-            call the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ImapClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method and authenticate with
-            the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">ImapClient.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a> method.
+            call the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ImapClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method
+            and authenticate with the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">ImapClient.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a> method.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="C:MailKit.Net.Imap.ImapClient(MailKit.IProtocolLogger):Version Information">
@@ -1443,13 +1460,16 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken):Remarks">
-                <p>If the server supports one or more SASL authentication mechanisms, then
-            the SASL mechanisms that both the client and server support are tried
+                <p>If the IMAP server supports one or more SASL authentication mechanisms,
+            then the SASL mechanisms that both the client and server support are tried
             in order of greatest security to weakest security. Once a SASL
             authentication mechanism is found that both client and server support,
             the credentials are used to authenticate.</p>
                 <p>If the server does not support SASL or if no common SASL mechanisms
             can be found, then LOGIN command is used as a fallback.</p>
+                <p>Note: To prevent the usage of certain authentication mechanisms,
+            simply remove them from the the <a href="../MailKit.Net.Imap/ImapClient.html#P:MailKit.Net.Imap.ImapClient.AuthenticationMechanisms">ImapClient.AuthenticationMechanisms</a> hash
+            set before calling the Authenticate() method.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken):Version Information">
@@ -1467,8 +1487,15 @@
               <blockquote class="SubsectionBox" id="P:MailKit.Net.Imap.ImapClient.AuthenticationMechanisms:Value">The authentication mechanisms.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.AuthenticationMechanisms:Remarks">
-            The authentication mechanisms are queried as part of the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ImapClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method.
-            </div>
+                <p>The authentication mechanisms are queried as part of the
+            <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ImapClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a>
+            method.</p>
+                <p>Note: To prevent the usage of certain authentication mechanisms in
+            <a href="../MailKit/MailService.html#M:MailKit.MailService.Authenticate(System.String,System.String,System.Threading.CancellationToken)">MailKit.MailService.Authenticate(string, string, System.Threading.CancellationToken)</a> or
+            <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">ImapClient.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a>, simply remove
+            them from the the <a href="../MailKit.Net.Imap/ImapClient.html#P:MailKit.Net.Imap.ImapClient.AuthenticationMechanisms">ImapClient.AuthenticationMechanisms</a> hash set before
+            calling either of the Authenticate() methods.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.AuthenticationMechanisms:Version Information">
                 <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -3334,8 +3361,9 @@
               <blockquote class="SubsectionBox" id="P:MailKit.Net.Imap.ImapClient.ThreadingAlgorithms:Value">The authentication mechanisms.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.ThreadingAlgorithms:Remarks">
-            The threading algorithms are queried as part of the <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ImapClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> and
-            <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">ImapClient.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a> methods.
+            The threading algorithms are queried as part of the
+            <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">ImapClient.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a>
+            and <a href="../MailKit.Net.Imap/ImapClient.html#M:MailKit.Net.Imap.ImapClient.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">ImapClient.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a> methods.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.Net.Imap.ImapClient.ThreadingAlgorithms:Version Information">

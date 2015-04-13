@@ -313,6 +313,23 @@
             </td>
                   </tr>
                   <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="#P:MailKit.MailService.ServerCertificateValidationCallback">ServerCertificateValidationCallback</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Security.RemoteCertificateValidationCallback">System.Net.Security.RemoteCertificateValidationCallback</a>
+                      </i>. 
+            Get or sets a callback function to validate the server certificate.
+            </td>
+                  </tr>
+                  <tr valign="top">
                     <td>[read-only]<div>abstract </div></td>
                     <td>
                       <b>
@@ -783,13 +800,16 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MailKit.MailService.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken):Remarks">
-                <p>If the server supports one or more SASL authentication mechanisms, then
-            the SASL mechanisms that both the client and server support are tried
+                <p>If the server supports one or more SASL authentication mechanisms,
+            then the SASL mechanisms that both the client and server support are tried
             in order of greatest security to weakest security. Once a SASL
             authentication mechanism is found that both client and server support,
             the credentials are used to authenticate.</p>
                 <p>If the server does not support SASL or if no common SASL mechanisms
             can be found, then the default login command is used as a fallback.</p>
+                <p>Note: To prevent the usage of certain authentication mechanisms,
+            simply remove them from the the <a href="../MailKit/MailService.html#P:MailKit.MailService.AuthenticationMechanisms">MailService.AuthenticationMechanisms</a> hash
+            set before calling the Authenticate() method.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.MailService.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken):Version Information">
@@ -899,13 +919,16 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MailKit.MailService.Authenticate(System.String,System.String,System.Threading.CancellationToken):Remarks">
-                <p>If the server supports one or more SASL authentication mechanisms, then
-            the SASL mechanisms that both the client and server support are tried
+                <p>If the server supports one or more SASL authentication mechanisms,
+            then the SASL mechanisms that both the client and server support are tried
             in order of greatest security to weakest security. Once a SASL
             authentication mechanism is found that both client and server support,
             the credentials are used to authenticate.</p>
                 <p>If the server does not support SASL or if no common SASL mechanisms
             can be found, then the default login command is used as a fallback.</p>
+                <p>Note: To prevent the usage of certain authentication mechanisms,
+            simply remove them from the the <a href="../MailKit/MailService.html#P:MailKit.MailService.AuthenticationMechanisms">MailService.AuthenticationMechanisms</a> hash
+            set before calling the Authenticate() method.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.MailService.Authenticate(System.String,System.String,System.Threading.CancellationToken):Version Information">
@@ -1009,13 +1032,16 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MailKit.MailService.AuthenticateAsync(System.Net.ICredentials,System.Threading.CancellationToken):Remarks">
-                <p>If the server supports one or more SASL authentication mechanisms, then
-            the SASL mechanisms that both the client and server support are tried
+                <p>If the server supports one or more SASL authentication mechanisms,
+            then the SASL mechanisms that both the client and server support are tried
             in order of greatest security to weakest security. Once a SASL
             authentication mechanism is found that both client and server support,
             the credentials are used to authenticate.</p>
                 <p>If the server does not support SASL or if no common SASL mechanisms
             can be found, then the default login command is used as a fallback.</p>
+                <p>Note: To prevent the usage of certain authentication mechanisms,
+            simply remove them from the the <a href="../MailKit/MailService.html#P:MailKit.MailService.AuthenticationMechanisms">MailService.AuthenticationMechanisms</a> hash
+            set before calling the Authenticate() method.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.MailService.AuthenticateAsync(System.Net.ICredentials,System.Threading.CancellationToken):Version Information">
@@ -1127,13 +1153,16 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MailKit.MailService.AuthenticateAsync(System.String,System.String,System.Threading.CancellationToken):Remarks">
-                <p>If the server supports one or more SASL authentication mechanisms, then
-            the SASL mechanisms that both the client and server support are tried
+                <p>If the server supports one or more SASL authentication mechanisms,
+            then the SASL mechanisms that both the client and server support are tried
             in order of greatest security to weakest security. Once a SASL
             authentication mechanism is found that both client and server support,
             the credentials are used to authenticate.</p>
                 <p>If the server does not support SASL or if no common SASL mechanisms
             can be found, then the default login command is used as a fallback.</p>
+                <p>Note: To prevent the usage of certain authentication mechanisms,
+            simply remove them from the the <a href="../MailKit/MailService.html#P:MailKit.MailService.AuthenticationMechanisms">MailService.AuthenticationMechanisms</a> hash
+            set before calling the Authenticate() method.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.MailService.AuthenticateAsync(System.String,System.String,System.Threading.CancellationToken):Version Information">
@@ -1168,7 +1197,7 @@
               <blockquote class="SubsectionBox" id="P:MailKit.MailService.AuthenticationMechanisms:Value">The authentication mechanisms.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.MailService.AuthenticationMechanisms:Remarks">
-            The authentication mechanisms are queried as part of the <a href="../MailKit/MailService.html#M:MailKit.MailService.Connect(System.Uri,System.Threading.CancellationToken)">MailService.Connect(Uri, System.Threading.CancellationToken)</a> method.
+            The authentication mechanisms are queried as part of the <a href="../MailKit/MailService.html#M:MailKit.MailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">MailService.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method.
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.MailService.AuthenticationMechanisms:Version Information">
@@ -1188,7 +1217,7 @@
               <div class="SectionBox" id="P:MailKit.MailService.ClientCertificates:Remarks">
                 <p>Some servers may require the client SSL certificates in order
             to allow the user to connect.</p>
-                <p>This property should be set before calling <a href="../MailKit/MailService.html#M:MailKit.MailService.Connect(System.Uri,System.Threading.CancellationToken)">MailService.Connect(Uri, System.Threading.CancellationToken)</a>.</p>
+                <p>This property should be set before calling <a href="../MailKit/MailService.html#M:MailKit.MailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">MailService.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a>.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.MailService.ClientCertificates:Version Information">
@@ -2305,6 +2334,25 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.MailService.Protocol:Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MailKit.MailService.ServerCertificateValidationCallback">ServerCertificateValidationCallback Property</h3>
+            <blockquote id="P:MailKit.MailService.ServerCertificateValidationCallback:member">
+              <div class="msummary">
+            Get or sets a callback function to validate the server certificate.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Security.RemoteCertificateValidationCallback">System.Net.Security.RemoteCertificateValidationCallback</a> <b>ServerCertificateValidationCallback</b>  { get; set; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.MailService.ServerCertificateValidationCallback:Value">The server certificate validation callback function.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MailKit.MailService.ServerCertificateValidationCallback:Remarks">
+                <p>Gets or sets a callback function to validate the server certificate.</p>
+                <p>This property should be set before calling <a href="../MailKit/MailService.html#M:MailKit.MailService.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">MailService.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a>.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MailKit.MailService.ServerCertificateValidationCallback:Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>

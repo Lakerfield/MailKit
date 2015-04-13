@@ -433,6 +433,23 @@
             </td>
                   </tr>
                   <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td>
+                      <b>
+                        <a href="../MailKit/MailService.html#P:MailKit.MailService.ServerCertificateValidationCallback">ServerCertificateValidationCallback</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Net.Security.RemoteCertificateValidationCallback">System.Net.Security.RemoteCertificateValidationCallback</a>
+                      </i>. 
+            Get or sets a callback function to validate the server certificate.
+             (<i>Inherited from <a href="../MailKit/MailService.html">MailKit.MailService</a>.</i>)</td>
+                  </tr>
+                  <tr valign="top">
                     <td>[read-only]<div>override </div></td>
                     <td>
                       <b>
@@ -2020,6 +2037,9 @@
             the credentials are used to authenticate.</p>
                 <p>If the server does not support SASL or if no common SASL mechanisms
             can be found, then the USER and PASS commands are used as a fallback.</p>
+                <p>Note: To prevent the usage of certain authentication mechanisms,
+            simply remove them from the the <a href="../MailKit.Net.Pop3/Pop3Client.html#P:MailKit.Net.Pop3.Pop3Client.AuthenticationMechanisms">Pop3Client.AuthenticationMechanisms</a> hash
+            set before calling the Authenticate() method.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.Net.Pop3.Pop3Client.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken):Version Information">
@@ -2037,10 +2057,21 @@
               <blockquote class="SubsectionBox" id="P:MailKit.Net.Pop3.Pop3Client.AuthenticationMechanisms:Value">The authentication mechanisms.</blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="P:MailKit.Net.Pop3.Pop3Client.AuthenticationMechanisms:Remarks">
-                <p>The authentication mechanisms are queried durring the <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Pop3Client.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a> method.</p>
-                <p>Servers that do not support the SASL capability will typically support either the
-            <tt>"APOP"</tt> authentication mechanism (<a href="../MailKit.Net.Pop3/Pop3Capabilities.html#F:MailKit.Net.Pop3.Pop3Capabilities.Apop">Pop3Capabilities.Apop</a>) or the ability to
-            login using the <tt>"USER"</tt> and <tt>"PASS"</tt> commands (<a href="../MailKit.Net.Pop3/Pop3Capabilities.html#F:MailKit.Net.Pop3.Pop3Capabilities.User">Pop3Capabilities.User</a>).</p>
+                <p>The authentication mechanisms are queried as part of the
+            <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Connect(System.String,System.Int32,MailKit.Security.SecureSocketOptions,System.Threading.CancellationToken)">Pop3Client.Connect(string, int, MailKit.Security.SecureSocketOptions, System.Threading.CancellationToken)</a>
+            method.</p>
+                <p>Servers that do not support the SASL capability will typically
+            support either the <tt>"APOP"</tt> authentication mechanism
+            (<a href="../MailKit.Net.Pop3/Pop3Capabilities.html#F:MailKit.Net.Pop3.Pop3Capabilities.Apop">Pop3Capabilities.Apop</a>) or the ability to login using the
+            <tt>"USER"</tt> and <tt>"PASS"</tt> commands
+            (<a href="../MailKit.Net.Pop3/Pop3Capabilities.html#F:MailKit.Net.Pop3.Pop3Capabilities.User">Pop3Capabilities.User</a>).</p>
+                <p>Note: To prevent the usage of certain authentication mechanisms in
+            <a href="../MailKit/MailService.html#M:MailKit.MailService.Authenticate(System.String,System.String,System.Threading.CancellationToken)">MailKit.MailService.Authenticate(string, string, System.Threading.CancellationToken)</a> or
+            <a href="../MailKit.Net.Pop3/Pop3Client.html#M:MailKit.Net.Pop3.Pop3Client.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken)">Pop3Client.Authenticate(System.Net.ICredentials, System.Threading.CancellationToken)</a>, simply remove
+            them from the the <a href="../MailKit.Net.Pop3/Pop3Client.html#P:MailKit.Net.Pop3.Pop3Client.AuthenticationMechanisms">Pop3Client.AuthenticationMechanisms</a> hash set before
+            calling either of the Authenticate() methods.</p>
+                <p>In the case of the APOP authentication mechanism, remove it from
+            the <a href="../MailKit.Net.Pop3/Pop3Client.html#P:MailKit.Net.Pop3.Pop3Client.Capabilities">Pop3Client.Capabilities</a> instead.</p>
               </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="P:MailKit.Net.Pop3.Pop3Client.AuthenticationMechanisms:Version Information">
