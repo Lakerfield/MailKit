@@ -711,6 +711,17 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MailKit.Search.SearchQuery.HeaderContains(System.String,System.String)">HeaderContains</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)<nobr> : <a href="../MailKit.Search/HeaderSearchQuery.html">HeaderSearchQuery</a></nobr><blockquote>
+            Matches messages where the specified header contains the specified text.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>static </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="#M:MailKit.Search.SearchQuery.LargerThan(System.Int32)">LargerThan</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>)<nobr> : <a href="../MailKit.Search/NumericSearchQuery.html">NumericSearchQuery</a></nobr><blockquote>
             Matches messages that are larger than the specified number of octets.
@@ -1858,7 +1869,7 @@
             Matches messages where the specified header contains the specified text.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public static <a href="../MailKit.Search/HeaderSearchQuery.html">HeaderSearchQuery</a> <b>Header</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> field, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text)</div>
+              <div class="Signature">[System.Obsolete("Use HeaderContains(string, string) instead.")]<br />public static <a href="../MailKit.Search/HeaderSearchQuery.html">HeaderSearchQuery</a> <b>Header</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> field, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text)</div>
               <h4 class="Subsection">Parameters</h4>
               <blockquote class="SubsectionBox" id="M:MailKit.Search.SearchQuery.Header(System.String,System.String):Parameters">
                 <dl>
@@ -1913,6 +1924,70 @@
             </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.Search.SearchQuery.Header(System.String,System.String):Version Information">
+                <b>Namespace: </b>MailKit.Search<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.Search.SearchQuery.HeaderContains(System.String,System.String)">HeaderContains Method</h3>
+            <blockquote id="M:MailKit.Search.SearchQuery.HeaderContains(System.String,System.String):member">
+              <div class="msummary">
+            Matches messages where the specified header contains the specified text.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public static <a href="../MailKit.Search/HeaderSearchQuery.html">HeaderSearchQuery</a> <b>HeaderContains</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> field, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> text)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Search.SearchQuery.HeaderContains(System.String,System.String):Parameters">
+                <dl>
+                  <dt>
+                    <i>field</i>
+                  </dt>
+                  <dd>The header field to match against.</dd>
+                  <dt>
+                    <i>text</i>
+                  </dt>
+                  <dd>The text to match against.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Search.SearchQuery.HeaderContains(System.String,System.String):Returns">A <a href="../MailKit.Search/HeaderSearchQuery.html">MailKit.Search.HeaderSearchQuery</a>.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Search.SearchQuery.HeaderContains(System.String,System.String):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>field</i> is <tt>null</tt>.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>text</i> is <tt>null</tt>.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+                      <p>
+                        <i>field</i> is empty.</p>
+                      <p>-or-</p>
+                      <p>
+                        <i>text</i> is empty.</p>
+                    </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.Search.SearchQuery.HeaderContains(System.String,System.String):Remarks">
+            Matches messages where the specified header contains the specified text.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.Search.SearchQuery.HeaderContains(System.String,System.String):Version Information">
                 <b>Namespace: </b>MailKit.Search<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
               <hr size="1" />
             </blockquote>

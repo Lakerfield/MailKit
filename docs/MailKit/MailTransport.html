@@ -965,8 +965,14 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MailKit.MailTransport.Send(MimeKit.MimeMessage,System.Threading.CancellationToken):Remarks">
-            Sends the specified message.
-            </div>
+                <p>Sends the specified message.</p>
+                <p>The sender address is determined by checking the following
+            message headers (in order of precedence): Resent-Sender,
+            Resent-From, Sender, and From.</p>
+                <p>If either the Resent-Sender or Resent-From addresses are present,
+            the recipients are collected from the Resent-To, Resent-Cc, and
+            Resent-Bcc headers, otherwise the To, Cc, and Bcc headers are used.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.MailTransport.Send(MimeKit.MimeMessage,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -1085,8 +1091,14 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MailKit.MailTransport.Send(MimeKit.FormatOptions,MimeKit.MimeMessage,System.Threading.CancellationToken):Remarks">
-            Sends the specified message.
-            </div>
+                <p>Sends the specified message.</p>
+                <p>The sender address is determined by checking the following
+            message headers (in order of precedence): Resent-Sender,
+            Resent-From, Sender, and From.</p>
+                <p>If either the Resent-Sender or Resent-From addresses are present,
+            the recipients are collected from the Resent-To, Resent-Cc, and
+            Resent-Bcc headers, otherwise the To, Cc, and Bcc headers are used.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.MailTransport.Send(MimeKit.FormatOptions,MimeKit.MimeMessage,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -1448,8 +1460,14 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MailKit.MailTransport.SendAsync(MimeKit.MimeMessage,System.Threading.CancellationToken):Remarks">
-            Asynchronously sends the specified message.
-            </div>
+                <p>Asynchronously sends the specified message.</p>
+                <p>The sender address is determined by checking the following
+            message headers (in order of precedence): Resent-Sender,
+            Resent-From, Sender, and From.</p>
+                <p>If either the Resent-Sender or Resent-From addresses are present,
+            the recipients are collected from the Resent-To, Resent-Cc, and
+            Resent-Bcc headers, otherwise the To, Cc, and Bcc headers are used.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.MailTransport.SendAsync(MimeKit.MimeMessage,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
@@ -1570,8 +1588,14 @@
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MailKit.MailTransport.SendAsync(MimeKit.FormatOptions,MimeKit.MimeMessage,System.Threading.CancellationToken):Remarks">
-            Asynchronously sends the specified message.
-            </div>
+                <p>Asynchronously sends the specified message.</p>
+                <p>The sender address is determined by checking the following
+            message headers (in order of precedence): Resent-Sender,
+            Resent-From, Sender, and From.</p>
+                <p>If either the Resent-Sender or Resent-From addresses are present,
+            the recipients are collected from the Resent-To, Resent-Cc, and
+            Resent-Bcc headers, otherwise the To, Cc, and Bcc headers are used.</p>
+              </div>
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.MailTransport.SendAsync(MimeKit.FormatOptions,MimeKit.MimeMessage,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0</div>
