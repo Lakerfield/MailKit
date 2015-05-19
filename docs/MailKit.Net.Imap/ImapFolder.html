@@ -1985,7 +1985,8 @@
                       <b>
                         <a href="../MailKit/MailFolder.html#M:MailKit.MailFolder.Fetch(System.Collections.Generic.IList{System.Int32},System.UInt64,MailKit.MessageSummaryItems,System.Collections.Generic.HashSet{MimeKit.HeaderId},System.Threading.CancellationToken)">Fetch</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;int&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a>, <a href="../MailKit/MessageSummaryItems.html">MailKit.MessageSummaryItems</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.HashSet`1">HashSet&lt;MimeKit.HeaderId&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;MailKit.IMessageSummary&gt;</a></nobr><blockquote>
-            Fetch the message summaries for the specified message indexes.
+            Fetch the message summaries for the specified message indexes that
+            have a higher mod-sequence value than the one specified.
              (<i>Inherited from <a href="../MailKit/MailFolder.html">MailKit.MailFolder</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -2008,7 +2009,8 @@
                       <b>
                         <a href="../MailKit/MailFolder.html#M:MailKit.MailFolder.Fetch(System.Collections.Generic.IList{System.Int32},System.UInt64,MailKit.MessageSummaryItems,System.Collections.Generic.HashSet{System.String},System.Threading.CancellationToken)">Fetch</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;int&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a>, <a href="../MailKit/MessageSummaryItems.html">MailKit.MessageSummaryItems</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.HashSet`1">HashSet&lt;string&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;MailKit.IMessageSummary&gt;</a></nobr><blockquote>
-            Fetch the message summaries for the specified message indexes.
+            Fetch the message summaries for the specified message indexes that
+            have a higher mod-sequence value than the one specified.
              (<i>Inherited from <a href="../MailKit/MailFolder.html">MailKit.MailFolder</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -2259,7 +2261,8 @@
                       <b>
                         <a href="../MailKit/MailFolder.html#M:MailKit.MailFolder.FetchAsync(System.Collections.Generic.IList{MailKit.UniqueId},System.UInt64,MailKit.MessageSummaryItems,System.Collections.Generic.HashSet{System.String},System.Threading.CancellationToken)">FetchAsync</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;MailKit.UniqueId&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a>, <a href="../MailKit/MessageSummaryItems.html">MailKit.MessageSummaryItems</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.HashSet`1">HashSet&lt;string&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IList&lt;MailKit.IMessageSummary&gt;&gt;</a></nobr><blockquote>
-            Asynchronously fetch the message summaries for the specified message UIDs that have a higher mod-sequence value than the one specified.
+            Asynchronously fetch the message summaries for the specified message UIDs that have a
+            higher mod-sequence value than the one specified.
              (<i>Inherited from <a href="../MailKit/MailFolder.html">MailKit.MailFolder</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -2271,7 +2274,8 @@
                       <b>
                         <a href="../MailKit/MailFolder.html#M:MailKit.MailFolder.FetchAsync(System.Collections.Generic.IList{System.Int32},System.UInt64,MailKit.MessageSummaryItems,System.Collections.Generic.HashSet{MimeKit.HeaderId},System.Threading.CancellationToken)">FetchAsync</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;int&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a>, <a href="../MailKit/MessageSummaryItems.html">MailKit.MessageSummaryItems</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.HashSet`1">HashSet&lt;MimeKit.HeaderId&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IList&lt;MailKit.IMessageSummary&gt;&gt;</a></nobr><blockquote>
-            Asynchronously fetch the message summaries for the specified message indexes.
+            Asynchronously fetch the message summaries for the specified message indexes that
+            have a higher mod-sequence value than the one specified.
              (<i>Inherited from <a href="../MailKit/MailFolder.html">MailKit.MailFolder</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
@@ -2283,7 +2287,8 @@
                       <b>
                         <a href="../MailKit/MailFolder.html#M:MailKit.MailFolder.FetchAsync(System.Collections.Generic.IList{System.Int32},System.UInt64,MailKit.MessageSummaryItems,System.Collections.Generic.HashSet{System.String},System.Threading.CancellationToken)">FetchAsync</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;int&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UInt64">ulong</a>, <a href="../MailKit/MessageSummaryItems.html">MailKit.MessageSummaryItems</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.HashSet`1">HashSet&lt;string&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IList&lt;MailKit.IMessageSummary&gt;&gt;</a></nobr><blockquote>
-            Asynchronously fetch the message summaries for the specified message indexes.
+            Asynchronously fetch the message summaries for the specified message indexes that
+            have a higher mod-sequence value than the one specified.
              (<i>Inherited from <a href="../MailKit/MailFolder.html">MailKit.MailFolder</a>.</i>)</blockquote></td>
                   </tr>
                   <tr valign="top">
