@@ -376,6 +376,30 @@
             Asynchronously get the folder for the specified path.
             </blockquote></td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.IMailStore.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken)">GetFolders</a>
+                      </b>(<a href="../MailKit/FolderNamespace.html">FolderNamespace</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;IMailFolder&gt;</a></nobr><blockquote>
+            Get all of the folders within the specified namespace.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.IMailStore.GetFoldersAsync(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken)">GetFoldersAsync</a>
+                      </b>(<a href="../MailKit/FolderNamespace.html">FolderNamespace</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IEnumerable&lt;IMailFolder&gt;&gt;</a></nobr><blockquote>
+            Asynchronously get all of the folders within the specified namespace.
+            </blockquote></td>
+                  </tr>
                 </table>
               </div>
             </div>
@@ -458,7 +482,7 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
                     </td>
                     <td>
-            The <a href="../MailKit/MailStore.html">MailKit.MailStore</a> is not connected, not authenticated, or a folder has been selected.
+            Quick resynchronization needs to be enabled before selecting a folder.
             </td>
                   </tr>
                   <tr valign="top">
@@ -491,6 +515,30 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command failed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -549,7 +597,7 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
                     </td>
                     <td>
-            The <a href="../MailKit/MailStore.html">MailKit.MailStore</a> is not connected, not authenticated, or a folder has been selected.
+            Quick resynchronization needs to be enabled before selecting a folder.
             </td>
                   </tr>
                   <tr valign="top">
@@ -582,6 +630,30 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command failed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -753,6 +825,30 @@
             The folder could not be found.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ProtocolException.html">MailKit.ProtocolException</a>
+                    </td>
+                    <td>
+            A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command failed.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -817,6 +913,30 @@
             The folder could not be found.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ProtocolException.html">MailKit.ProtocolException</a>
+                    </td>
+                    <td>
+            A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command failed.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -826,6 +946,258 @@
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.IMailStore.GetFolderAsync(System.String,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0, 1.2.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailStore.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken)">GetFolders Method</h3>
+            <blockquote id="M:MailKit.IMailStore.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Get all of the folders within the specified namespace.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;IMailFolder&gt;</a> <b>GetFolders</b> (<a href="../MailKit/FolderNamespace.html">FolderNamespace</a> namespace, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> subscribedOnly, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailStore.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>namespace</i>
+                  </dt>
+                  <dd>The namespace.</dd>
+                  <dt>
+                    <i>subscribedOnly</i>
+                  </dt>
+                  <dd>If set to <tt>true</tt>, only subscribed folders will be listed.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailStore.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Returns">The folders.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailStore.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>namespace</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+                      <p>The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not connected.</p>
+                      <p>-or-</p>
+                      <p>The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not authenticated.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a>
+                    </td>
+                    <td>
+            The namespace folder could not be found.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ProtocolException.html">MailKit.ProtocolException</a>
+                    </td>
+                    <td>
+            A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command failed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not authenticated.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailStore.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Remarks">
+            Gets all of the folders within the specified namespace.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailStore.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.IMailStore.GetFoldersAsync(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken)">GetFoldersAsync Method</h3>
+            <blockquote id="M:MailKit.IMailStore.GetFoldersAsync(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Asynchronously get all of the folders within the specified namespace.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IEnumerable&lt;IMailFolder&gt;&gt;</a> <b>GetFoldersAsync</b> (<a href="../MailKit/FolderNamespace.html">FolderNamespace</a> namespace, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> subscribedOnly, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailStore.GetFoldersAsync(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>namespace</i>
+                  </dt>
+                  <dd>The namespace.</dd>
+                  <dt>
+                    <i>subscribedOnly</i>
+                  </dt>
+                  <dd>If set to <tt>true</tt>, only subscribed folders will be listed.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailStore.GetFoldersAsync(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Returns">The folders.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailStore.GetFoldersAsync(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>namespace</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailStore.html">MailKit.IMailStore</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+                      <p>The <a href="../MailKit/IMailStore.html">MailKit.IMailStore</a> is not connected.</p>
+                      <p>-or-</p>
+                      <p>The <a href="../MailKit/IMailStore.html">MailKit.IMailStore</a> is not authenticated.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a>
+                    </td>
+                    <td>
+            The namespace folder could not be found.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ProtocolException.html">MailKit.ProtocolException</a>
+                    </td>
+                    <td>
+            A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command failed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not authenticated.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.IMailStore.GetFoldersAsync(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Remarks">
+            Asynchronously gets all of the folders within the specified namespace.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.IMailStore.GetFoldersAsync(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="P:MailKit.IMailStore.Inbox">Inbox Property</h3>

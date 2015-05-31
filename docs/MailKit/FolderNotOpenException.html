@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>MailKit.FolderNotFoundException</title>
+    <title>MailKit.FolderNotOpenException</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="description" content="MailKit: A cross-platform .NET mail-client library optimized for mobile." />
     <link rel="stylesheet" type="text/css" media="screen" href="/MailKit/stylesheets/stylesheet.css" />
@@ -205,27 +205,31 @@
       <section id="main_content" class="inner">
         <div class="CollectionTitle">
           <a href="../index.html">MailKit</a> : <a href="index.html">MailKit Namespace</a></div>
-        <h1 class="PageTitle" id="T:MailKit.FolderNotFoundException">FolderNotFoundException  Class</h1>
-        <p class="Summary" id="T:MailKit.FolderNotFoundException:Summary">
-            The exception that is thrown when a folder could not be found.
+        <h1 class="PageTitle" id="T:MailKit.FolderNotOpenException">FolderNotOpenException  Class</h1>
+        <p class="Summary" id="T:MailKit.FolderNotOpenException:Summary">
+            The exception that is thrown when a folder is not open.
             </p>
         <div>
           <h2>Syntax</h2>
-          <div class="Signature" id="T:MailKit.FolderNotFoundException:Signature">public class  <b>FolderNotFoundException</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Exception">Exception</a></div>
+          <div class="Signature" id="T:MailKit.FolderNotOpenException:Signature">public class  <b>FolderNotOpenException</b> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a></div>
         </div>
-        <div class="Remarks" id="T:MailKit.FolderNotFoundException:Docs">
+        <div class="Remarks" id="T:MailKit.FolderNotOpenException:Docs">
           <h2 class="Section">Remarks</h2>
-          <div class="SectionBox" id="T:MailKit.FolderNotFoundException:Docs:Remarks">
-            This exception is thrown by <a href="../MailKit/IMailFolder.html#M:MailKit.IMailFolder.GetSubfolder(System.String,System.Threading.CancellationToken)">IMailFolder.GetSubfolder(string, System.Threading.CancellationToken)</a>.
+          <div class="SectionBox" id="T:MailKit.FolderNotOpenException:Docs:Remarks">
+            This exception is thrown when an operation on a folder could not be completed
+            due to the folder being in a closed state. For example, the
+            <a href="../MailKit/IMailFolder.html#M:MailKit.IMailFolder.GetMessage(MailKit.UniqueId,System.Threading.CancellationToken)">IMailFolder.GetMessage(UniqueId, System.Threading.CancellationToken)</a>
+            method will throw a <a href="../MailKit/FolderNotOpenException.html">MailKit.FolderNotOpenException</a> if the folder is not
+            current open.
             </div>
           <h2 class="Section">Requirements</h2>
-          <div class="SectionBox" id="T:MailKit.FolderNotFoundException:Docs:Version Information">
-            <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0, 1.2.0.0</div>
+          <div class="SectionBox" id="T:MailKit.FolderNotOpenException:Docs:Version Information">
+            <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
           <h2 class="Section" id="Members">Members</h2>
           <div class="SectionBox" id="_Members">
             <p>
 								See Also: Inherited members from
-								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Exception">Exception</a>.
+								<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>.
 							</p>
             <h2 class="Section">Public Constructors</h2>
             <div class="SectionBox" id="Public Constructors">
@@ -239,11 +243,11 @@
                     <td>
                       <div>
                         <b>
-                          <a href="#C:MailKit.FolderNotFoundException(System.String)">FolderNotFoundException</a>
-                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                          <a href="#C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess)">FolderNotOpenException</a>
+                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MailKit/FolderAccess.html">FolderAccess</a>)</div>
                     </td>
                     <td>
-            Initializes a new instance of the <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a> class.
+            Initializes a new instance of the <a href="../MailKit/FolderNotOpenException.html">MailKit.FolderNotOpenException</a> class.
             </td>
                   </tr>
                   <tr valign="top">
@@ -254,11 +258,11 @@
                     <td>
                       <div>
                         <b>
-                          <a href="#C:MailKit.FolderNotFoundException(System.String,System.String)">FolderNotFoundException</a>
-                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
+                          <a href="#C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess,System.String)">FolderNotOpenException</a>
+                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MailKit/FolderAccess.html">FolderAccess</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>)</div>
                     </td>
                     <td>
-            Initializes a new instance of the <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a> class.
+            Initializes a new instance of the <a href="../MailKit/FolderNotOpenException.html">MailKit.FolderNotOpenException</a> class.
             </td>
                   </tr>
                   <tr valign="top">
@@ -269,11 +273,11 @@
                     <td>
                       <div>
                         <b>
-                          <a href="#C:MailKit.FolderNotFoundException(System.String,System.String,System.Exception)">FolderNotFoundException</a>
-                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Exception">Exception</a>)</div>
+                          <a href="#C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess,System.String,System.Exception)">FolderNotOpenException</a>
+                        </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="../MailKit/FolderAccess.html">FolderAccess</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Exception">Exception</a>)</div>
                     </td>
                     <td>
-            Initializes a new instance of the <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a> class.
+            Initializes a new instance of the <a href="../MailKit/FolderNotOpenException.html">MailKit.FolderNotOpenException</a> class.
             </td>
                   </tr>
                 </table>
@@ -291,11 +295,11 @@
                     <td>
                       <div>
                         <b>
-                          <a href="#C:MailKit.FolderNotFoundException(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">FolderNotFoundException</a>
+                          <a href="#C:MailKit.FolderNotOpenException(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">FolderNotOpenException</a>
                         </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Runtime.Serialization.SerializationInfo">System.Runtime.Serialization.SerializationInfo</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Runtime.Serialization.StreamingContext">System.Runtime.Serialization.StreamingContext</a>)</div>
                     </td>
                     <td>
-            Initializes a new instance of the <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a> class.
+            Initializes a new instance of the <a href="../MailKit/FolderNotOpenException.html">MailKit.FolderNotOpenException</a> class.
             </td>
                   </tr>
                 </table>
@@ -309,14 +313,28 @@
                     <td>[read-only]<div></div></td>
                     <td>
                       <b>
-                        <a href="#P:MailKit.FolderNotFoundException.FolderName">FolderName</a>
+                        <a href="#P:MailKit.FolderNotOpenException.FolderAccess">FolderAccess</a>
+                      </b>
+                    </td>
+                    <td>
+                      <i>
+                        <a href="../MailKit/FolderAccess.html">FolderAccess</a>
+                      </i>. 
+            Get the minimum folder access required by the operation.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>[read-only]<div></div></td>
+                    <td>
+                      <b>
+                        <a href="#P:MailKit.FolderNotOpenException.FolderName">FolderName</a>
                       </b>
                     </td>
                     <td>
                       <i>
                         <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a>
                       </i>. 
-            Gets the name of the folder that could not be found.
+            Get the name of the folder.
             </td>
                   </tr>
                 </table>
@@ -332,7 +350,7 @@
                     </td>
                     <td colspan="2">
                       <b>
-                        <a href="#M:MailKit.FolderNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">GetObjectData</a>
+                        <a href="#M:MailKit.FolderNotOpenException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">GetObjectData</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Runtime.Serialization.SerializationInfo">System.Runtime.Serialization.SerializationInfo</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Runtime.Serialization.StreamingContext">System.Runtime.Serialization.StreamingContext</a>)<blockquote>
             When overridden in a derived class, sets the <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Runtime.Serialization.SerializationInfo">System.Runtime.Serialization.SerializationInfo</a>
             with information about the exception.
@@ -343,60 +361,18 @@
             </div>
           </div>
         </div>
-        <div class="Members" id="T:MailKit.FolderNotFoundException:Members">
+        <div class="Members" id="T:MailKit.FolderNotOpenException:Members">
           <h2 class="Section" id="MemberDetails">Member Details</h2>
           <div class="SectionBox" id="_MemberDetails">
-            <h3 id="C:MailKit.FolderNotFoundException(System.String)">FolderNotFoundException Constructor</h3>
-            <blockquote id="C:MailKit.FolderNotFoundException(System.String):member">
+            <h3 id="C:MailKit.FolderNotOpenException(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">FolderNotOpenException Constructor</h3>
+            <blockquote id="C:MailKit.FolderNotOpenException(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):member">
               <div class="msummary">
-            Initializes a new instance of the <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a> class.
+            Initializes a new instance of the <a href="../MailKit/FolderNotOpenException.html">MailKit.FolderNotOpenException</a> class.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public  <b>FolderNotFoundException</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> folderName)</div>
+              <div class="Signature">protected  <b>FolderNotOpenException</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Runtime.Serialization.SerializationInfo">System.Runtime.Serialization.SerializationInfo</a> info, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Runtime.Serialization.StreamingContext">System.Runtime.Serialization.StreamingContext</a> context)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotFoundException(System.String):Parameters">
-                <dl>
-                  <dt>
-                    <i>folderName</i>
-                  </dt>
-                  <dd>The name of the folder.</dd>
-                </dl>
-              </blockquote>
-              <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotFoundException(System.String):Exceptions">
-                <table class="TypeDocumentation">
-                  <tr>
-                    <th>Type</th>
-                    <th>Reason</th>
-                  </tr>
-                  <tr valign="top">
-                    <td>
-                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
-                    </td>
-                    <td>
-                      <i>folderName</i> is <tt>null</tt>.
-            </td>
-                  </tr>
-                </table>
-              </blockquote>
-              <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MailKit.FolderNotFoundException(System.String):Remarks">
-            Creates a new <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a>.
-            </div>
-              <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MailKit.FolderNotFoundException(System.String):Version Information">
-                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0, 1.2.0.0</div>
-              <hr size="1" />
-            </blockquote>
-            <h3 id="C:MailKit.FolderNotFoundException(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">FolderNotFoundException Constructor</h3>
-            <blockquote id="C:MailKit.FolderNotFoundException(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):member">
-              <div class="msummary">
-            Initializes a new instance of the <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a> class.
-            </div>
-              <h2>Syntax</h2>
-              <div class="Signature">protected  <b>FolderNotFoundException</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Runtime.Serialization.SerializationInfo">System.Runtime.Serialization.SerializationInfo</a> info, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Runtime.Serialization.StreamingContext">System.Runtime.Serialization.StreamingContext</a> context)</div>
-              <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotFoundException(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Parameters">
+              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotOpenException(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Parameters">
                 <dl>
                   <dt>
                     <i>info</i>
@@ -409,7 +385,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotFoundException(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Exceptions">
+              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotOpenException(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -426,36 +402,36 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MailKit.FolderNotFoundException(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Remarks">
-            Deserializes a <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a>.
+              <div class="SectionBox" id="C:MailKit.FolderNotOpenException(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Remarks">
+            Deserializes a <a href="../MailKit/FolderNotOpenException.html">MailKit.FolderNotOpenException</a>.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MailKit.FolderNotFoundException(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Version Information">
-                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0, 1.2.0.0</div>
+              <div class="SectionBox" id="C:MailKit.FolderNotOpenException(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="C:MailKit.FolderNotFoundException(System.String,System.String)">FolderNotFoundException Constructor</h3>
-            <blockquote id="C:MailKit.FolderNotFoundException(System.String,System.String):member">
+            <h3 id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess)">FolderNotOpenException Constructor</h3>
+            <blockquote id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess):member">
               <div class="msummary">
-            Initializes a new instance of the <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a> class.
+            Initializes a new instance of the <a href="../MailKit/FolderNotOpenException.html">MailKit.FolderNotOpenException</a> class.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public  <b>FolderNotFoundException</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> folderName)</div>
+              <div class="Signature">public  <b>FolderNotOpenException</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> folderName, <a href="../MailKit/FolderAccess.html">FolderAccess</a> access)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotFoundException(System.String,System.String):Parameters">
+              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess):Parameters">
                 <dl>
-                  <dt>
-                    <i>message</i>
-                  </dt>
-                  <dd>The error message.</dd>
                   <dt>
                     <i>folderName</i>
                   </dt>
-                  <dd>The name of the folder.</dd>
+                  <dd>The folder name.</dd>
+                  <dt>
+                    <i>access</i>
+                  </dt>
+                  <dd>The minimum folder access required by the operation.</dd>
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotFoundException(System.String,System.String):Exceptions">
+              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -472,32 +448,86 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MailKit.FolderNotFoundException(System.String,System.String):Remarks">
-            Creates a new <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a>.
+              <div class="SectionBox" id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess):Remarks">
+            Creates a new <a href="../MailKit/FolderNotOpenException.html">MailKit.FolderNotOpenException</a>.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MailKit.FolderNotFoundException(System.String,System.String):Version Information">
-                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0, 1.2.0.0</div>
+              <div class="SectionBox" id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="C:MailKit.FolderNotFoundException(System.String,System.String,System.Exception)">FolderNotFoundException Constructor</h3>
-            <blockquote id="C:MailKit.FolderNotFoundException(System.String,System.String,System.Exception):member">
+            <h3 id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess,System.String)">FolderNotOpenException Constructor</h3>
+            <blockquote id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess,System.String):member">
               <div class="msummary">
-            Initializes a new instance of the <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a> class.
+            Initializes a new instance of the <a href="../MailKit/FolderNotOpenException.html">MailKit.FolderNotOpenException</a> class.
             </div>
               <h2>Syntax</h2>
-              <div class="Signature">public  <b>FolderNotFoundException</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> folderName, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Exception">Exception</a> innerException)</div>
+              <div class="Signature">public  <b>FolderNotOpenException</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> folderName, <a href="../MailKit/FolderAccess.html">FolderAccess</a> access, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotFoundException(System.String,System.String,System.Exception):Parameters">
+              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess,System.String):Parameters">
                 <dl>
+                  <dt>
+                    <i>folderName</i>
+                  </dt>
+                  <dd>The folder name.</dd>
+                  <dt>
+                    <i>access</i>
+                  </dt>
+                  <dd>The minimum folder access required by the operation.</dd>
                   <dt>
                     <i>message</i>
                   </dt>
                   <dd>The error message.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess,System.String):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>folderName</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess,System.String):Remarks">
+            Creates a new <a href="../MailKit/FolderNotOpenException.html">MailKit.FolderNotOpenException</a>.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess,System.String):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess,System.String,System.Exception)">FolderNotOpenException Constructor</h3>
+            <blockquote id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess,System.String,System.Exception):member">
+              <div class="msummary">
+            Initializes a new instance of the <a href="../MailKit/FolderNotOpenException.html">MailKit.FolderNotOpenException</a> class.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public  <b>FolderNotOpenException</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> folderName, <a href="../MailKit/FolderAccess.html">FolderAccess</a> access, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> message, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Exception">Exception</a> innerException)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess,System.String,System.Exception):Parameters">
+                <dl>
                   <dt>
                     <i>folderName</i>
                   </dt>
-                  <dd>The name of the folder.</dd>
+                  <dd>The folder name.</dd>
+                  <dt>
+                    <i>access</i>
+                  </dt>
+                  <dd>The minimum folder access required by the operation.</dd>
+                  <dt>
+                    <i>message</i>
+                  </dt>
+                  <dd>The error message.</dd>
                   <dt>
                     <i>innerException</i>
                   </dt>
@@ -505,7 +535,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotFoundException(System.String,System.String,System.Exception):Exceptions">
+              <blockquote class="SubsectionBox" id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess,System.String,System.Exception):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -522,34 +552,52 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="C:MailKit.FolderNotFoundException(System.String,System.String,System.Exception):Remarks">
-            Creates a new <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a>.
+              <div class="SectionBox" id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess,System.String,System.Exception):Remarks">
+            Creates a new <a href="../MailKit/FolderNotOpenException.html">MailKit.FolderNotOpenException</a>.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="C:MailKit.FolderNotFoundException(System.String,System.String,System.Exception):Version Information">
-                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0, 1.2.0.0</div>
+              <div class="SectionBox" id="C:MailKit.FolderNotOpenException(System.String,MailKit.FolderAccess,System.String,System.Exception):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="P:MailKit.FolderNotFoundException.FolderName">FolderName Property</h3>
-            <blockquote id="P:MailKit.FolderNotFoundException.FolderName:member">
+            <h3 id="P:MailKit.FolderNotOpenException.FolderAccess">FolderAccess Property</h3>
+            <blockquote id="P:MailKit.FolderNotOpenException.FolderAccess:member">
               <div class="msummary">
-            Gets the name of the folder that could not be found.
+            Get the minimum folder access required by the operation.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public <a href="../MailKit/FolderAccess.html">FolderAccess</a> <b>FolderAccess</b>  { get; }</div>
+              <h4 class="Subsection">Value</h4>
+              <blockquote class="SubsectionBox" id="P:MailKit.FolderNotOpenException.FolderAccess:Value">The minimum required folder access.</blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="P:MailKit.FolderNotOpenException.FolderAccess:Remarks">
+            Gets the minimum folder access required by the operation.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="P:MailKit.FolderNotOpenException.FolderAccess:Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="P:MailKit.FolderNotOpenException.FolderName">FolderName Property</h3>
+            <blockquote id="P:MailKit.FolderNotOpenException.FolderName:member">
+              <div class="msummary">
+            Get the name of the folder.
             </div>
               <h2>Syntax</h2>
               <div class="Signature">public <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.String">string</a> <b>FolderName</b>  { get; }</div>
               <h4 class="Subsection">Value</h4>
-              <blockquote class="SubsectionBox" id="P:MailKit.FolderNotFoundException.FolderName:Value">The name of the folder.</blockquote>
+              <blockquote class="SubsectionBox" id="P:MailKit.FolderNotOpenException.FolderName:Value">The name of the folder.</blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="P:MailKit.FolderNotFoundException.FolderName:Remarks">
-            Gets the name of the folder that could not be found.
+              <div class="SectionBox" id="P:MailKit.FolderNotOpenException.FolderName:Remarks">
+            Gets the name of the folder.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="P:MailKit.FolderNotFoundException.FolderName:Version Information">
-                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0, 1.2.0.0</div>
+              <div class="SectionBox" id="P:MailKit.FolderNotOpenException.FolderName:Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
               <hr size="1" />
             </blockquote>
-            <h3 id="M:MailKit.FolderNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">GetObjectData Method</h3>
-            <blockquote id="M:MailKit.FolderNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):member">
+            <h3 id="M:MailKit.FolderNotOpenException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">GetObjectData Method</h3>
+            <blockquote id="M:MailKit.FolderNotOpenException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):member">
               <div class="msummary">
             When overridden in a derived class, sets the <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Runtime.Serialization.SerializationInfo">System.Runtime.Serialization.SerializationInfo</a>
             with information about the exception.
@@ -557,7 +605,7 @@
               <h2>Syntax</h2>
               <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Void">void</a> <b>GetObjectData</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Runtime.Serialization.SerializationInfo">System.Runtime.Serialization.SerializationInfo</a> info, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Runtime.Serialization.StreamingContext">System.Runtime.Serialization.StreamingContext</a> context)</div>
               <h4 class="Subsection">Parameters</h4>
-              <blockquote class="SubsectionBox" id="M:MailKit.FolderNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Parameters">
+              <blockquote class="SubsectionBox" id="M:MailKit.FolderNotOpenException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Parameters">
                 <dl>
                   <dt>
                     <i>info</i>
@@ -570,7 +618,7 @@
                 </dl>
               </blockquote>
               <h4 class="Subsection">Exceptions</h4>
-              <blockquote class="SubsectionBox" id="M:MailKit.FolderNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Exceptions">
+              <blockquote class="SubsectionBox" id="M:MailKit.FolderNotOpenException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Exceptions">
                 <table class="TypeDocumentation">
                   <tr>
                     <th>Type</th>
@@ -587,11 +635,11 @@
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
-              <div class="SectionBox" id="M:MailKit.FolderNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Remarks">
-            Serializes the state of the <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a>.
+              <div class="SectionBox" id="M:MailKit.FolderNotOpenException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Remarks">
+            Serializes the state of the <a href="../MailKit/FolderNotOpenException.html">MailKit.FolderNotOpenException</a>.
             </div>
               <h2 class="Section">Requirements</h2>
-              <div class="SectionBox" id="M:MailKit.FolderNotFoundException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Version Information">
+              <div class="SectionBox" id="M:MailKit.FolderNotOpenException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext):Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
               <hr size="1" />
             </blockquote>

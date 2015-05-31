@@ -1104,6 +1104,75 @@
                     </td>
                     <td colspan="2">
                       <b>
+                        <a href="#M:MailKit.MailSpool.GetStream(System.Int32,System.Boolean,System.Threading.CancellationToken)">GetStream</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a></nobr><blockquote>
+            Get the message or header stream at the specified index.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.MailSpool.GetStreamAsync(System.Int32,System.Boolean,System.Threading.CancellationToken)">GetStreamAsync</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;System.IO.Stream&gt;</a></nobr><blockquote>
+            Asynchronously get the message or header stream at the specified index.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.MailSpool.GetStreams(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken)">GetStreams</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;int&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;System.IO.Stream&gt;</a></nobr><blockquote>
+            Get the message or header streams at the specified indexes.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.MailSpool.GetStreams(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken)">GetStreams</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;System.IO.Stream&gt;</a></nobr><blockquote>
+            Get the message or header streams within the specified range.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.MailSpool.GetStreamsAsync(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken)">GetStreamsAsync</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;int&gt;</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IList&lt;System.IO.Stream&gt;&gt;</a></nobr><blockquote>
+            Asynchronously get the message or header streams at the specified indexes.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.MailSpool.GetStreamsAsync(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken)">GetStreamsAsync</a>
+                      </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IList&lt;System.IO.Stream&gt;&gt;</a></nobr><blockquote>
+            Asynchronously get the message or header streams within the specified range.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
                         <a href="../MailKit/MailService.html#M:MailKit.MailService.NoOp(System.Threading.CancellationToken)">NoOp</a>
                       </b>(<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<blockquote>
             Pings the mail server to keep the connection alive.
@@ -1334,6 +1403,14 @@
             The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -1424,6 +1501,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -1518,6 +1611,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -1622,6 +1731,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -1744,6 +1869,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -1848,6 +1989,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -1972,6 +2129,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -2084,6 +2257,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -2208,6 +2397,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -2315,6 +2520,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -2431,6 +2652,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -2557,6 +2794,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -2668,6 +2921,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -2751,6 +3020,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -2855,6 +3140,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -2977,6 +3278,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -3079,6 +3396,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -3201,6 +3534,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -3293,6 +3642,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -3383,6 +3748,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -3497,6 +3878,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -3621,6 +4018,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -3723,6 +4136,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -3845,6 +4274,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -3952,6 +4397,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -4066,6 +4527,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -4190,6 +4667,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -4292,6 +4785,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -4414,6 +4923,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -4521,6 +5046,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -4635,6 +5176,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -4759,6 +5316,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -4866,6 +5439,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -4980,6 +5569,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -5104,6 +5709,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -5213,6 +5834,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -5315,6 +5952,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -5429,6 +6082,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -5531,6 +6200,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -5645,6 +6330,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -5737,6 +6438,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -5827,6 +6544,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -5939,6 +6672,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -6054,6 +6803,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -6153,6 +6918,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -6256,6 +7037,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -6266,6 +7063,690 @@
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.MailSpool.GetMessageUidsAsync(System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0, 1.2.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.MailSpool.GetStream(System.Int32,System.Boolean,System.Threading.CancellationToken)">GetStream Method</h3>
+            <blockquote id="M:MailKit.MailSpool.GetStream(System.Int32,System.Boolean,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Get the message or header stream at the specified index.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.Stream">System.IO.Stream</a> <b>GetStream</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> index, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> headersOnly, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStream(System.Int32,System.Boolean,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>index</i>
+                  </dt>
+                  <dd>The index of the message.</dd>
+                  <dt>
+                    <i>headersOnly</i>
+                  </dt>
+                  <dd>
+                    <tt>true</tt> if only the headers should be retrieved; otherwise, <tt>false</tt>.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStream(System.Int32,System.Boolean,System.Threading.CancellationToken):Returns">The message or header stream.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStream(System.Int32,System.Boolean,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>index</i> is not a valid message index.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command failed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ProtocolException.html">MailKit.ProtocolException</a>
+                    </td>
+                    <td>
+            A protocol error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.MailSpool.GetStream(System.Int32,System.Boolean,System.Threading.CancellationToken):Remarks">
+            Gets the message or header stream at the specified index.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.MailSpool.GetStream(System.Int32,System.Boolean,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.MailSpool.GetStreamAsync(System.Int32,System.Boolean,System.Threading.CancellationToken)">GetStreamAsync Method</h3>
+            <blockquote id="M:MailKit.MailSpool.GetStreamAsync(System.Int32,System.Boolean,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Asynchronously get the message or header stream at the specified index.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;System.IO.Stream&gt;</a> <b>GetStreamAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> index, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> headersOnly, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreamAsync(System.Int32,System.Boolean,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>index</i>
+                  </dt>
+                  <dd>The index of the message.</dd>
+                  <dt>
+                    <i>headersOnly</i>
+                  </dt>
+                  <dd>
+                    <tt>true</tt> if only the headers should be retrieved; otherwise, <tt>false</tt>.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreamAsync(System.Int32,System.Boolean,System.Threading.CancellationToken):Returns">The message or header stream.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreamAsync(System.Int32,System.Boolean,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>index</i> is not a valid message index.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command failed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ProtocolException.html">MailKit.ProtocolException</a>
+                    </td>
+                    <td>
+            A protocol error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.MailSpool.GetStreamAsync(System.Int32,System.Boolean,System.Threading.CancellationToken):Remarks">
+            Asynchronously gets the message or header stream at the specified index.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.MailSpool.GetStreamAsync(System.Int32,System.Boolean,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.MailSpool.GetStreams(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken)">GetStreams Method</h3>
+            <blockquote id="M:MailKit.MailSpool.GetStreams(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Get the message or header streams at the specified indexes.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;System.IO.Stream&gt;</a> <b>GetStreams</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;int&gt;</a> indexes, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> headersOnly, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreams(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>indexes</i>
+                  </dt>
+                  <dd>The indexes of the messages.</dd>
+                  <dt>
+                    <i>headersOnly</i>
+                  </dt>
+                  <dd>
+                    <tt>true</tt> if only the headers should be retrieved; otherwise, <tt>false</tt>.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreams(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken):Returns">The message or header streams.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreams(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>indexes</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+                      <p>One or more of the <i>indexes</i> are invalid.</p>
+                      <p>-or-</p>
+                      <p>No indexes were specified.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command failed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ProtocolException.html">MailKit.ProtocolException</a>
+                    </td>
+                    <td>
+            A protocol error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.MailSpool.GetStreams(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken):Remarks">
+            Get the message or header streams at the specified indexes.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.MailSpool.GetStreams(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.MailSpool.GetStreams(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken)">GetStreams Method</h3>
+            <blockquote id="M:MailKit.MailSpool.GetStreams(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Get the message or header streams within the specified range.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public abstract <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;System.IO.Stream&gt;</a> <b>GetStreams</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> count, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> headersOnly, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreams(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>startIndex</i>
+                  </dt>
+                  <dd>The index of the first stream to get.</dd>
+                  <dt>
+                    <i>count</i>
+                  </dt>
+                  <dd>The number of streams to get.</dd>
+                  <dt>
+                    <i>headersOnly</i>
+                  </dt>
+                  <dd>
+                    <tt>true</tt> if only the headers should be retrieved; otherwise, <tt>false</tt>.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreams(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken):Returns">The message or header streams.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreams(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>startIndex</i> and <i>count</i> do not specify
+            a valid range of messages.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command failed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ProtocolException.html">MailKit.ProtocolException</a>
+                    </td>
+                    <td>
+            A protocol error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.MailSpool.GetStreams(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken):Remarks">
+            Gets the message or header streams within the specified range.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.MailSpool.GetStreams(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.MailSpool.GetStreamsAsync(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken)">GetStreamsAsync Method</h3>
+            <blockquote id="M:MailKit.MailSpool.GetStreamsAsync(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Asynchronously get the message or header streams at the specified indexes.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IList&lt;System.IO.Stream&gt;&gt;</a> <b>GetStreamsAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IList`1">IList&lt;int&gt;</a> indexes, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> headersOnly, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreamsAsync(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>indexes</i>
+                  </dt>
+                  <dd>The indexes of the messages.</dd>
+                  <dt>
+                    <i>headersOnly</i>
+                  </dt>
+                  <dd>
+                    <tt>true</tt> if only the headers should be retrieved; otherwise, <tt>false</tt>.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreamsAsync(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken):Returns">The messages.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreamsAsync(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>indexes</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentException">ArgumentException</a>
+                    </td>
+                    <td>
+                      <p>One or more of the <i>indexes</i> are invalid.</p>
+                      <p>-or-</p>
+                      <p>No indexes were specified.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command failed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ProtocolException.html">MailKit.ProtocolException</a>
+                    </td>
+                    <td>
+            A protocol error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.MailSpool.GetStreamsAsync(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken):Remarks">
+            Asynchronously get the message or header streams at the specified indexes.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.MailSpool.GetStreamsAsync(System.Collections.Generic.IList{System.Int32},System.Boolean,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.MailSpool.GetStreamsAsync(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken)">GetStreamsAsync Method</h3>
+            <blockquote id="M:MailKit.MailSpool.GetStreamsAsync(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Asynchronously get the message or header streams within the specified range.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public virtual <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IList&lt;System.IO.Stream&gt;&gt;</a> <b>GetStreamsAsync</b> (<a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> startIndex, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Int32">int</a> count, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> headersOnly, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreamsAsync(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>startIndex</i>
+                  </dt>
+                  <dd>The index of the first stream to get.</dd>
+                  <dt>
+                    <i>count</i>
+                  </dt>
+                  <dd>The number of streams to get.</dd>
+                  <dt>
+                    <i>headersOnly</i>
+                  </dt>
+                  <dd>
+                    <tt>true</tt> if only the headers should be retrieved; otherwise, <tt>false</tt>.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreamsAsync(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken):Returns">The messages.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.MailSpool.GetStreamsAsync(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentOutOfRangeException">ArgumentOutOfRangeException</a>
+                    </td>
+                    <td>
+                      <i>startIndex</i> and <i>count</i> do not specify
+            a valid range of messages.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command failed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ProtocolException.html">MailKit.ProtocolException</a>
+                    </td>
+                    <td>
+            A protocol error occurred.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.MailSpool.GetStreamsAsync(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken):Remarks">
+            Asynchronously gets the message or header streams within the specified range.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.MailSpool.GetStreamsAsync(System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MailKit.MailSpool.Reset(System.Threading.CancellationToken)">Reset Method</h3>
@@ -6345,6 +7826,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -6441,6 +7938,22 @@
             A protocol error occurred.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -6490,6 +8003,14 @@
                   <tr valign="top">
                     <td>
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.UnauthorizedAccessException">UnauthorizedAccessException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
                     </td>
                     <td>
             The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
@@ -6582,6 +8103,22 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/MailSpool.html">MailKit.MailSpool</a> is not authenticated.
             </td>
                   </tr>
                 </table>

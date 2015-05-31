@@ -1064,6 +1064,40 @@
                   </tr>
                   <tr valign="top">
                     <td>
+                      <div>override </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.Net.Imap.ImapClient.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken)">GetFolders</a>
+                      </b>(<a href="../MailKit/FolderNamespace.html">MailKit.FolderNamespace</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MailKit.IMailFolder&gt;</a></nobr><blockquote>
+            Get all of the folders within the specified namespace.
+            </blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>abstract </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MailKit/MailStore.html#M:MailKit.MailStore.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken)">GetFolders</a>
+                      </b>(<a href="../MailKit/FolderNamespace.html">MailKit.FolderNamespace</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MailKit.IMailFolder&gt;</a></nobr><blockquote>
+            Get all of the folders within the specified namespace.
+             (<i>Inherited from <a href="../MailKit/MailStore.html">MailKit.MailStore</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="../MailKit/MailStore.html#M:MailKit.MailStore.GetFoldersAsync(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken)">GetFoldersAsync</a>
+                      </b>(<a href="../MailKit/FolderNamespace.html">MailKit.FolderNamespace</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a>, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a>)<nobr> : <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.Tasks.Task`1">System.Threading.Tasks.Task&lt;IEnumerable&lt;MailKit.IMailFolder&gt;&gt;</a></nobr><blockquote>
+            Asynchronously get all of the folders within the specified namespace.
+             (<i>Inherited from <a href="../MailKit/MailStore.html">MailKit.MailStore</a>.</i>)</blockquote></td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
                       <div>
                       </div>
                     </td>
@@ -1151,6 +1185,18 @@
             <div class="SectionBox" id="Protected Methods">
               <div class="SubsectionBox">
                 <table class="TypeMembers">
+                  <tr valign="top">
+                    <td>
+                      <div>
+                      </div>
+                    </td>
+                    <td colspan="2">
+                      <b>
+                        <a href="#M:MailKit.Net.Imap.ImapClient.CreateImapFolder(MailKit.Net.Imap.ImapFolderConstructorArgs)">CreateImapFolder</a>
+                      </b>(<a href="../MailKit.Net.Imap/ImapFolderConstructorArgs.html">ImapFolderConstructorArgs</a>)<nobr> : <a href="../MailKit.Net.Imap/ImapFolder.html">ImapFolder</a></nobr><blockquote>
+            Instantiate a new <a href="../MailKit.Net.Imap/ImapFolder.html">MailKit.Net.Imap.ImapFolder</a>.
+            </blockquote></td>
+                  </tr>
                   <tr valign="top">
                     <td>
                       <div>override </div>
@@ -1405,7 +1451,7 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
                     </td>
                     <td>
-            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected or is already authenticated.
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is already authenticated.
             </td>
                   </tr>
                   <tr valign="top">
@@ -1454,6 +1500,14 @@
                     </td>
                     <td>
             Authentication using the supplied credentials has failed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
             </td>
                   </tr>
                 </table>
@@ -1574,7 +1628,7 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
                     </td>
                     <td>
-            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
+            Compression must be enabled before a folder has been selected.
             </td>
                   </tr>
                   <tr valign="top">
@@ -1606,7 +1660,7 @@
                       <a href="../MailKit.Net.Imap/ImapCommandException.html">MailKit.Net.Imap.ImapCommandException</a>
                     </td>
                     <td>
-            The server replied to the ENABLE command with a NO or BAD response.
+            The server replied to the COMPRESS command with a NO or BAD response.
             </td>
                   </tr>
                   <tr valign="top">
@@ -1615,6 +1669,14 @@
                     </td>
                     <td>
             An IMAP protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
             </td>
                   </tr>
                 </table>
@@ -1667,7 +1729,7 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
                     </td>
                     <td>
-            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected, not authenticated, or a folder has been selected.
+            Compression must be enabled before a folder has been selected.
             </td>
                   </tr>
                   <tr valign="top">
@@ -1675,7 +1737,7 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.NotSupportedException">NotSupportedException</a>
                     </td>
                     <td>
-            The IMAP server does not support the UTF8=ACCEPT extension.
+            The IMAP server does not support the COMPRESS extension.
             </td>
                   </tr>
                   <tr valign="top">
@@ -1699,7 +1761,7 @@
                       <a href="../MailKit.Net.Imap/ImapCommandException.html">MailKit.Net.Imap.ImapCommandException</a>
                     </td>
                     <td>
-            The server replied to the ENABLE command with a NO or BAD response.
+            The server replied to the COMPRESS command with a NO or BAD response.
             </td>
                   </tr>
                   <tr valign="top">
@@ -1708,6 +1770,14 @@
                     </td>
                     <td>
             An IMAP protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
             </td>
                   </tr>
                 </table>
@@ -2000,6 +2070,51 @@
                 <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0, 1.2.0.0</div>
               <hr size="1" />
             </blockquote>
+            <h3 id="M:MailKit.Net.Imap.ImapClient.CreateImapFolder(MailKit.Net.Imap.ImapFolderConstructorArgs)">CreateImapFolder Method</h3>
+            <blockquote id="M:MailKit.Net.Imap.ImapClient.CreateImapFolder(MailKit.Net.Imap.ImapFolderConstructorArgs):member">
+              <div class="msummary">
+            Instantiate a new <a href="../MailKit.Net.Imap/ImapFolder.html">MailKit.Net.Imap.ImapFolder</a>.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">protected virtual <a href="../MailKit.Net.Imap/ImapFolder.html">ImapFolder</a> <b>CreateImapFolder</b> (<a href="../MailKit.Net.Imap/ImapFolderConstructorArgs.html">ImapFolderConstructorArgs</a> args)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.CreateImapFolder(MailKit.Net.Imap.ImapFolderConstructorArgs):Parameters">
+                <dl>
+                  <dt>
+                    <i>args</i>
+                  </dt>
+                  <dd>The constructior arguments.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.CreateImapFolder(MailKit.Net.Imap.ImapFolderConstructorArgs):Returns">The IMAP folder instance.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.CreateImapFolder(MailKit.Net.Imap.ImapFolderConstructorArgs):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>args</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.CreateImapFolder(MailKit.Net.Imap.ImapFolderConstructorArgs):Remarks">
+                <p>Creates a new <a href="../MailKit.Net.Imap/ImapFolder.html">MailKit.Net.Imap.ImapFolder</a> instance.</p>
+                <p>Note: This method's purpose is to allow subclassing <a href="../MailKit.Net.Imap/ImapFolder.html">MailKit.Net.Imap.ImapFolder</a>.</p>
+              </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.CreateImapFolder(MailKit.Net.Imap.ImapFolderConstructorArgs):Version Information">
+                <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
+              <hr size="1" />
+            </blockquote>
             <h3 id="M:MailKit.Net.Imap.ImapClient.Disconnect(System.Boolean,System.Threading.CancellationToken)">Disconnect Method</h3>
             <blockquote id="M:MailKit.Net.Imap.ImapClient.Disconnect(System.Boolean,System.Threading.CancellationToken):member">
               <div class="msummary">
@@ -2111,7 +2226,7 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
                     </td>
                     <td>
-            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected, not authenticated, or a folder has been selected.
+            Quick resynchronization needs to be enabled before selecting a folder.
             </td>
                   </tr>
                   <tr valign="top">
@@ -2152,6 +2267,22 @@
                     </td>
                     <td>
             The server replied to the ENABLE command with a NO or BAD response.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -2208,7 +2339,7 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
                     </td>
                     <td>
-            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected, not authenticated, or a folder has been selected.
+            UTF8=ACCEPT needs to be enabled before selecting a folder.
             </td>
                   </tr>
                   <tr valign="top">
@@ -2249,6 +2380,22 @@
                     </td>
                     <td>
             The server replied to the ENABLE command with a NO or BAD response.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -2300,7 +2447,7 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
                     </td>
                     <td>
-            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected, not authenticated, or a folder has been selected.
+            UTF8=ACCEPT needs to be enabled before selecting a folder.
             </td>
                   </tr>
                   <tr valign="top">
@@ -2341,6 +2488,22 @@
                     </td>
                     <td>
             The server replied to the ENABLE command with a NO or BAD response.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -2413,6 +2576,22 @@
             The folder could not be found.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -2474,6 +2653,22 @@
                       <p>-or-</p>
                       <p>The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.</p>
                     </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.
+            </td>
                   </tr>
                 </table>
               </blockquote>
@@ -2560,6 +2755,46 @@
             The folder could not be found.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapCommandException.html">MailKit.Net.Imap.ImapCommandException</a>
+                    </td>
+                    <td>
+            The server replied to the IDLE command with a NO or BAD response.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapProtocolException.html">MailKit.Net.Imap.ImapProtocolException</a>
+                    </td>
+                    <td>
+            The server responded with an unexpected token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -2569,6 +2804,132 @@
               <h2 class="Section">Requirements</h2>
               <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.GetFolder(System.String,System.Threading.CancellationToken):Version Information">
                 <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.0.0.0, 1.2.0.0</div>
+              <hr size="1" />
+            </blockquote>
+            <h3 id="M:MailKit.Net.Imap.ImapClient.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken)">GetFolders Method</h3>
+            <blockquote id="M:MailKit.Net.Imap.ImapClient.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):member">
+              <div class="msummary">
+            Get all of the folders within the specified namespace.
+            </div>
+              <h2>Syntax</h2>
+              <div class="Signature">public override <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Collections.Generic.IEnumerable`1">IEnumerable&lt;MailKit.IMailFolder&gt;</a> <b>GetFolders</b> (<a href="../MailKit/FolderNamespace.html">MailKit.FolderNamespace</a> namespace, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Boolean">bool</a> subscribedOnly, <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.Threading.CancellationToken">System.Threading.CancellationToken</a> cancellationToken)</div>
+              <h4 class="Subsection">Parameters</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Parameters">
+                <dl>
+                  <dt>
+                    <i>namespace</i>
+                  </dt>
+                  <dd>The namespace.</dd>
+                  <dt>
+                    <i>subscribedOnly</i>
+                  </dt>
+                  <dd>If set to <tt>true</tt>, only subscribed folders will be listed.</dd>
+                  <dt>
+                    <i>cancellationToken</i>
+                  </dt>
+                  <dd>The cancellation token.</dd>
+                </dl>
+              </blockquote>
+              <h4 class="Subsection">Returns</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Returns">The folders.</blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.Net.Imap.ImapClient.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ArgumentNullException">ArgumentNullException</a>
+                    </td>
+                    <td>
+                      <i>namespace</i> is <tt>null</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+                      <p>The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.</p>
+                      <p>-or-</p>
+                      <p>The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.</p>
+                    </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/FolderNotFoundException.html">MailKit.FolderNotFoundException</a>
+                    </td>
+                    <td>
+            The namespace folder could not be found.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapCommandException.html">MailKit.Net.Imap.ImapCommandException</a>
+                    </td>
+                    <td>
+            The server replied to the IDLE command with a NO or BAD response.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit.Net.Imap/ImapProtocolException.html">MailKit.Net.Imap.ImapProtocolException</a>
+                    </td>
+                    <td>
+            The server responded with an unexpected token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
+              <h2 class="Section">Remarks</h2>
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Remarks">
+            Gets all of the folders within the specified namespace.
+            </div>
+              <h2 class="Section">Requirements</h2>
+              <div class="SectionBox" id="M:MailKit.Net.Imap.ImapClient.GetFolders(MailKit.FolderNamespace,System.Boolean,System.Threading.CancellationToken):Version Information">
+                <b>Namespace: </b>MailKit.Net.Imap<br /><b>Assembly: </b>MailKit (in MailKit.dll)<br /><b>Assembly Versions: </b>1.2.0.0</div>
               <hr size="1" />
             </blockquote>
             <h3 id="M:MailKit.Net.Imap.ImapClient.Identify(MailKit.Net.Imap.ImapImplementation,System.Threading.CancellationToken)">Identify Method</h3>
@@ -2654,6 +3015,14 @@
                     </td>
                     <td>
             The server replied to the ID command with a NO or BAD response.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
             </td>
                   </tr>
                 </table>
@@ -2765,6 +3134,14 @@
             The server replied to the ID command with a NO or BAD response.
             </td>
                   </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
+            </td>
+                  </tr>
                 </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
@@ -2837,12 +3214,8 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
                     </td>
                     <td>
-                      <p>The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.</p>
-                      <p>-or-</p>
-                      <p>The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.</p>
-                      <p>-or-</p>
-                      <p>A <a href="../MailKit.Net.Imap/ImapFolder.html">MailKit.Net.Imap.ImapFolder</a> has not been opened.</p>
-                    </td>
+            A <a href="../MailKit.Net.Imap/ImapFolder.html">MailKit.Net.Imap.ImapFolder</a> has not been opened.
+            </td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -2882,6 +3255,22 @@
                     </td>
                     <td>
             The IMAP server does not support the IDLE extension.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -2958,12 +3347,8 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
                     </td>
                     <td>
-                      <p>The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.</p>
-                      <p>-or-</p>
-                      <p>The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.</p>
-                      <p>-or-</p>
-                      <p>A <a href="../MailKit.Net.Imap/ImapFolder.html">MailKit.Net.Imap.ImapFolder</a> has not been opened.</p>
-                    </td>
+            A <a href="../MailKit.Net.Imap/ImapFolder.html">MailKit.Net.Imap.ImapFolder</a> has not been opened.
+            </td>
                   </tr>
                   <tr valign="top">
                     <td>
@@ -3003,6 +3388,22 @@
                     </td>
                     <td>
             The IMAP server does not support the IDLE extension.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.
             </td>
                   </tr>
                 </table>
@@ -3062,6 +3463,22 @@
                       <p>-or-</p>
                       <p>The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.</p>
                     </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.
+            </td>
                   </tr>
                 </table>
               </blockquote>
@@ -3207,6 +3624,22 @@
                     </td>
                     <td>
             The server responded with an unexpected token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit.Net.Imap/ImapClient.html">MailKit.Net.Imap.ImapClient</a> is not authenticated.
             </td>
                   </tr>
                 </table>

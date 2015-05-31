@@ -501,6 +501,23 @@
                   <dd>The cancellation token.</dd>
                 </dl>
               </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailService.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not connected.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MailKit.IMailService.Authenticate(System.Net.ICredentials,System.Threading.CancellationToken):Remarks">
             If the service supports authentication, then the credentials are used
@@ -561,7 +578,7 @@
                       <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
                     </td>
                     <td>
-            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not connected or is already authenticated.
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is already authenticated.
             </td>
                   </tr>
                   <tr valign="top">
@@ -602,6 +619,14 @@
                     </td>
                     <td>
             A protocol error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not connected.
             </td>
                   </tr>
                 </table>
@@ -726,6 +751,46 @@
                     </td>
                     <td>
                       <i>port</i> is not between <tt>0</tt> and <tt>65535</tt>.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.InvalidOperationException">InvalidOperationException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is already connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command was rejected by the mail server.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ProtocolException.html">MailKit.ProtocolException</a>
+                    </td>
+                    <td>
+            The server responded with an unexpected token.
             </td>
                   </tr>
                 </table>
@@ -881,6 +946,63 @@
                   <dd>The cancellation token.</dd>
                 </dl>
               </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailService.Disconnect(System.Boolean,System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command was rejected by the mail server.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ProtocolException.html">MailKit.ProtocolException</a>
+                    </td>
+                    <td>
+            The server responded with an unexpected token.
+            </td>
+                  </tr>
+                </table>
+              </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MailKit.IMailService.Disconnect(System.Boolean,System.Threading.CancellationToken):Remarks">
             If <i>quit</i> is <tt>true</tt>, a "QUIT" command will be issued in order to disconnect cleanly.
@@ -925,6 +1047,46 @@
                     </td>
                     <td>
             The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command was rejected by the mail server.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ProtocolException.html">MailKit.ProtocolException</a>
+                    </td>
+                    <td>
+            The server responded with an unexpected token.
             </td>
                   </tr>
                 </table>
@@ -989,6 +1151,63 @@
                   </dt>
                   <dd>The cancellation token.</dd>
                 </dl>
+              </blockquote>
+              <h4 class="Subsection">Exceptions</h4>
+              <blockquote class="SubsectionBox" id="M:MailKit.IMailService.NoOp(System.Threading.CancellationToken):Exceptions">
+                <table class="TypeDocumentation">
+                  <tr>
+                    <th>Type</th>
+                    <th>Reason</th>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.ObjectDisposedException">ObjectDisposedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> has been disposed.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.OperationCanceledException">OperationCanceledException</a>
+                    </td>
+                    <td>
+            The operation was canceled via the cancellation token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="http://www.go-mono.com/docs/monodoc.ashx?link=T:System.IO.IOException">System.IO.IOException</a>
+                    </td>
+                    <td>
+            An I/O error occurred.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/CommandException.html">MailKit.CommandException</a>
+                    </td>
+                    <td>
+            The command was rejected by the mail server.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ProtocolException.html">MailKit.ProtocolException</a>
+                    </td>
+                    <td>
+            The server responded with an unexpected token.
+            </td>
+                  </tr>
+                </table>
               </blockquote>
               <h2 class="Section">Remarks</h2>
               <div class="SectionBox" id="M:MailKit.IMailService.NoOp(System.Threading.CancellationToken):Remarks">
@@ -1072,6 +1291,22 @@
                     </td>
                     <td>
             The server responded with an unexpected token.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotConnectedException.html">MailKit.ServiceNotConnectedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not connected.
+            </td>
+                  </tr>
+                  <tr valign="top">
+                    <td>
+                      <a href="../MailKit/ServiceNotAuthenticatedException.html">MailKit.ServiceNotAuthenticatedException</a>
+                    </td>
+                    <td>
+            The <a href="../MailKit/IMailService.html">MailKit.IMailService</a> is not authenticated.
             </td>
                   </tr>
                 </table>
