@@ -1,516 +1,396 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="MailKit : A cross-platform .NET mail client library.">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@jstedfast" />
+    <meta name="twitter:title" content="MailKit" />
+    <meta name="twitter:image" content="http://jstedfast.github.io/MailKit/img/favicon.png" />
+    <meta name="twitter:description" content="MailKit is a complete email framework for .NET" />
+    <meta name="description" content="MailKit is a complete email framework for .NET" />
+    <meta name="author" content="Jeffrey Stedfast">
 
     <title>MailKit</title>
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--<script src="js/ie-emulation-modes-warning.js"></script>-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="ico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="ico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="ico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="ico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="ico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="ico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="ico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="ico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="ico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="manifest" href="ico/manifest.json">
+    <link href="ico/favicon.ico" ref="icon">
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+
+    <!-- NuGet styles -->
+    <link href="css/nuget.css" rel="stylesheet">
   </head>
-
+<!-- NAVBAR
+================================================== -->
   <body>
+    <div class="navbar-wrapper">
+      <div class="container">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/jstedfast/MailKit">View on GitHub</a>
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><i class="fa fa-envelope fa-lg"></i> MailKit</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#help">Help</a></li>
+                <li><a href="#donate">Donate</a></li>
+                <!--<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>-->
+              </ul>
+            </div>
+          </div>
+        </nav>
 
-          <h1 id="project_title">MailKit</h1>
-          <h2 id="project_tagline">A cross-platform .NET mail client library.</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/jstedfast/MailKit/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/jstedfast/MailKit/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+      </div>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a id="mailkit" class="anchor" href="#mailkit" aria-hidden="true"><span class="octicon octicon-link"></span></a>MailKit</h1>
 
-<p><a href="https://scan.coverity.com/projects/3202">
-  <img alt="Coverity Scan Build Status" src="https://scan.coverity.com/projects/3202/badge.svg">
-</a></p>
-
-<h2>
-<a id="what-is-mailkit" class="anchor" href="#what-is-mailkit" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is MailKit?</h2>
-
-<p>MailKit is a cross-platform mail client library built on top of <a href="https://github.com/jstedfast/MimeKit">MimeKit</a>.</p>
-
-<h2>
-<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
-
-<ul>
-<li>SASL Authentication
-
-<ul>
-<li>CRAM-MD5</li>
-<li>DIGEST-MD5</li>
-<li>LOGIN</li>
-<li>NTLM</li>
-<li>PLAIN</li>
-<li>SCRAM-SHA-1</li>
-<li>XOAUTH2 (partial support - you need to fetch the auth tokens yourself)</li>
-</ul>
-</li>
-<li>SMTP Client
-
-<ul>
-<li>Supports all of the SASL mechanisms listed above.</li>
-<li>Supports SSL-wrapped connections via the "smtps" protocol.</li>
-<li>Supports client SSL/TLS certificates.</li>
-<li>Supports the following extensions: STARTTLS, SIZE, DSN, 8BITMIME, PIPELINING, BINARYMIME, SMTPUTF8</li>
-<li>All APIs are cancellable.</li>
-<li>Async APIs are available.</li>
-</ul>
-</li>
-<li>POP3 Client
-
-<ul>
-<li>Supports all of the SASL mechanisms listed above.</li>
-<li>Also supports authentication via APOP and USER/PASS.</li>
-<li>Supports SSL-wrapped connections via the "pops" protocol.</li>
-<li>Supports client SSL/TLS certificates.</li>
-<li>Supports the following extensions: STLS, UIDL, PIPELINING, UTF8, LANG</li>
-<li>All APIs are cancellable.</li>
-<li>Async APIs are available.</li>
-</ul>
-</li>
-<li>IMAP4 Client
-
-<ul>
-<li>Supports all of the SASL mechanisms listed above.</li>
-<li>Supports SSL-wrapped connections via the "imaps" protocol.</li>
-<li>Supports client SSL/TLS certificates.</li>
-<li>Supports the following extensions:
-
-<ul>
-<li>QUOTA</li>
-<li>LITERAL+</li>
-<li>IDLE</li>
-<li>NAMESPACE</li>
-<li>CHILDREN</li>
-<li>LOGINDISABLED</li>
-<li>STARTTLS</li>
-<li>MULTIAPPEND</li>
-<li>UNSELECT</li>
-<li>UIDPLUS</li>
-<li>CONDSTORE</li>
-<li>ESEARCH</li>
-<li>SASL-IR</li>
-<li>COMPRESS</li>
-<li>WITHIN</li>
-<li>ENABLE</li>
-<li>QRESYNC</li>
-<li>SORT</li>
-<li>THREAD</li>
-<li>ESORT (partial)</li>
-<li>SPECIAL-USE</li>
-<li>SEARCH=FUZZY (partial)</li>
-<li>MOVE</li>
-<li>UTF8=ACCEPT</li>
-<li>UTF8=ONLY</li>
-<li>XLIST</li>
-<li>X-GM-EXT1 (X-GM-MSGID, X-GM-THRID, X-GM-RAW and X-GM-LABELS)</li>
-</ul>
-</li>
-<li>All APIs are cancellable.</li>
-<li>Async APIs are available.</li>
-</ul>
-</li>
-<li>Client-side sorting and threading of messages.</li>
-</ul>
-
-<h2>
-<a id="goals" class="anchor" href="#goals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Goals</h2>
-
-<p>The main goal of this project is to provide the .NET world with robust, fully featured and RFC-compliant
-SMTP, POP3, and IMAP client implementations.</p>
-
-<p>All of the other .NET IMAP client implementations that I could find suffer from major architectural
-problems such as ignoring unexpected untagged responses, assuming that literal string tokens will
-never be used for anything other than message bodies (when in fact they could be used for pretty
-much any string token in a response), assuming that the way to find the end of a message body in a
-FETCH response is by scanning for ") UID", and not properly handling mailbox names with international
-characters to simply name a few.</p>
-
-<p>IMAP requires a LOT of time spent laboriously reading and re-reading the IMAP specifications (as well
-as the MIME specifications) to understand all of the subtleties of the protocol and most (all?) of the
-other Open Source .NET IMAP libraries, at least, were written by developers that only cared enough that
-it worked for their simple needs. There's nothing necessarily wrong with doing that, but the web is full
-of half-working, non-RFC-compliant IMAP implementations out there that it was finally time for a carefully
-designed and implemented IMAP client library to be written.</p>
-
-<p>For POP3, libraries such as OpenPOP.NET are actually fairly decent, although the MIME parser is far
-too strict - throwing exceptions any time it encounteres a Content-Type or Content-Disposition
-parameter that it doesn't already know about, which, if you read over the mailing-list, is a problem
-that OpenPOP.NET users are constantly running into. MailKit's Pop3Client, of course, doesn't have this
-problem. It also parses messages directly from the socket instead of downloading the message into a
-large string buffer before parsing it, so you'll probably find that not only is MailKit faster (MailKit's
-MIME parser, <a href="https://github.com/jstedfast/MimeKit">MimeKit</a>, parses messages from disk 25x faster than
-OpenPOP.NET's parser), but also uses far less memory.</p>
-
-<p>For SMTP, most developers use System.Net.Mail.SmtpClient which suits their needs more-or-less satisfactorily
-and so is probably not high on their list of needs. However, the SmtpClient implementation included with
-MailKit is a much better option if cross-platform support is needed or if the developer wants to be able to
-save and re-load MIME messages before sending them via SMTP. MailKit's SmtpClient also supports PIPELINING
-which should improve performance of sending messages (although might not be very noticeable).</p>
-
-<h2>
-<a id="license-information" class="anchor" href="#license-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>License Information</h2>
-
-<p>MailKit is Copyright (C) 2013-2014 Xamarin Inc. and is licensed under the MIT license:</p>
-
-<pre><code>Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-</code></pre>
-
-<h2>
-<a id="installing-via-nuget" class="anchor" href="#installing-via-nuget" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing via NuGet</h2>
-
-<p>The easiest way to install MailKit is via <a href="https://www.nuget.org/packages/MailKit/">NuGet</a>.</p>
-
-<p>In Visual Studio's <a href="http://docs.nuget.org/docs/start-here/using-the-package-manager-console">Package Manager Console</a>,
-simply enter the following command:</p>
-
-<pre><code>Install-Package MailKit
-</code></pre>
-
-<h2>
-<a id="building" class="anchor" href="#building" aria-hidden="true"><span class="octicon octicon-link"></span></a>Building</h2>
-
-<p>First, you'll need to clone MailKit, MimeKit, Bouncy Castle, and Portable.Text.Encoding from my GitHub repository:</p>
-
-<pre><code>git clone https://github.com/jstedfast/MailKit.git
-git clone https://github.com/jstedfast/MimeKit.git
-git clone https://github.com/jstedfast/bc-csharp.git
-git clone https://github.com/jstedfast/Portable.Text.Encoding.git
-</code></pre>
-
-<p>Currently, MailKit (through its use of MimeKit) depends on the vs2010 branch of bc-csharp for the
-Visual Studio 2010 project files that I've added (to replace the Visual Studio 2003 project files).
-To switch to that branch,</p>
-
-<pre><code>cd bc-csharp
-git checkout -b vs2010 origin/vs2010
-</code></pre>
-
-<p>In the top-level MailKit source directory, there are three solution files: MailKit.sln, MailKit.Net40.sln and MailKit.Mobile.sln.</p>
-
-<ul>
-<li>MailKit.sln includes the projects for .NET 4.5, .NET 4.0, Xamarin.Android, and Xamarin.iOS.</li>
-<li>MailKit.Net40.sln just includes the .NET Framework 4.0 C# project (MailKit/MailKit.Net40.csproj)</li>
-<li>MailKit.Mobile.sln just includes the Xamarin.iOS and Xamarin.Android projects.</li>
-<li>MailKit.Win.sln just includes the Windows 8.1 Universal project (aka wpa81).</li>
-</ul>
-
-<p>If you don't have the Xamarin products, you'll probably want to open the MailKit.Net45.sln instead of MailKit.sln.</p>
-
-<p>Once you've opened the appropriate MailKit solution file in either Xamarin Studio or Visual Studio 2010+ (either will work),
-you can simply choose the Debug or Release build configuration and then build.</p>
-
-<p>Note: The Release build will generate the xml API documentation, but the Debug build will not.</p>
-
-<h2>
-<a id="using-mailkit" class="anchor" href="#using-mailkit" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using MailKit</h2>
-
-<h3>
-<a id="sending-messages" class="anchor" href="#sending-messages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sending Messages</h3>
-
-<p>One of the more common operations that MailKit is meant for is sending email messages.</p>
-
-<div class="highlight highlight-csharp"><pre><span class="pl-k">using</span> System;
-
-<span class="pl-k">using</span> MailKit.Net.Smtp;
-<span class="pl-k">using</span> MailKit;
-<span class="pl-k">using</span> MimeKit;
-
-<span class="pl-k">namespace</span> <span class="pl-en">TestClient</span> {
-    <span class="pl-s">class</span> <span class="pl-en">Program</span>
-    {
-        <span class="pl-s">public</span> <span class="pl-s">static</span> <span class="pl-st">void</span> <span class="pl-en">Main</span> (<span class="pl-st">string[]</span> <span class="pl-vpf">args</span>)
-        {
-            <span class="pl-k">var</span> message = <span class="pl-s">new</span> MimeMessage ();
-            message.From.Add (<span class="pl-s">new</span> MailboxAddress (<span class="pl-s1"><span class="pl-pds">"</span>Joey Tribbiani<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>joey@friends.com<span class="pl-pds">"</span></span>));
-            message.To.Add (<span class="pl-s">new</span> MailboxAddress (<span class="pl-s1"><span class="pl-pds">"</span>Mrs. Chanandler Bong<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>chandler@friends.com<span class="pl-pds">"</span></span>));
-            message.Subject = <span class="pl-s1"><span class="pl-pds">"</span>How you doin'?<span class="pl-pds">"</span></span>;
-
-            message.Body = <span class="pl-s">new</span> TextPart (<span class="pl-s1"><span class="pl-pds">"</span>plain<span class="pl-pds">"</span></span>) {
-                Text = @<span class="pl-s1"><span class="pl-pds">"</span>Hey Chandler,</span>
-<span class="pl-s1"></span>
-<span class="pl-s1">I just wanted to let you know that Monica and I were going to go play some paintball, you in?</span>
-<span class="pl-s1"></span>
-<span class="pl-s1">-- Joey<span class="pl-pds">"</span></span>
-            };
-
-            <span class="pl-k">using</span> (<span class="pl-k">var</span> client = <span class="pl-s">new</span> SmtpClient ()) {
-                client.Connect (<span class="pl-s1"><span class="pl-pds">"</span>smtp.friends.com<span class="pl-pds">"</span></span>, <span class="pl-c1">587</span>, <span class="pl-c1">false</span>);
-
-                <span class="pl-c">// Note: since we don't have an OAuth2 token, disable</span>
-                <span class="pl-c">// the XOAUTH2 authentication mechanism.</span>
-                client.AuthenticationMechanisms.Remove (<span class="pl-s1"><span class="pl-pds">"</span>XOAUTH2<span class="pl-pds">"</span></span>);
-
-                <span class="pl-c">// Note: only needed if the SMTP server requires authentication</span>
-                client.Authenticate (<span class="pl-s1"><span class="pl-pds">"</span>joey<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>password<span class="pl-pds">"</span></span>);
-
-                client.Send (message);
-                client.Disconnect (<span class="pl-c1">true</span>);
-            }
-        }
-    }
-}</pre></div>
-
-<h2>
-<a id="retrieving-messages-via-pop3" class="anchor" href="#retrieving-messages-via-pop3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Retrieving Messages (via Pop3)</h2>
-
-<p>One of the other main uses of MailKit is retrieving messages from pop3 servers.</p>
-
-<div class="highlight highlight-csharp"><pre><span class="pl-k">using</span> System;
-
-<span class="pl-k">using</span> MailKit.Net.Pop3;
-<span class="pl-k">using</span> MailKit;
-<span class="pl-k">using</span> MimeKit;
-
-<span class="pl-k">namespace</span> <span class="pl-en">TestClient</span> {
-    <span class="pl-s">class</span> <span class="pl-en">Program</span>
-    {
-        <span class="pl-s">public</span> <span class="pl-s">static</span> <span class="pl-st">void</span> <span class="pl-en">Main</span> (<span class="pl-st">string[]</span> <span class="pl-vpf">args</span>)
-        {
-            <span class="pl-k">using</span> (<span class="pl-k">var</span> client = <span class="pl-s">new</span> Pop3Client ()) {
-                client.Connect (<span class="pl-s1"><span class="pl-pds">"</span>pop.friends.com<span class="pl-pds">"</span></span>, <span class="pl-c1">110</span>, <span class="pl-c1">false</span>);
-
-                <span class="pl-c">// Note: since we don't have an OAuth2 token, disable</span>
-                <span class="pl-c">// the XOAUTH2 authentication mechanism.</span>
-                client.AuthenticationMechanisms.Remove (<span class="pl-s1"><span class="pl-pds">"</span>XOAUTH2<span class="pl-pds">"</span></span>);
-
-                client.Authenticate (<span class="pl-s1"><span class="pl-pds">"</span>joey<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>password<span class="pl-pds">"</span></span>);
-
-                <span class="pl-st">int</span> count = client.GetMessageCount ();
-                <span class="pl-k">for</span> (<span class="pl-st">int</span> i = <span class="pl-c1">0</span>; i &lt; count; i++) {
-                    <span class="pl-k">var</span> message = client.GetMessage (i);
-                    Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>Subject: {0}<span class="pl-pds">"</span></span>, message.Subject);
-                }
-
-                client.Disconnect (<span class="pl-c1">true</span>);
-            }
-        }
-    }
-}</pre></div>
-
-<h2>
-<a id="using-imap" class="anchor" href="#using-imap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using IMAP</h2>
-
-<p>More important than POP3 support is the IMAP support. Here's a simple use-case of retreiving messages from an IMAP server:</p>
-
-<div class="highlight highlight-csharp"><pre><span class="pl-k">using</span> System;
-
-<span class="pl-k">using</span> MailKit.Net.Imap;
-<span class="pl-k">using</span> MailKit.Search;
-<span class="pl-k">using</span> MailKit;
-<span class="pl-k">using</span> MimeKit;
-
-<span class="pl-k">namespace</span> <span class="pl-en">TestClient</span> {
-    <span class="pl-s">class</span> <span class="pl-en">Program</span>
-    {
-        <span class="pl-s">public</span> <span class="pl-s">static</span> <span class="pl-st">void</span> <span class="pl-en">Main</span> (<span class="pl-st">string[]</span> <span class="pl-vpf">args</span>)
-        {
-            <span class="pl-k">using</span> (<span class="pl-k">var</span> client = <span class="pl-s">new</span> ImapClient ()) {
-                client.Connect (<span class="pl-s1"><span class="pl-pds">"</span>imap.friends.com<span class="pl-pds">"</span></span>, <span class="pl-c1">995</span>, <span class="pl-c1">true</span>);
-
-                <span class="pl-c">// Note: since we don't have an OAuth2 token, disable</span>
-                <span class="pl-c">// the XOAUTH2 authentication mechanism.</span>
-                client.AuthenticationMechanisms.Remove (<span class="pl-s1"><span class="pl-pds">"</span>XOAUTH<span class="pl-pds">"</span></span>);
-
-                client.Authenticate (<span class="pl-s1"><span class="pl-pds">"</span>joey<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>password<span class="pl-pds">"</span></span>);
-
-                <span class="pl-c">// The Inbox folder is always available on all IMAP servers...</span>
-                <span class="pl-k">var</span> inbox = client.Inbox;
-                inbox.Open (FolderAccess.ReadOnly);
-
-                Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>Total messages: {0}<span class="pl-pds">"</span></span>, inbox.Count);
-                Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>Recent messages: {0}<span class="pl-pds">"</span></span>, inbox.Recent);
-
-                <span class="pl-k">for</span> (<span class="pl-st">int</span> i = <span class="pl-c1">0</span>; i &lt; inbox.Count; i++) {
-                    <span class="pl-k">var</span> message = inbox.GetMessage (i);
-                    Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>Subject: {0}<span class="pl-pds">"</span></span>, message.Subject);
-                }
-
-                client.Disconnect (<span class="pl-c1">true</span>);
-            }
-        }
-    }
-}</pre></div>
-
-<p>However, you probably want to do more complicated things with IMAP such as fetching summary information
-so that you can display a list of messages in a mail client without having to first download all of the
-messages from the server:</p>
-
-<div class="highlight highlight-csharp"><pre><span class="pl-k">foreach</span> (<span class="pl-k">var</span> summary <span class="pl-k">in</span> inbox.Fetch (<span class="pl-c1">0</span>, -<span class="pl-c1">1</span>, MessageSummaryItems.Full | MessageSummaryItems.UniqueId)) {
-    Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>[summary] {0:D2}: {1}<span class="pl-pds">"</span></span>, summary.Index, summary.Envelope.Subject);
-}</pre></div>
-
-<p>The results of a Fetch command can also be used to download individual MIME parts rather
-than downloading the entire message. For example:</p>
-
-<div class="highlight highlight-csharp"><pre><span class="pl-k">foreach</span> (<span class="pl-k">var</span> summary <span class="pl-k">in</span> inbox.Fetch (<span class="pl-c1">0</span>, -<span class="pl-c1">1</span>, MessageSummaryItems.Full | MessageSummaryItems.UniqueId)) {
-    <span class="pl-k">var</span> text = summary.Body <span class="pl-k">as</span> BodyPartText;
-
-    <span class="pl-k">if</span> (text == <span class="pl-c1">null</span>) {
-        <span class="pl-k">var</span> multipart = summary.Body <span class="pl-k">as</span> BodyPartMultipart;
-
-        <span class="pl-k">if</span> (multipart != <span class="pl-c1">null</span>)
-            text = multipart.BodyParts.OfType&lt;BodyPartText&gt; ().FirstOrDefault ();
-    }
-
-    <span class="pl-k">if</span> (text == <span class="pl-c1">null</span>)
-        <span class="pl-k">continue</span>;
-
-    <span class="pl-c">// this will download *just* the text part</span>
-    <span class="pl-k">var</span> part = inbox.GetBodyPart (summary.UniqueId.Value, text);
-}</pre></div>
-
-<p>You may also be interested in sorting and searching...</p>
-
-<div class="highlight highlight-csharp"><pre><span class="pl-c">// let's search for all messages received after Jan 12, 2013 with "MailKit" in the subject...</span>
-<span class="pl-k">var</span> query = SearchQuery.DeliveredAfter (DateTime.Parse (<span class="pl-s1"><span class="pl-pds">"</span>2013-01-12<span class="pl-pds">"</span></span>))
-    .And (SearchQuery.SubjectContains (<span class="pl-s1"><span class="pl-pds">"</span>MailKit<span class="pl-pds">"</span></span>)).And (SearchQuery.Seen);
-
-<span class="pl-k">foreach</span> (<span class="pl-k">var</span> uid <span class="pl-k">in</span> inbox.Search (query)) {
-    <span class="pl-k">var</span> message = inbox.GetMessage (uid);
-    Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>[match] {0}: {1}<span class="pl-pds">"</span></span>, uid, message.Subject);
-}
-
-<span class="pl-c">// let's do the same search, but this time sort them in reverse arrival order</span>
-<span class="pl-k">var</span> orderBy = <span class="pl-s">new</span> [] { OrderBy.ReverseArrival };
-<span class="pl-k">foreach</span> (<span class="pl-k">var</span> uid <span class="pl-k">in</span> inbox.Search (query, orderBy)) {
-    <span class="pl-k">var</span> message = inbox.GetMessage (uid);
-    Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>[match] {0}: {1}<span class="pl-pds">"</span></span>, uid, message.Subject);
-}
-
-<span class="pl-c">// you'll notice that the orderBy argument is an array... this is because you</span>
-<span class="pl-c">// can actually sort the search results based on multiple columns:</span>
-orderBy = <span class="pl-s">new</span> [] { OrderBy.ReverseArrival, OrderBy.Subject };
-<span class="pl-k">foreach</span> (<span class="pl-k">var</span> uid <span class="pl-k">in</span> inbox.Search (query, orderBy)) {
-    <span class="pl-k">var</span> message = inbox.GetMessage (uid);
-    Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>[match] {0}: {1}<span class="pl-pds">"</span></span>, uid, message.Subject);
-}</pre></div>
-
-<p>Of course, instead of downloading the message, you could also fetch the summary information for the matching messages
-or do any of a number of other things with the UIDs that are returned.</p>
-
-<p>How about navigating folders? MailKit can do that, too:</p>
-
-<div class="highlight highlight-csharp"><pre><span class="pl-c">// Get the first personal namespace and list the toplevel folders under it.</span>
-<span class="pl-k">var</span> personal = client.GetFolder (client.PersonalNamespaces[<span class="pl-c1">0</span>]);
-<span class="pl-k">foreach</span> (<span class="pl-k">var</span> folder <span class="pl-k">in</span> personal.GetSubfolders (<span class="pl-c1">false</span>))
-    Console.WriteLine (<span class="pl-s1"><span class="pl-pds">"</span>[folder] {0}<span class="pl-pds">"</span></span>, folder.Name);</pre></div>
-
-<p>If the IMAP server supports the SPECIAL-USE or the XLIST (GMail) extension, you can get ahold of
-the pre-defined All, Drafts, Flagged (aka Important), Junk, Sent, Trash, etc folders like this:</p>
-
-<div class="highlight highlight-csharp"><pre><span class="pl-k">if</span> ((client.Capabilities &amp; (ImapCapabilities.SpecialUse | ImapCapabilities.XList)) != <span class="pl-c1">0</span>) {
-    <span class="pl-k">var</span> drafts = client.GetFolder (SpecialFolder.Drafts);
-} <span class="pl-k">else</span> {
-    <span class="pl-c">// maybe check the user's preferences for the Drafts folder?</span>
-}</pre></div>
-
-<p>In cases where the IMAP server does <em>not</em> support the SPECIAL-USE or XLIST extensions, you'll have to
-come up with your own heuristics for getting the Sent, Drafts, Trash, etc folders. For example, you
-might use logic similar to this:</p>
-
-<div class="highlight highlight-csharp"><pre><span class="pl-s">static</span> <span class="pl-st">string</span>[] CommonSentFolderNames = { <span class="pl-s1"><span class="pl-pds">"</span>Sent Items<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>Sent Mail<span class="pl-pds">"</span></span>, <span class="pl-c">/* maybe add some translated names */</span> };
-
-<span class="pl-s">static</span> IFolder GetSentFolder (ImapClient client, CancellationToken cancellationToken)
-{
-    <span class="pl-k">var</span> personal = client.GetFolder (client.PersonalNamespaces[<span class="pl-c1">0</span>]);
-
-    <span class="pl-k">foreach</span> (<span class="pl-k">var</span> folder <span class="pl-k">in</span> personal.GetSubfolders (<span class="pl-c1">false</span>, cancellationToken)) {
-        <span class="pl-k">foreach</span> (<span class="pl-k">var</span> name <span class="pl-k">in</span> CommonSentFolderNames) {
-            <span class="pl-k">if</span> (folder.Name == commonName)
-                <span class="pl-k">return</span> folder;
-        }
-    }
-
-    <span class="pl-k">return</span> <span class="pl-c1">null</span>;
-}</pre></div>
-
-<p>Using LINQ, you could simplify this down to something more like this:</p>
-
-<div class="highlight highlight-csharp"><pre><span class="pl-s">static</span> <span class="pl-st">string</span>[] CommonSentFolderNames = { <span class="pl-s1"><span class="pl-pds">"</span>Sent Items<span class="pl-pds">"</span></span>, <span class="pl-s1"><span class="pl-pds">"</span>Sent Mail<span class="pl-pds">"</span></span>, <span class="pl-c">/* maybe add some translated names */</span> };
-
-<span class="pl-s">static</span> IFolder GetSentFolder (ImapClient client, CancellationToken cancellationToken)
-{
-    <span class="pl-k">var</span> personal = client.GetFolder (client.PersonalNamespaces[<span class="pl-c1">0</span>]);
-
-    <span class="pl-k">return</span> personal.GetSubfolders (<span class="pl-c1">false</span>, cancellationToken).FirstOrDefault (x =&gt; CommonSentFolderNames.Contains (x.Name));
-}</pre></div>
-
-<p>Another option might be to allow the user of your application to configure which folder he or she wants to use as their Sent folder, Drafts folder, Trash folder, etc.</p>
-
-<p>How you handle this is up to you.</p>
-
-<h2>
-<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
-
-<p>The first thing you'll need to do is fork MailKit to your own GitHub repository. Once you do that,</p>
-
-<pre><code>git clone git@github.com/&lt;your-account&gt;/MailKit.git
-</code></pre>
-
-<p>If you use <a href="http://xamarin.com/studio">Xamarin Studio</a> or <a href="http://monodevelop.com">MonoDevelop</a>, all of the
-solution files are configured with the coding style used by MailKit. If you use Visual Studio or some
-other editor, please try to maintain the existing coding style as best as you can.</p>
-
-<p>Once you've got some changes that you'd like to submit upstream to the official MailKit repository,
-simply send me a Pull Request and I will try to review your changes in a timely manner.</p>
-
-<p>If you'd like to contribute but don't have any particular features in mind to work on, check out the issue
-tracker and look for something that might pique your interest!</p>
-
-<h2>
-<a id="reporting-bugs" class="anchor" href="#reporting-bugs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reporting Bugs</h2>
-
-<p>Have a bug or a feature request? <a href="https://github.com/jstedfast/MailKit/issues">Please open a new issue</a>.</p>
-
-<p>Before opening a new issue, please search for existing issues to avoid submitting duplicates.</p>
-
-<h2>
-<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Documentation</h2>
-
-<p>API documentation can be found at <a href="http://jstedfast.github.io/MailKit/docs">http://jstedfast.github.io/MailKit/docs</a>.</p>
-      </section>
+    <!-- Download
+    ================================================== -->
+    <div class="modal fade" id="download-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body slim-dialog">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="page-header">Install with NuGet (recommended)</h4>
+                    <a href="https://www.nuget.org/packages/MailKit/" target="_blank">
+                        <img src="img/nuget-logo.png" alt="NuGet" class="center-block" />
+                    </a>
+                    <br />
+                    <table align="center" width="100%">
+                        <tbody>
+                            <tr>
+                                <td width="46%" align="right">
+                                    <div class="nuget-badge">
+                                        PM&gt; Install-Package MailKit
+                                    </div>
+                                </td>
+                                <td width="8%" align="center">
+                                    or
+                                </td>
+                                <td width="46%" align="left">
+                                    <div class="vs-package-management">
+                                        Install via VS <a href="https://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog" target="_blank">Package Management</a> window.
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br />
+                    <br />
+                    <h4 class="page-header">Direct Download</h4>
+                    <p>
+                        ZIP file containing MailKit source code:
+                        <a class="btn btn-default btn-sm" href="https://github.com/jstedfast/MailKit/releases" target="_blank">
+                            <i class="fa fa-file-zip-o"></i> MailKit
+                        </a>
+                    </p>
+                    <br />
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">MailKit maintained by <a href="https://github.com/jstedfast">jstedfast</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img id="slide-01" class="first-slide" src="img/slide-01.jpg" srcset="img/slide-01.jpg 1280w, img/slide-01@2x.jpg 2560w" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>World-Class</h1>
+              <p>Not only is MimeKit's parser more robust than other .NET MIME parsers, but it's also orders of magnitude faster. Parse gigabytes of mail in seconds.</p>
+              <p>
+                <a class="btn btn-lg btn-success carousel-button" href="#" role="button" target="_blank" data-toggle="modal" data-target="#download-modal">
+                  <i class="fa fa-download fa-lg"></i> Download
+                </a>
+                <a class="btn btn-lg btn-primary carousel-button" href="https://github.com/jstedfast/MailKit" role="button" target="_blank">
+                  <i class="fa fa-github fa-lg"></i> Source code
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img id="slide-02" class="second-slide" src="img/slide-02.jpg" srcset="img/slide-02.jpg 1280w, img/slide-02@2x.jpg 2560w" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Mobile Ready</h1>
+              <p>MailKit is ready to go mobile just like you. Build powerful mail apps for your favorite Android, iOS and Windows Phone devices.</p>
+              <p>
+                <a class="btn btn-lg btn-success carousel-button" href="#" role="button" target="_blank" data-toggle="modal" data-target="#download-modal">
+                  <i class="fa fa-download fa-lg"></i> Download
+                </a>
+                <a class="btn btn-lg btn-primary carousel-button" href="https://github.com/jstedfast/MailKit" role="button" target="_blank">
+                  <i class="fa fa-download fa-lg"></i> Source code
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img id="slide-03" class="third-slide" src="img/slide-03.jpg" srcset="img/slide-03.jpg 1280w, img/slide-03@2x.jpg 2560w" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Secure Mail</h1>
+              <p>Not only does MailKit support SSL and TLS, it also supports message encryption, decryption, and signing as well as verifying digital signatures with either the S/MIME or OpenPGP standards.</p>
+              <p>
+                <a class="btn btn-lg btn-success carousel-button" href="#" role="button" target="_blank" data-toggle="modal" data-target="#download-modal">
+                  <i class="fa fa-download fa-lg"></i> Download
+                </a>
+                <a class="btn btn-lg btn-primary carousel-button" href="https://github.com/jstedfast/MailKit" role="button" target="_blank">
+                  <i class="fa fa-download fa-lg"></i> Source code
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <a name="about"></a>
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <h4><i class="fa fa-globe fa-lg"></i> World-Class</h4>
+          <p>Parse any message with MimeKit's powerful MIME parser.</p>
+          <p><a class="btn btn-default" href="docs/html/ParsingMessages.html" target="_blank" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <h4><i class="fa fa-bolt fa-lg"></i> High Performance</h4>
+          <p>MimeKit is orders of magnitude faster than any other MIME parser for .NET.</p>
+          <p><a class="btn btn-default" href="http://jeffreystedfast.blogspot.com/2013/10/optimization-tips-tricks-used-by.html" target="_blank" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <h4><i class="fa fa-user-secret fa-lg"></i> Security</h4>
+          <p>MimeKit has full support for S/MIME v3.2 and OpenPGP.</p>
+          <p><a class="btn btn-default" href="docs/html/WorkingWithSMime.htm" target="_blank" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+      <br/><br/>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <h4><i class="fa fa-github fa-lg"></i> Open Source</h4>
+          <p>MailKit is open source and is completely <a href="https://github.com/jstedfast/MailKit/blob/master/License.md" target="_blank">free for commercial use</a>.</p>
+          <p><a class="btn btn-default" href="https://github.com/jstedfast/MailKit" target="_blank" role="button">View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <h4><i class="fa fa-windows fa-lg"></i> <i class="fa fa-linux fa-lg"></i> <i class="fa fa-apple fa-lg"></i> <i class="fa fa-android fa-lg"></i> Run Anywhere</h4>
+          <p>MailKit supports Windows, Mac, Linux, Android, iOS, Windows Phone and more!</p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <h4><i class="fa fa-smile-o fa-lg"></i> Easy To Use</h4>
+          <p>MailKit makes even the complex tasks doable.</p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+<!--
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+-->
+      <!-- /END THE FEATURETTES -->
+
+      <br/><br/>
+
+      <a name="help"></a><h2>Help</h2>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <h4><i class="fa fa-file-text-o fa-lg"></i> MailKit Documentation</h4>
+          <p><a href="docs" target="_blank">MailKit's documentation</a> is the first place to go for help.</p>
+        </div><!-- /.span4 -->
+        <div class="col-lg-4">
+          <h4><i class="fa fa-stack-overflow fa-lg"></i> Stack Overflow</h4>
+          <p><a href="http://stackoverflow.com/questions/tagged/mailkit" target="_blank">Stack Overflow</a> is a great place to ask questions about MailKit.</a>
+        </div><!-- /.span4 -->
+        <div class="col-lg-4">
+          <h4><i class="fa fa-github fa-lg"></i> Issue Tracker</h4>
+          <p>MailKit's <a href="https://github.com/jstedfast/MailKit/issues" target="_blank">Issue Tracker</a> is a great place to go to file bug reports and make feature requests.</p>
+        </div><!-- /.span4 -->
+      </div><!-- /.row -->
+
+      <br><br>
+
+      <h2>License</h2>
+
+      <p>MailKit is open source under the <a href="https://github.com/jstedfast/MailKit/blob/master/License.md" target="_blank">MIT license</a> and is free for commercial use.</p>
+
+      <br><br>
+
+      <a name="donate"></a><h2>Donate</h2>
+
+      <p>
+        MimeKit and MailKit are personal open source projects that I have put thousands of hours into perfecting
+        by continuously improving the API based on feedback from developers like yourself, writing documentation,
+        and optimizing with the goal of making them not only the very best email framework for .NET, but the best
+        email framework for any programming language. I need your help to achieve this.
+      </p>
+      <p>If MimeKit and/or MailKit have been helpful to you, please consider donating. Your contributions will be appreciated.</p>
+      <p>
+        <a href="http://www.pledgie.com/campaigns/29300" target="_blank">
+            <img alt="Click here to lend your support to MimeKit and MailKit by making a donation at www.pledgie.com" src="http://www.pledgie.com/campaigns/29300.png?skin_name=chrome">
+        </a>
+      </p>
+
+      <br/><br/>
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013-2015 Jeffrey Stedfast</p>
       </footer>
-    </div>
 
-    
+    </div><!-- /.container -->
 
+    <script>
+      function OnSlideLoaded (evt) {
+        var img = evt.currentTarget;
+        var ph = $(img).parent().height();
+        var pw = $(img).parent().width();
+        var h = $(img).height();
+        var src = $(img).src;
+        var id = $(img).id;
+
+        if (pw > 1280) {
+           $(img).src = "img/" + id + "@2x.jpg";
+           h = 1360;
+        } else {
+           $(img).src = "img/" + id + ".jpg";
+           h = 680;
+        }
+
+        var top = (ph / 2) - (h / 2);
+
+        $(img).css("top", top);
+      }
+    </script>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/picturefill.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/vendor/holder.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
